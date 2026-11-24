@@ -1,0 +1,1598 @@
+/* ==========================================================================
+   BUBBLE & BREW – OUR FLAVOUR PAGE STYLES  v1.0
+   Matches Home 1 design language: caramel brown, cream, peach, white,
+   organic shapes, floating doodles, high-contrast typography & animations.
+   ========================================================================== */
+
+/* ── Base Page Styling ─────────────────────────────────────────────────── */
+.flavor-page-body {
+  background-color: var(--hs-bg, #F4EBDD);
+  color: var(--hs-body, #5a3a22);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   GLOBAL OUTLINE-WORD & TYPOGRAPHY SYSTEM
+   ══════════════════════════════════════════════════════════════════════════ */
+.outline-word {
+  display: inline-block;
+  color: transparent !important;
+  font-weight: 800;
+  -webkit-text-stroke: 2.2px currentColor;
+  text-stroke: 2.2px currentColor;
+}
+
+/* Cream & White Sections: crisp dark brown outline & headings */
+.flavor-collections-section .outline-word,
+.flavor-signature-section .outline-word,
+.flavor-ingredients-section .outline-word,
+.flavor-custom-section .outline-word {
+  -webkit-text-stroke: 2.2px #3d2016 !important;
+  text-stroke: 2.2px #3d2016 !important;
+}
+
+.flavor-collections-section .hs-eyebrow,
+.flavor-signature-section .hs-eyebrow,
+.flavor-ingredients-section .hs-eyebrow,
+.flavor-custom-section .hs-eyebrow {
+  color: var(--hs-primary, #98633A) !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.flavor-collections-section .hs-heading,
+.flavor-signature-section .hs-heading,
+.flavor-ingredients-section .hs-heading,
+.flavor-custom-section .hs-heading {
+  color: var(--hs-heading, #3d2016) !important;
+  font-weight: 800 !important;
+}
+
+.flavor-collections-section .hs-body-sub,
+.flavor-signature-section .hs-body-sub,
+.flavor-ingredients-section .hs-body-sub,
+.flavor-custom-section .hs-body-sub {
+  color: var(--hs-body, #5a3a22) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+}
+
+/* Brown & Dark Sections: crisp pure white outline & high-contrast text */
+.flavor-hero-wrapper .outline-word,
+.flavor-mood-section .outline-word,
+.flavor-cta-section .outline-word,
+.flavor-cta-headline .outline-word {
+  -webkit-text-stroke: 2.2px #FFFFFF !important;
+  text-stroke: 2.2px #FFFFFF !important;
+  color: transparent !important;
+}
+
+.flavor-mood-section .hs-eyebrow,
+.flavor-cta-section .hs-eyebrow {
+  color: var(--peach-accent, #F5C18F) !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.flavor-mood-section .hs-heading,
+.flavor-cta-section .hs-heading,
+.flavor-cta-section .flavor-cta-headline {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+.flavor-mood-section .hs-body-sub,
+.flavor-cta-section .flavor-cta-desc {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   1. HERO SECTION (Caramel Brown Canvas matching Home 1)
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavor-hero-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: calc(100dvh + 2rem);
+  padding-top: 90px; /* space for fixed navbar */
+  padding-bottom: 3.5rem;
+  background-color: var(--primary-brown, #98633A);
+  background-image: 
+    radial-gradient(circle at 18% 28%, rgba(185, 130, 88, 0.32) 0%, transparent 55%),
+    radial-gradient(circle at 82% 82%, rgba(96, 61, 41, 0.45) 0%, transparent 65%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.flavor-hero-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 38%, rgba(96, 61, 41, 0.28) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.flavor-hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.25rem 3rem 4rem;
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  align-items: center;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 3;
+}
+
+.flavor-hero-content {
+  color: #FFFFFF;
+}
+
+.flavor-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--peach-accent, #F5C18F);
+  margin-bottom: 1.25rem;
+}
+
+.flavor-hero-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--peach-accent, #F5C18F);
+  display: inline-block;
+}
+
+.flavor-hero-headline {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 1.15rem;
+}
+
+.flavor-hero-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 560px;
+  margin-bottom: 2.25rem;
+}
+
+.flavor-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-explore-main {
+  background: #FFFFFF;
+  color: #603D29;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.88rem 2.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.28s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-explore-main:hover {
+  background: var(--peach-accent, #F5C18F);
+  color: #3d2016;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.btn-mood-secondary {
+  background: transparent;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  border: 1.8px solid rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: all 0.28s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-mood-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+/* Hero Visual with Organic SVG Blob Mask */
+.flavor-hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  justify-self: center;
+  align-self: center;
+  transform: none;
+}
+
+.flavor-hero-svg-mask {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.28));
+  overflow: visible;
+}
+
+.flavor-peach-ribbon {
+  fill: none;
+  stroke: var(--peach-accent, #F5C18F);
+  stroke-width: 3.5;
+  stroke-dasharray: 8 6;
+  opacity: 0.85;
+}
+
+.hero-flavour-badge {
+  position: absolute;
+  bottom: 8%;
+  left: 2%;
+  background: #603D29;
+  color: var(--peach-accent, #F5C18F);
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  border: 1.8px solid var(--peach-accent, #F5C18F);
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   2. FLAVOUR COLLECTIONS (6 Category Cards on Cream)
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavor-collections-section {
+  padding: 7rem 0;
+  background-color: var(--hs-bg, #F4EBDD);
+  position: relative;
+  overflow: hidden;
+}
+
+.flavor-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  margin-top: 3.5rem;
+}
+
+.flavor-cat-card {
+  background: var(--hs-card-bg, #FFFFFF);
+  border: 1.5px solid var(--hs-card-border, rgba(185, 130, 88, 0.22));
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(96, 61, 41, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.flavor-cat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(96, 61, 41, 0.16);
+  border-color: rgba(185, 130, 88, 0.45);
+}
+
+.flavor-cat-img-box {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.flavor-cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.flavor-cat-card:hover .flavor-cat-img {
+  transform: scale(1.08);
+}
+
+.flavor-cat-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #603D29;
+  color: var(--peach-accent, #F5C18F);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--peach-accent, #F5C18F);
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+[dir="rtl"] .flavor-cat-tag {
+  left: auto;
+  right: 1rem;
+}
+
+.flavor-cat-body {
+  padding: 1.85rem 1.6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.flavor-cat-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--hs-heading, #3d2016);
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.flavor-cat-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--hs-body, #5a3a22);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.flavor-cat-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--hs-primary, #98633A);
+  text-decoration: none;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.flavor-cat-explore:hover {
+  color: #3d2016;
+  gap: 0.75rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   3. OUR SIGNATURE FLAVOURS (Interactive 4-Card Showcase Inspired by Reference)
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavor-signature-section {
+  padding: 7rem 0 7.5rem;
+  background-color: var(--hs-bg-alt, #FFFFFF);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft Pastel Oval Background Accent (matches reference design) */
+.flavor-sig-oval-bg {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 620px;
+  max-width: 92vw;
+  height: 300px;
+  background: radial-gradient(ellipse at center, rgba(245, 193, 143, 0.45) 0%, rgba(244, 235, 221, 0.28) 60%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(16px);
+}
+
+[data-theme="dark"] .flavor-sig-oval-bg {
+  background: radial-gradient(ellipse at center, rgba(245, 193, 143, 0.12) 0%, rgba(96, 61, 41, 0.22) 60%, transparent 100%);
+}
+
+.flavor-sig-container {
+  position: relative;
+  z-index: 2;
+}
+
+.flavor-sig-track-wrap {
+  position: relative;
+  margin-top: 2.75rem;
+  width: 100%;
+}
+
+.flavor-sig-cards-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.5rem 0.5rem 2.5rem;
+  transition: all 0.4s ease;
+  overflow: visible;
+}
+
+/* Base Inactive Card Styling */
+.flavor-sig-card {
+  position: relative;
+  flex: 0 0 205px;
+  max-width: 215px;
+  min-height: 380px;
+  background: #FFFFFF;
+  border: 1px solid rgba(96, 61, 41, 0.12);
+  border-radius: 28px;
+  box-shadow: 0 16px 42px rgba(96, 61, 41, 0.10);
+  padding: 10rem 1.15rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: flex 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              min-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s ease,
+              border-color 0.4s ease,
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  z-index: 2;
+}
+
+/* Hover on inactive card creates a gentle rise */
+.flavor-sig-card:not(.active):hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 130, 88, 0.45);
+  box-shadow: 0 16px 40px rgba(96, 61, 41, 0.15);
+}
+
+/* Active Highlighted Center Card (matches reference design) */
+.flavor-sig-card.active {
+  flex: 0 0 350px;
+  max-width: 360px;
+  min-height: 590px;
+  background: #FFFFFF;
+  border: 1px solid rgba(96, 61, 41, 0.14);
+  border-radius: 34px;
+  box-shadow: 0 30px 70px rgba(74, 43, 26, 0.20), 0 10px 28px rgba(96, 61, 41, 0.10);
+  padding: 12.25rem 1.35rem 1.35rem;
+  transform: translateY(-12px) scale(1.02);
+  z-index: 10;
+  cursor: default;
+}
+
+/* Card 3: Ceremonial Matcha Velvet custom green-tint gradient matching reference active card */
+.flavor-sig-card.active[data-id="matcha-velvet"] {
+  background: #FFFFFF;
+  border-color: rgba(96, 61, 41, 0.14);
+  box-shadow: 0 30px 70px rgba(74, 43, 26, 0.20), 0 10px 28px rgba(96, 61, 41, 0.10);
+}
+
+[data-theme="dark"] .flavor-sig-card:not(.active) {
+  background: #FFFFFF;
+  border-color: rgba(245, 193, 143, 0.24);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .flavor-sig-card.active {
+  background: #FFFFFF;
+  border-color: rgba(245, 193, 143, 0.4);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .flavor-sig-card.active[data-id="matcha-velvet"] {
+  background: linear-gradient(165deg, #1F361E 0%, #101E0F 100%);
+  border-color: rgba(168, 222, 164, 0.4);
+}
+
+/* Image Wrap */
+.flavor-sig-img-container {
+  position: absolute;
+  top: -3.25rem;
+  left: 50%;
+  width: 100%;
+  height: 190px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.flavor-sig-img-box {
+  position: relative;
+  width: 150px;
+  height: 190px;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-radius 0.45s ease,
+              box-shadow 0.45s ease;
+}
+
+.flavor-sig-card.active .flavor-sig-img-box {
+  width: 250px;
+  height: 280px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.flavor-sig-card.active .flavor-sig-img-container {
+  top: -6.25rem;
+  height: 280px;
+}
+
+.flavor-sig-drink-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  filter: drop-shadow(0 18px 16px rgba(74, 43, 26, 0.22));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flavor-sig-card:hover .flavor-sig-drink-img,
+.flavor-sig-card.active .flavor-sig-drink-img {
+  transform: scale(1.08);
+}
+
+/* Badge (Tag) */
+.flavor-sig-card-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--peach-accent, #F5C18F);
+  color: #603D29;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  z-index: 3;
+}
+
+[dir="rtl"] .flavor-sig-card-badge {
+  right: auto;
+  left: -8px;
+}
+
+/* Normal View Content (for inactive cards) */
+.flavor-sig-normal-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  transition: opacity 0.25s ease;
+}
+
+.flavor-sig-card.active .flavor-sig-normal-view {
+  display: none;
+  opacity: 0;
+}
+
+.flavor-sig-title-normal {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--hs-heading, #3d2016);
+  margin-bottom: 0.4rem;
+}
+
+.flavor-sig-price-normal {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--hs-primary, #98633A);
+}
+
+.flavor-sig-desc-normal {
+  max-width: 155px;
+  margin: 0.85rem auto 0;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: rgba(96, 61, 41, 0.68);
+}
+
+.flavor-sig-explore-normal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.15rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(96, 61, 41, 0.18);
+  border-radius: 999px;
+  color: #603D29;
+  background: #FFF9F4;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.flavor-sig-card:not(.active):hover .flavor-sig-explore-normal {
+  background: #603D29;
+  color: #FFFFFF;
+  border-color: #603D29;
+}
+
+[data-theme="dark"] .flavor-sig-price-normal {
+  color: var(--peach-accent, #F5C18F);
+}
+
+/* Active View Content (for highlighted card) */
+.flavor-sig-active-view {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flavor-sig-card.active .flavor-sig-active-view {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  animation: sipFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Top Nav Chevrons inside the Active Card */
+.flavor-sig-card-nav-bar {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.flavor-sig-arrow-btn {
+  pointer-events: auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.flavor-sig-arrow-btn:hover {
+  background: var(--peach-accent, #F5C18F);
+  color: #603D29;
+  border-color: var(--peach-accent, #F5C18F);
+  transform: scale(1.12);
+}
+
+.flavor-sig-arrow-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Active Heading & Price */
+.flavor-sig-title-active {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.22;
+  color: #603D29;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+[dir="rtl"] .flavor-sig-title-active { text-align: right; }
+
+.flavor-sig-desc-active {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(96, 61, 41, 0.72);
+  margin-bottom: 0.85rem;
+  text-align: left;
+}
+[dir="rtl"] .flavor-sig-desc-active { text-align: right; }
+
+.flavor-sig-price-active-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.95rem;
+}
+
+.flavor-sig-price-active {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #B27A46;
+}
+
+.flavor-sig-cal-active {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(96, 61, 41, 0.58);
+}
+
+/* Customization Options Box (matching reference layout) */
+.flavor-sig-options-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  background: #FFF9F4;
+  border-radius: 18px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid rgba(96, 61, 41, 0.10);
+}
+
+.flavor-sig-option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.flavor-sig-option-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #603D29;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  flex-shrink: 0;
+}
+
+.flavor-sig-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 175px;
+}
+
+.flavor-sig-custom-select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(96, 61, 41, 0.18);
+  color: #603D29;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.25rem 1.4rem 0.25rem 0.35rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+  text-align-last: right;
+}
+
+.flavor-sig-custom-select:focus {
+  border-bottom-color: var(--peach-accent, #F5C18F);
+}
+
+.flavor-sig-custom-select option {
+  background: #FFFFFF;
+  color: #603D29;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+}
+
+.flavor-sig-select-chevron {
+  position: absolute;
+  right: 0.3rem;
+  pointer-events: none;
+  color: var(--peach-accent, #F5C18F);
+  font-size: 0.7rem;
+}
+
+[dir="rtl"] .flavor-sig-custom-select {
+  text-align-last: left;
+  padding: 0.25rem 0.35rem 0.25rem 1.4rem;
+}
+
+[dir="rtl"] .flavor-sig-select-chevron {
+  right: auto;
+  left: 0.3rem;
+}
+
+/* "ADD TO BASKET" Pill Button (Directly matching reference design) */
+.flavor-sig-btn-add {
+  width: 100%;
+  background: #603D29;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.flavor-sig-btn-add:hover {
+  background: var(--peach-accent, #F5C18F);
+  color: #603D29;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 193, 143, 0.45);
+}
+
+.flavor-sig-btn-add:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Tablet & Mobile Navigation Arrows */
+.flavor-sig-nav-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #603D29;
+  color: #FFFFFF;
+  border: 1.5px solid var(--peach-accent, #F5C18F);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.flavor-sig-nav-arrow:hover {
+  background: var(--peach-accent, #F5C18F);
+  color: #603D29;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.flavor-sig-nav-prev { left: 0.25rem; }
+.flavor-sig-nav-next { right: 0.25rem; }
+
+/* Toast alert for Add to Basket */
+.flavor-cart-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #603D29;
+  color: #FFFFFF;
+  border: 1.5px solid var(--peach-accent, #F5C18F);
+  border-radius: 16px;
+  padding: 0.9rem 1.5rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.flavor-cart-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+[dir="rtl"] .flavor-cart-toast {
+  right: auto;
+  left: 2rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   4. CHOOSE YOUR FLAVOUR MOOD (Interactive on Brown)
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavor-mood-section {
+  padding: 7rem 0;
+  background-color: var(--primary-brown, #98633A);
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.flavor-mood-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-top: 3.5rem;
+}
+
+.mood-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(245, 193, 143, 0.25);
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mood-card:hover,
+.mood-card.active {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--peach-accent, #F5C18F);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.mood-card.active::after {
+  content: 'SELECTED';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--peach-accent, #F5C18F);
+  color: #3d2016;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  z-index: 3;
+}
+
+[dir="rtl"] .mood-card.active::after {
+  right: auto;
+  left: 1rem;
+}
+
+.mood-img-box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mood-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.mood-card:hover .mood-img,
+.mood-card.active .mood-img {
+  transform: scale(1.08);
+}
+
+.mood-card-body {
+  padding: 1.6rem 1.4rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mood-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--peach-accent, #F5C18F);
+  margin-bottom: 0.4rem;
+}
+
+.mood-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.55rem;
+}
+
+.mood-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.mood-recommend {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(245, 193, 143, 0.28);
+  border-radius: 14px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.82rem;
+  color: var(--peach-accent, #F5C18F);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Mood Live Reveal Box below grid */
+.mood-live-box {
+  margin-top: 3.5rem;
+  background: rgba(0, 0, 0, 0.26);
+  border: 2px solid var(--peach-accent, #F5C18F);
+  border-radius: 26px;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+}
+
+.mood-live-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mood-live-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--peach-accent, #F5C18F);
+}
+
+.mood-live-headline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.mood-live-sub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 650px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   5. INGREDIENTS BEHIND THE FLAVOUR (Editorial Asymmetric on Cream)
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavor-ingredients-section {
+  padding: 7rem 0;
+  background-color: var(--hs-bg, #F4EBDD);
+  position: relative;
+  overflow: hidden;
+}
+
+.ingredients-grid-wrap {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 3.5rem;
+}
+
+.ing-main-visual {
+  position: relative;
+  width: 100%;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 24px 65px rgba(96, 61, 41, 0.16);
+  border: 2px solid rgba(185, 130, 88, 0.25);
+}
+
+.ing-main-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.ing-floating-quote {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: rgba(96, 61, 41, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1.25rem 1.6rem;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 193, 143, 0.35);
+  color: #FFFFFF;
+}
+
+.ing-floating-quote p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ing-floating-quote strong {
+  color: var(--peach-accent, #F5C18F);
+}
+
+.ingredients-cards-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.ing-mini-card {
+  background: var(--hs-card-bg, #FFFFFF);
+  border: 1.5px solid var(--hs-card-border, rgba(185, 130, 88, 0.22));
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(96, 61, 41, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.32s ease;
+}
+
+.ing-mini-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(96, 61, 41, 0.14);
+  border-color: rgba(185, 130, 88, 0.45);
+}
+
+.ing-mini-img-box {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+
+.ing-mini-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ing-mini-card:hover .ing-mini-img {
+  transform: scale(1.08);
+}
+
+.ing-mini-body {
+  padding: 1.25rem 1.15rem 1.4rem;
+}
+
+.ing-mini-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--hs-heading, #3d2016);
+  margin-bottom: 0.35rem;
+}
+
+.ing-mini-desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--hs-body, #5a3a22);
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   6. CREATE YOUR OWN FLAVOUR EXPERIENCE (Customize Promo on White)
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavor-custom-section {
+  padding: 7rem 0;
+  background-color: var(--hs-bg-alt, #FFFFFF);
+  position: relative;
+  overflow: hidden;
+}
+
+.flavor-custom-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 3.5rem;
+}
+
+.custom-step-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.custom-step-pill {
+  background: var(--hs-bg, #F4EBDD);
+  border: 1.5px solid rgba(185, 130, 88, 0.25);
+  border-radius: 20px;
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.28s ease;
+}
+
+.custom-step-pill:hover {
+  background: #FFF7ED;
+  border-color: var(--hs-primary, #98633A);
+  transform: translateX(6px);
+}
+
+[dir="rtl"] .custom-step-pill:hover {
+  transform: translateX(-6px);
+}
+
+.custom-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--hs-primary, #98633A);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.custom-step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-step-title {
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--hs-heading, #3d2016);
+}
+
+.custom-step-desc {
+  font-size: 0.85rem;
+  color: var(--hs-body, #5a3a22);
+}
+
+.custom-drink-visual-wrap {
+  position: relative;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(96, 61, 41, 0.18);
+  border: 3px solid rgba(185, 130, 88, 0.35);
+}
+
+.custom-drink-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   7. FINAL CTA SECTION (Caramel Brown on Bottom)
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavor-cta-section {
+  padding: 7.5rem 0;
+  background-color: var(--primary-brown, #98633A);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(185, 130, 88, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 85% 80%, rgba(96, 61, 41, 0.4) 0%, transparent 60%);
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.flavor-cta-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 3;
+}
+
+.flavor-cta-headline {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 1.15rem;
+}
+
+.flavor-cta-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 2.25rem;
+  max-width: 560px;
+}
+
+.flavor-cta-img-wrap {
+  position: relative;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(245, 193, 143, 0.35);
+  height: 420px;
+}
+
+.flavor-cta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.flavor-cta-img-wrap:hover .flavor-cta-img {
+  transform: scale(1.05);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES
+   ══════════════════════════════════════════════════════════════════════════ */
+[data-theme="dark"] .outline-word {
+  -webkit-text-stroke: 2.2px var(--peach-accent, #F5C18F) !important;
+  text-stroke: 2.2px var(--peach-accent, #F5C18F) !important;
+  color: transparent !important;
+}
+
+[data-theme="dark"] .flavor-hero-wrapper {
+  background-color: #241208;
+}
+
+[data-theme="dark"] .flavor-collections-section,
+[data-theme="dark"] .flavor-ingredients-section {
+  background-color: #1E0D05;
+}
+
+[data-theme="dark"] .flavor-signature-section,
+[data-theme="dark"] .flavor-custom-section {
+  background-color: #2A170B;
+}
+
+[data-theme="dark"] .flavor-mood-section,
+[data-theme="dark"] .flavor-cta-section {
+  background-color: #1a0c05;
+}
+
+[data-theme="dark"] .flavor-cat-card,
+[data-theme="dark"] .flavor-sig-card,
+[data-theme="dark"] .ing-mini-card {
+  border-color: rgba(245, 193, 143, 0.2);
+}
+
+[data-theme="dark"] .flavor-sig-card {
+  background: #FFFFFF;
+}
+
+[data-theme="dark"] .ing-mini-card {
+  background: #2C1A0E;
+}
+
+[data-theme="dark"] .flavor-cat-title,
+[data-theme="dark"] .flavor-sig-title,
+[data-theme="dark"] .ing-mini-title,
+[data-theme="dark"] .custom-step-title {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .flavor-cat-desc,
+[data-theme="dark"] .flavor-sig-desc,
+[data-theme="dark"] .ing-mini-desc,
+[data-theme="dark"] .custom-step-desc {
+  color: rgba(245, 193, 143, 0.85) !important;
+}
+
+[data-theme="dark"] .custom-step-pill {
+  background: #2C1A0E;
+  border-color: rgba(245, 193, 143, 0.22);
+}
+
+[data-theme="dark"] .custom-step-pill:hover {
+  background: #392213;
+  border-color: var(--peach-accent, #F5C18F);
+}
+
+[data-theme="dark"] .hs-heading,
+[data-theme="dark"] .flavor-collections-section .hs-heading,
+[data-theme="dark"] .flavor-signature-section .hs-heading,
+[data-theme="dark"] .flavor-ingredients-section .hs-heading,
+[data-theme="dark"] .flavor-custom-section .hs-heading {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .hs-eyebrow,
+[data-theme="dark"] .flavor-collections-section .hs-eyebrow,
+[data-theme="dark"] .flavor-signature-section .hs-eyebrow,
+[data-theme="dark"] .flavor-ingredients-section .hs-eyebrow,
+[data-theme="dark"] .flavor-custom-section .hs-eyebrow {
+  color: var(--peach-accent, #F5C18F) !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS (Desktop, Tablet, Mobile)
+   ══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .flavor-collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .flavor-sig-cards-row {
+    gap: 1.25rem;
+  }
+  .flavor-sig-card {
+    flex: 0 0 190px;
+    max-width: 200px;
+  }
+  .flavor-sig-card.active {
+    flex: 0 0 330px;
+    max-width: 340px;
+  }
+  .flavor-mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .flavor-hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 1rem 2rem 3rem;
+  }
+  .flavor-hero-visual {
+    max-width: 500px;
+    justify-self: center;
+    transform: none;
+  }
+  .flavor-sig-track-wrap {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 0 1rem 1.5rem;
+  }
+  .flavor-sig-nav-arrow {
+    display: flex;
+  }
+  .flavor-sig-cards-row {
+    justify-content: flex-start;
+    padding: 1rem 1rem 2rem;
+    width: max-content;
+  }
+  .flavor-sig-card {
+    scroll-snap-align: center;
+  }
+  .flavor-sig-card.active {
+    flex: 0 0 320px;
+    max-width: 330px;
+    min-height: 560px;
+  }
+  .ingredients-grid-wrap,
+  .flavor-custom-grid,
+  .flavor-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .ing-main-img {
+    height: 380px;
+  }
+  .custom-drink-img {
+    height: 380px;
+  }
+  .mood-live-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .flavor-collections-section,
+  .flavor-signature-section,
+  .flavor-mood-section,
+  .flavor-ingredients-section,
+  .flavor-custom-section,
+  .flavor-cta-section {
+    padding: 4.5rem 0;
+  }
+  .flavor-hero-container {
+    padding: 0.5rem 1.25rem 2.5rem;
+  }
+  .flavor-hero-wrapper {
+    padding-top: 70px; /* reduced on mobile */
+  }
+  .flavor-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .flavor-hero-buttons a {
+    justify-content: center;
+  }
+  .flavor-collections-grid,
+  .flavor-mood-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .flavor-sig-card.active {
+    flex: 0 0 290px;
+    max-width: 300px;
+    min-height: 540px;
+    padding: 10.5rem 1.15rem 1.35rem;
+  }
+  .flavor-sig-card.active .flavor-sig-img-box {
+    width: 220px;
+    height: 250px;
+  }
+  .flavor-sig-card.active .flavor-sig-img-container {
+    top: -5.5rem;
+    height: 250px;
+  }
+  .flavor-sig-title-active {
+    font-size: 1.2rem;
+  }
+  .flavor-sig-btn-add {
+    padding: 0.78rem 1.25rem;
+    font-size: 0.86rem;
+  }
+  .ingredients-cards-column {
+    grid-template-columns: 1fr;
+  }
+  .ing-main-img {
+    height: 300px;
+  }
+  .custom-drink-img {
+    height: 320px;
+  }
+  .flavor-cta-img-wrap {
+    height: 300px;
+  }
+}

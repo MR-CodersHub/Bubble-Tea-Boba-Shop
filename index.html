@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUBBLE & BREW | Handcrafted Bubble Tea & Boba Shop</title>
+
+  <!-- Google Fonts: Poppins (Weights 300, 400, 500, 600, 700, 800) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/home-sections.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+  <!-- REUSABLE NAVBAR COMPONENT (Fixed at top — shared component via components/navbar.js) -->
+  <div id="navbar-container"></div>
+
+  <!-- =========================================================================
+       HERO WRAPPER (Full-screen Caramel Brown Canvas 100vh)
+       ========================================================================= -->
+  <main class="hero-wrapper" id="homeHero">
+
+    <!-- FLOATING DECORATIVE OUTLINED BUBBLES -->
+    <div class="floating-circle circle-1" aria-hidden="true"></div>
+    <div class="floating-circle circle-2" aria-hidden="true"></div>
+    <div class="floating-circle circle-3" aria-hidden="true"></div>
+    <div class="floating-circle circle-4" aria-hidden="true"></div>
+    <div class="floating-circle circle-5" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="top:82%;left:38%;animation-delay:-2.5s;"
+      aria-hidden="true"></div>
+
+    <!-- HERO FLOATING DECORATIVE ELEMENTS -->
+    <div class="hs-decor hs-pearl hs-pearl-lg" style="top:22%;right:6%;" aria-hidden="true"></div>
+    <div class="hs-decor hs-pearl hs-pearl-sm" style="top:58%;right:36%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-pearl-cluster" style="bottom:22%;left:44%;animation-delay:-3.2s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach hs-pearl-sm"></div>
+      <div class="hs-pearl hs-pearl-sm"></div>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="top:18%;left:36%;animation-delay:-1.8s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:16%;right:42%;animation-delay:-1s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:22%;right:10%;animation-delay:-3s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+        <path d="M12 22V2" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-dot" style="top:74%;right:26%;animation-delay:-1.5s;" aria-hidden="true"></div>
+
+    <!-- =======================================================================
+         NAVBAR (now fixed at top of body — see above)
+         ======================================================================= -->
+
+    <!-- =======================================================================
+         2. HERO BODY (Split Composition: Text on LEFT, Organic Image on RIGHT)
+         ======================================================================= -->
+    <section class="hero-body">
+
+      <!-- LEFT SIDE: Content (Eyebrow, Outlined Heading, Subtitle, Description, Size, CTA) -->
+      <div class="hero-content-left fade-in-left">
+
+        <!-- Eyebrow text -->
+        <div class="hero-eyebrow" id="heroEyebrow">
+          <span class="hero-eyebrow-dot"></span> CRAFTED WITH LOVE • BREWED FRESH
+        </div>
+
+        <!-- Main Heading (Bold white letters, "Bubble" outlined with white stroke) -->
+        <h1 class="hero-headline" id="heroHeadline">
+          Enjoy <span class="outlined-word">Bubble</span> Tea in Every Moment
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 class="hero-subtitle" id="heroSubtitle">
+          Exceptional Aroma Bubble Tea
+        </h2>
+
+        <!-- Description -->
+        <p class="hero-description" id="heroDescription">
+          Discover the delightful taste of freshly brewed tea, creamy milk and perfectly chewy pearls. Every cup is
+          crafted to bring happiness to your day.
+        </p>
+
+        <!-- Interactive Size Selection & Hand-Drawn Cup Illustration Row -->
+        <div class="hero-interaction-row">
+
+          <!-- Size Selection Area -->
+          <div class="size-selector-wrap">
+            <span class="size-label">Size:</span>
+            <div class="size-options">
+
+              <!-- Medium Option -->
+              <div class="size-radio-item selected" data-size="Medium" role="radio" aria-checked="true" tabindex="0">
+                <span class="custom-radio"></span>
+                <span>Medium</span>
+              </div>
+
+              <!-- Small Option -->
+              <div class="size-radio-item" data-size="Small" role="radio" aria-checked="false" tabindex="0">
+                <span class="custom-radio"></span>
+                <span>Small</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Hand-Drawn Bubble Tea Cup Illustration with sparks and speech bubble -->
+          <div class="cup-doodle-container" aria-hidden="true" title="Hand-drawn tea doodle">
+            <svg class="doodle-svg" viewBox="0 0 110 110" fill="none" stroke="#FFFFFF" stroke-linecap="round"
+              stroke-linejoin="round">
+              <!-- Speech Bubble doodle -->
+              <path d="M20 28C20 18 28 12 40 12C52 12 60 18 60 28C60 34 56 39 48 42L45 52L40 44C30 43 20 37 20 28Z" />
+              <!-- Three spark rays -->
+              <line x1="82" y1="20" x2="90" y2="14" stroke-width="2" />
+              <line x1="90" y1="26" x2="98" y2="24" stroke-width="2" />
+              <line x1="88" y1="36" x2="96" y2="38" stroke-width="2" />
+              <!-- Cup with straw -->
+              <path d="M42 56L48 94C48.3 96.5 50.5 98 53 98H71C73.5 98 75.7 96.5 76 94L82 56" stroke-width="2.2" />
+              <path d="M38 56H86" stroke-width="2.2" />
+              <path d="M44 56C44 47 50 42 62 42C74 42 80 47 80 56" stroke-width="2.2" />
+              <!-- Straw -->
+              <line x1="62" y1="42" x2="62" y2="28" stroke-width="2.5" />
+              <!-- Excitement squiggles -->
+              <path d="M88 72Q94 76 88 80Q94 84 88 88" stroke-width="1.8" />
+              <path d="M36 78Q30 82 36 86" stroke-width="1.8" />
+            </svg>
+          </div>
+
+        </div>
+
+        <!-- CTA Buttons (Read More & Order Now) -->
+        <div class="hero-cta-group">
+          <!-- 1. Read More (White background, brown text) -->
+          <button class="btn-read-more" id="readMoreBtn">Read More</button>
+
+          <!-- 2. Order Now (Peach background, dark brown text) -->
+          <button class="btn-order-now" id="orderNowBtn">Order Now</button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE: Organic Masked Bubble Tea Photography + Peach Ribbon Divider -->
+      <div class="hero-visual-right" id="heroVisualRight">
+        <svg class="organic-svg-container" viewBox="0 0 1000 700" preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <!-- Organic curved mask mirrored on the right side - Expanded to cover center -->
+            <clipPath id="heroOrganicClipRight">
+              <path
+                d="M 180,0 L 1000,0 L 1000,700 L 1000,600 C 880,630 760,560 620,555 C 480,550 350,600 310,490 C 275,380 360,330 350,240 C 340,150 200,120 180,0 Z" />
+            </clipPath>
+          </defs>
+
+          <!-- Large High Quality Bubble Tea Image covering empty center -->
+          <g clip-path="url(#heroOrganicClipRight)">
+            <image id="carouselSvgImg" class="carousel-image" href="https://i.pinimg.com/736x/72/27/ea/7227ea762d101640d6e2267d062969d1.jpg"
+              xlink:href="https://i.pinimg.com/736x/72/27/ea/7227ea762d101640d6e2267d062969d1.jpg" x="0" y="0" width="1000" height="700"
+              preserveAspectRatio="xMidYMid slice" />
+          </g>
+
+          <!-- Peach Ribbon Ambient Glow -->
+          <path class="peach-ribbon-glow"
+            d="M 180,-5 C 200,120 340,150 350,240 C 360,330 275,380 310,490 C 350,600 480,550 620,555 C 760,560 880,630 1005,600" />
+
+          <!-- Decorative Peach-colored Organic Curved Border Ribbon -->
+          <path class="peach-ribbon-path"
+            d="M 180,-5 C 200,120 340,150 350,240 C 360,330 275,380 310,490 C 350,600 480,550 620,555 C 760,560 880,630 1005,600" />
+        </svg>
+
+        <!-- Hand-Drawn Cup Doodle Bottom-Right (under the wavy peach line) -->
+        <div class="cup-doodle-bottom-right" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <!-- Tilted Cup -->
+            <path d="M38 42L44 86C44.3 88.5 46.5 90 49 90H63C65.5 90 67.7 88.5 68 86L74 42" />
+            <path d="M34 42H78" />
+            <path d="M40 42C40 33 46 26 56 26C66 26 72 33 72 42" />
+            <!-- Straw -->
+            <line x1="56" y1="26" x2="56" y2="12" />
+            <!-- Speech Bubble Doodle -->
+            <path d="M22 28C22 22 27 18 34 18C41 18 46 22 46 28C46 32 43 35 38 37L35 44L32 37C26 36 22 32 22 28Z"
+              stroke-dasharray="2 3" />
+            <!-- Sparkles & Hearts -->
+            <path d="M80 30L83 26L86 30L90 33L86 36L83 40L80 36L76 33Z" />
+            <path d="M28 62C26 60 22 62 22 66C22 70 28 74 28 74C28 74 34 70 34 66C34 62 30 60 28 62Z" />
+            <line x1="20" y1="48" x2="26" y2="52" />
+            <line x1="18" y1="56" x2="24" y2="58" />
+          </svg>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       HOME 1 — CONTENT SECTIONS (below hero)
+       ========================================================================= -->
+
+  <!-- ═══ SECTION 1: SIGNATURE FLAVOURS ═══════════════════════════════════════ -->
+  <section class="hs-section hs-section-cream" id="flavoursSection" aria-labelledby="flavoursHeading">
+    <!-- Floating Decorative Elements: Outlined Balls (Header Style) -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:6%;left:2%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="bottom:10%;left:5%;animation-delay:-3s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="top:18%;right:3%;animation-delay:-1s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="bottom:22%;right:5%;animation-delay:-4s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-xs" style="top:52%;left:1%;animation-delay:-2.5s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cups (Header Style) -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg" style="top:9%;right:6%;animation-delay:-1.2s;" aria-hidden="true"
+      title="Hand-drawn Boba Cup">
+      <svg viewBox="0 0 110 110" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 28C20 18 28 12 40 12C52 12 60 18 60 28C60 34 56 39 48 42L45 52L40 44C30 43 20 37 20 28Z"
+          stroke-width="2" />
+        <line x1="82" y1="20" x2="90" y2="14" stroke-width="2" />
+        <line x1="90" y1="26" x2="98" y2="24" stroke-width="2" />
+        <line x1="88" y1="36" x2="96" y2="38" stroke-width="2" />
+        <path d="M42 56L48 94C48.3 96.5 50.5 98 53 98H71C73.5 98 75.7 96.5 76 94L82 56" stroke-width="2.2" />
+        <path d="M38 56H86" stroke-width="2.2" />
+        <path d="M44 56C44 47 50 42 62 42C74 42 80 47 80 56" stroke-width="2.2" />
+        <line x1="62" y1="42" x2="62" y2="28" stroke-width="2.5" />
+        <circle cx="53" cy="85" r="3" fill="currentColor" />
+        <circle cx="61" cy="88" r="3" fill="currentColor" />
+        <circle cx="68" cy="84" r="3" fill="currentColor" />
+        <path d="M88 72Q94 76 88 80Q94 84 88 88" stroke-width="1.8" />
+        <path d="M36 78Q30 82 36 86" stroke-width="1.8" />
+      </svg>
+    </div>
+    <div class="hs-doodle-cup hs-doodle-cup-md" style="bottom:7%;left:3%;animation-delay:-2.8s;" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M38 42L44 86C44.3 88.5 46.5 90 49 90H63C65.5 90 67.7 88.5 68 86L74 42" stroke-width="2.2" />
+        <path d="M34 42H78" stroke-width="2.2" />
+        <path d="M40 42C40 33 46 26 56 26C66 26 72 33 72 42" stroke-width="2.2" />
+        <line x1="56" y1="26" x2="56" y2="12" stroke-width="2.5" />
+        <circle cx="50" cy="78" r="3" fill="currentColor" />
+        <circle cx="58" cy="81" r="3" fill="currentColor" />
+        <circle cx="64" cy="76" r="3" fill="currentColor" />
+        <path d="M22 28C22 22 27 18 34 18C41 18 46 22 46 28C46 32 43 35 38 37L35 44L32 37C26 36 22 32 22 28Z"
+          stroke-dasharray="2 3" />
+        <path d="M80 30L83 26L86 30L90 33L86 36L83 40L80 36L76 33Z" />
+        <path d="M28 62C26 60 22 62 22 66C22 70 28 74 28 74C28 74 34 70 34 66C34 62 30 60 28 62Z" stroke-width="1.5" />
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Straws -->
+    <div class="hs-doodle-straw hs-doodle-straw-md" style="top:26%;left:4%;animation-delay:-1.6s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <line x1="45" y1="34" x2="53" y2="38" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+        <circle cx="10" cy="94" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm" style="bottom:18%;right:4%;animation-delay:-3.4s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 72L36 30L56 18" stroke-width="3" />
+        <path d="M24 75L41 35L59 23" stroke-width="3" />
+        <line x1="34" y1="36" x2="39" y2="39" stroke-width="1.8" />
+        <line x1="37" y1="32" x2="42" y2="35" stroke-width="1.8" />
+        <circle cx="56" cy="38" r="2.5" fill="currentColor" />
+        <circle cx="62" cy="46" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+
+    <!-- Tapioca Pearls & Clusters -->
+    <div class="hs-pearl-cluster" style="top:42%;right:3%;animation-delay:-2.2s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-sm"></div>
+    </div>
+    <div class="hs-decor hs-pearl hs-pearl-peach" style="top:22%;right:12%;" aria-hidden="true"></div>
+    <div class="hs-decor hs-pearl hs-pearl-sm" style="bottom:24%;left:2%;animation-delay:-2.5s;" aria-hidden="true">
+    </div>
+
+    <!-- Sparks & Leaves -->
+    <div class="hs-decor hs-sparkle" style="top:7%;left:22%;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:11%;right:20%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="top:32%;left:2%;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+        <path d="M12 22V2" />
+      </svg>
+    </div>
+
+    <!-- Soft Pastel Oval Background (Directly Inspired by Starbucks Reference Design) -->
+    <div class="sip-reference-oval" aria-hidden="true"></div>
+
+    <div class="hs-container sip-showcase-container">
+      <div class="text-center hs-reveal">
+        <span class="hs-eyebrow">A Little Sip of Happiness</span>
+        <h2 class="hs-heading" id="flavoursHeading">Meet Our <span class="outline-word">Signature</span> Flavours</h2>
+        <p class="hs-body mx-auto text-center" style="max-width: 660px;">Every cup has its own personality. Hover over
+          or tap any drink to explore flavors, customize ingredients, and enjoy your perfect sip.</p>
+      </div>
+
+      <!-- Interactive Product Showcase (Inspired by Starbucks Reference UI) -->
+      <div class="sip-showcase-track-wrap" id="sipShowcaseWrap">
+
+        <!-- Side Navigation Arrows (Tablet / Mobile Carousel) -->
+        <button class="sip-nav-arrow sip-nav-prev" id="sipNavPrev" aria-label="Previous Drink">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+          </svg>
+        </button>
+
+        <!-- Product Cards Row (5 Distinct Handcrafted Drinks) -->
+        <div class="sip-cards-row" id="sipCardsRow" role="region" aria-label="Signature Drinks Showcase">
+
+          <!-- ── CARD 1: Brown Sugar Boba Milk Tea ── -->
+          <article class="sip-card" data-index="0" data-id="brown-sugar" data-base-price="149" tabindex="0"
+            role="button" aria-label="Brown Sugar Boba Milk Tea">
+            <div class="sip-img-container">
+              <span class="sip-badge">&#9733; Bestseller</span>
+              <div class="sip-img-box">
+                <img src="images/brown.png" alt="Brown Sugar Boba Milk Tea" class="sip-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="sip-normal-view">
+              <h3 class="sip-title-normal">Brown Sugar Boba</h3>
+              <span class="sip-price-normal">&#8377;149</span>
+              <p class="sip-desc-normal">Caramelized brown sugar, fresh milk and warm chewy boba.</p>
+              <span class="sip-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View (matches reference design) -->
+            <div class="sip-active-view">
+              <div class="sip-card-nav-bar">
+                <button type="button" class="sip-card-arrow-btn sip-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <button type="button" class="sip-card-arrow-btn sip-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                  </svg>
+                </button>
+              </div>
+
+              <h3 class="sip-title-active">Brown Sugar Boba</h3>
+              <p class="sip-desc-active">Rich Taiwanese brown sugar syrup slow-simmered with organic milk & chewy warm
+                boba.</p>
+
+              <div class="sip-price-active-wrap">
+                <span class="sip-price-active" data-role="display-price">&#8377;149</span>
+                <span class="sip-cal-active">• 340 kcal</span>
+              </div>
+
+              <!-- Customization Controls matching reference -->
+              <div class="sip-options-box">
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Size</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Milk</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Drink</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-temp" aria-label="Select temperature">
+                      <option value="Iced" selected>Iced Boba</option>
+                      <option value="Hot">Warm / Hot</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="sip-btn-add-cart" aria-label="Add Brown Sugar Boba to Cart">
+                <span>Add to Cart</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ── CARD 2: Classic Pearl Milk Tea ── -->
+          <article class="sip-card" data-index="1" data-id="classic-pearl" data-base-price="119" tabindex="0"
+            role="button" aria-label="Classic Pearl Milk Tea">
+            <div class="sip-img-container">
+              <span class="sip-badge" style="background:#603D29;color:#F5C18F;">Fan Favourite</span>
+              <div class="sip-img-box">
+                <img src="images/black.png" alt="Classic Pearl Milk Tea" class="sip-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="sip-normal-view">
+              <h3 class="sip-title-normal">Classic Pearl Tea</h3>
+              <span class="sip-price-normal">&#8377;119</span>
+              <p class="sip-desc-normal">Smooth black tea, creamy milk and signature tapioca pearls.</p>
+              <span class="sip-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View -->
+            <div class="sip-active-view">
+              <div class="sip-card-nav-bar">
+                <button type="button" class="sip-card-arrow-btn sip-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <button type="button" class="sip-card-arrow-btn sip-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                  </svg>
+                </button>
+              </div>
+
+              <h3 class="sip-title-active">Classic Pearl Tea</h3>
+              <p class="sip-desc-active">Traditional Sun Moon Lake black tea with velvety whole milk & signature bouncy
+                boba pearls.</p>
+
+              <div class="sip-price-active-wrap">
+                <span class="sip-price-active" data-role="display-price">&#8377;119</span>
+                <span class="sip-cal-active">• 290 kcal</span>
+              </div>
+
+              <!-- Customization Controls -->
+              <div class="sip-options-box">
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Size</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Milk</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Drink</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-temp" aria-label="Select temperature">
+                      <option value="Iced" selected>Iced Boba</option>
+                      <option value="Hot">Warm / Hot</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="sip-btn-add-cart" aria-label="Add Classic Pearl Tea to Cart">
+                <span>Add to Cart</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ── CARD 3: Strawberry Bubble Tea (Default Center Active Card) ── -->
+          <article class="sip-card active" data-index="2" data-id="strawberry-bubble" data-base-price="159"
+            tabindex="0" role="button" aria-label="Strawberry Bubble Tea">
+            <div class="sip-img-container">
+              <span class="sip-badge" style="background:#F5C18F;color:#603D29;">New Crave</span>
+              <div class="sip-img-box">
+                <img src="images/straberry.png" alt="Strawberry Bubble Tea" class="sip-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="sip-normal-view">
+              <h3 class="sip-title-normal">Strawberry Dream</h3>
+              <span class="sip-price-normal">&#8377;159</span>
+              <p class="sip-desc-normal">Sweet strawberry, floral jasmine tea and popping pearls.</p>
+              <span class="sip-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View (Default open in middle) -->
+            <div class="sip-active-view">
+              <div class="sip-card-nav-bar">
+                <button type="button" class="sip-card-arrow-btn sip-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <button type="button" class="sip-card-arrow-btn sip-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                  </svg>
+                </button>
+              </div>
+
+              <h3 class="sip-title-active">Strawberry Dream</h3>
+              <p class="sip-desc-active">Fresh strawberry puree layered over fragrant jasmine green tea, silky milk &
+                popping pearls.</p>
+
+              <div class="sip-price-active-wrap">
+                <span class="sip-price-active" data-role="display-price">&#8377;159</span>
+                <span class="sip-cal-active">• 280 kcal</span>
+              </div>
+
+              <!-- Customization Controls -->
+              <div class="sip-options-box">
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Size</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Milk</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Drink</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-temp" aria-label="Select temperature">
+                      <option value="Iced" selected>Iced Boba</option>
+                      <option value="Hot">Warm / Hot</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="sip-btn-add-cart" aria-label="Add Strawberry Dream to Cart">
+                <span>Add to Cart</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ── CARD 4: Matcha Milk Tea ── -->
+          <article class="sip-card" data-index="3" data-id="matcha-velvet" data-base-price="169" tabindex="0"
+            role="button" aria-label="Matcha Milk Tea">
+            <div class="sip-img-container">
+              <span class="sip-badge" style="background:#5B8A5A;color:#FFFFFF;">Ceremonial</span>
+              <div class="sip-img-box">
+                <img src="images/matcha.png" alt="Matcha Milk Tea" class="sip-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="sip-normal-view">
+              <h3 class="sip-title-normal">Matcha Velvet</h3>
+              <span class="sip-price-normal">&#8377;169</span>
+              <p class="sip-desc-normal">Ceremonial matcha blended with silky milk and tapioca.</p>
+              <span class="sip-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View -->
+            <div class="sip-active-view">
+              <div class="sip-card-nav-bar">
+                <button type="button" class="sip-card-arrow-btn sip-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <button type="button" class="sip-card-arrow-btn sip-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                  </svg>
+                </button>
+              </div>
+
+              <h3 class="sip-title-active">Matcha Velvet</h3>
+              <p class="sip-desc-active">Premium ceremonial Uji matcha whisked fresh and blended with velvety milk &
+                chewy tapioca.</p>
+
+              <div class="sip-price-active-wrap">
+                <span class="sip-price-active" data-role="display-price">&#8377;169</span>
+                <span class="sip-cal-active">• 310 kcal</span>
+              </div>
+
+              <!-- Customization Controls -->
+              <div class="sip-options-box">
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Size</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Milk</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Drink</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-temp" aria-label="Select temperature">
+                      <option value="Iced" selected>Iced Boba</option>
+                      <option value="Hot">Warm / Hot</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="sip-btn-add-cart" aria-label="Add Matcha Velvet to Cart">
+                <span>Add to Cart</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ── CARD 5: Taro Milk Tea ── -->
+          <article class="sip-card" data-index="4" data-id="taro-milk" data-base-price="159" tabindex="0" role="button"
+            aria-label="Taro Milk Tea">
+            <div class="sip-img-container">
+              <span class="sip-badge" style="background:#8C6291;color:#FFFFFF;">Chef's Choice</span>
+              <div class="sip-img-box">
+                <img src="images/taro.png" alt="Taro Milk Tea" class="sip-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="sip-normal-view">
+              <h3 class="sip-title-normal">Taro Bliss</h3>
+              <span class="sip-price-normal">&#8377;159</span>
+              <p class="sip-desc-normal">Creamy taro, sweet milk and soft purple boba pearls.</p>
+              <span class="sip-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View -->
+            <div class="sip-active-view">
+              <div class="sip-card-nav-bar">
+                <button type="button" class="sip-card-arrow-btn sip-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+                  </svg>
+                </button>
+                <button type="button" class="sip-card-arrow-btn sip-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                  </svg>
+                </button>
+              </div>
+
+              <h3 class="sip-title-active">Taro Bliss</h3>
+              <p class="sip-desc-active">Sweet roasted purple taro root purée blended with cream, fragrant tea & honey
+                tapioca pearls.</p>
+
+              <div class="sip-price-active-wrap">
+                <span class="sip-price-active" data-role="display-price">&#8377;159</span>
+                <span class="sip-cal-active">• 320 kcal</span>
+              </div>
+
+              <!-- Customization Controls -->
+              <div class="sip-options-box">
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Size</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Milk</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="sip-option-row">
+                  <span class="sip-option-label">Drink</span>
+                  <div class="sip-select-wrapper">
+                    <select class="sip-custom-select sip-opt-temp" aria-label="Select temperature">
+                      <option value="Iced" selected>Iced Boba</option>
+                      <option value="Hot">Warm / Hot</option>
+                    </select>
+                    <span class="sip-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="sip-btn-add-cart" aria-label="Add Taro Bliss to Cart">
+                <span>Add to Cart</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+              </button>
+            </div>
+          </article>
+
+        </div><!-- /.sip-cards-row -->
+
+        <!-- Right Side Nav Arrow (Tablet / Mobile Carousel) -->
+        <button class="sip-nav-arrow sip-nav-next" id="sipNavNext" aria-label="Next Drink">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+          </svg>
+        </button>
+
+      </div><!-- /.sip-showcase-track-wrap -->
+
+      <!-- Add-to-Cart Toast Notification Feedback -->
+      <div class="sip-cart-toast" id="sipCartToast" role="status" aria-live="polite">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#F5C18F">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+        <span id="sipToastMsg">Added to cart!</span>
+      </div>
+
+      <!-- Section CTA Button -->
+      <div class="flavours-cta-wrap hs-reveal mt-5 text-center">
+        <a href="flavours.html" class="hs-btn-primary">
+          Explore Full Menu <span class="hs-arrow">&#8594;</span>
+        </a>
+      </div>
+
+    </div><!-- /.hs-container -->
+  </section>
+
+
+  <!-- ═══ SECTION 2: FLAVOUR WORLD / CATEGORIES ════════════════════════════════ -->
+  <section class="hs-section hs-section-brown" id="categoriesSection" aria-labelledby="categoriesHeading">
+    <!-- Floating Decorative Elements: Outlined Balls (Header Style) -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:5%;right:4%;animation-delay:-1.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-white" style="bottom:6%;left:3%;animation-delay:-3.5s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="top:32%;left:2%;animation-delay:-2.2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-white" style="bottom:24%;right:5%;animation-delay:-4s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-xs" style="top:60%;right:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cups (Header Style) -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:8%;left:3%;animation-delay:-2.4s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M22 36C22 20 30 14 40 14C50 14 58 20 58 36" stroke-width="2.2" />
+        <path d="M16 36H64" stroke-width="2.5" />
+        <path d="M22 36L27 86C27.5 89 30 91 33 91H47C50 91 52.5 89 53 86L58 36" stroke-width="2.2" />
+        <line x1="40" y1="14" x2="48" y2="2" stroke-width="2.8" />
+        <circle cx="33" cy="78" r="3.5" fill="currentColor" />
+        <circle cx="41" cy="83" r="3.5" fill="currentColor" />
+        <circle cx="48" cy="77" r="3.5" fill="currentColor" />
+        <circle cx="38" cy="70" r="3" fill="currentColor" />
+        <line x1="66" y1="48" x2="73" y2="44" stroke-width="1.8" />
+        <line x1="68" y1="56" x2="75" y2="56" stroke-width="1.8" />
+        <line x1="65" y1="64" x2="72" y2="67" stroke-width="1.8" />
+      </svg>
+    </div>
+    <div class="hs-doodle-cup hs-doodle-cup-lg" style="bottom:6%;right:3%;animation-delay:-1.8s;" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M38 42L44 86C44.3 88.5 46.5 90 49 90H63C65.5 90 67.7 88.5 68 86L74 42" stroke-width="2.2" />
+        <path d="M34 42H78" stroke-width="2.2" />
+        <path d="M40 42C40 33 46 26 56 26C66 26 72 33 72 42" stroke-width="2.2" />
+        <line x1="56" y1="26" x2="56" y2="12" stroke-width="2.5" />
+        <circle cx="50" cy="78" r="3" fill="currentColor" />
+        <circle cx="58" cy="81" r="3" fill="currentColor" />
+        <circle cx="64" cy="76" r="3" fill="currentColor" />
+        <path d="M22 28C22 22 27 18 34 18C41 18 46 22 46 28C46 32 43 35 38 37L35 44L32 37C26 36 22 32 22 28Z"
+          stroke-dasharray="2 3" />
+        <path d="M80 30L83 26L86 30L90 33L86 36L83 40L80 36L76 33Z" />
+        <path d="M28 62C26 60 22 62 22 66C22 70 28 74 28 74C28 74 34 70 34 66C34 62 30 60 28 62Z" stroke-width="1.5" />
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Straws -->
+    <div class="hs-doodle-straw hs-doodle-straw-md" style="top:22%;right:7%;animation-delay:-3s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+        <circle cx="10" cy="94" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:18%;left:2%;animation-delay:-1.2s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 72L36 30L56 18" stroke-width="3" />
+        <path d="M24 75L41 35L59 23" stroke-width="3" />
+        <line x1="34" y1="36" x2="39" y2="39" stroke-width="1.8" />
+        <line x1="37" y1="32" x2="42" y2="35" stroke-width="1.8" />
+        <circle cx="56" cy="38" r="2.5" fill="currentColor" />
+        <circle cx="62" cy="46" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+
+    <!-- Tapioca Pearls & Clusters -->
+    <div class="hs-pearl-cluster" style="top:48%;left:3%;animation-delay:-2.5s;" aria-hidden="true">
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl hs-pearl-sm"></div>
+    </div>
+    <div class="hs-decor hs-pearl hs-pearl-peach" style="bottom:7%;left:8%;animation-delay:-2s;" aria-hidden="true">
+    </div>
+    <div class="hs-decor hs-pearl" style="bottom:12%;right:8%;animation-delay:-3.8s;" aria-hidden="true"></div>
+
+    <!-- Sparkles & Leaves -->
+    <div class="hs-decor hs-leaf" style="top:7%;right:12%;animation-delay:-1.5s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+        <path d="M12 22V2" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:14%;left:12%;animation-delay:-2.5s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width:620px;margin:0 auto;">
+        <span class="hs-eyebrow">Find Your Happy Place</span>
+        <h2 class="hs-heading" id="categoriesHeading">There's a <span class="outline-word">Flavour</span> for Every Mood
+        </h2>
+        <p class="hs-body text-center mx-auto" style="color:rgba(255,255,255,.82);">Explore our world of bubble tea by
+          mood, taste and craving. Something delicious is always waiting.</p>
+      </div>
+
+      <!-- Asymmetric Category Grid -->
+      <div class="cat-grid">
+
+        <!-- Cat 1 — tall, spans 2 rows -->
+        <div class="cat-card hs-reveal hs-delay-1" role="article" aria-label="Milk Tea Classics">
+          <div class="cat-card-inner">
+            <img src="images/category_milk_tea.jpg" alt="Two freshly made bubble milk teas" class="cat-img"
+              loading="lazy">
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <h3 class="cat-name">Milk Tea Classics</h3>
+              <p class="cat-desc">The originals that started it all. Rich, creamy and deeply satisfying.</p>
+              <a href="flavours.html" class="cat-link">Explore Flavours <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 2 -->
+        <div class="cat-card hs-reveal hs-delay-2" role="article" aria-label="Fruity Refreshers">
+          <div class="cat-card-inner">
+            <img src="images/cat_smoothie.jpg" alt="Citrus and green iced tea drinks" class="cat-img" loading="lazy">
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <h3 class="cat-name">Fruity Refreshers</h3>
+              <p class="cat-desc">Bright, sweet and totally refreshing handcrafted fruit tea blends.</p>
+              <a href="flavours.html" class="cat-link">Explore Flavours <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 3 -->
+        <div class="cat-card hs-reveal hs-delay-3" role="article" aria-label="Brown Sugar Specials">
+          <div class="cat-card-inner">
+            <img src="images/category_brown_sugar.jpg" alt="Brown sugar boba milk tea with syrup swirls" class="cat-img"
+              loading="lazy">
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <h3 class="cat-name">Brown Sugar Specials</h3>
+              <p class="cat-desc">The fan-favourite slow-cooked caramel tiger-stripe experience.</p>
+              <a href="flavours.html" class="cat-link">Explore Flavours <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 4 — tall, spans 2 rows -->
+        <div class="cat-card hs-reveal hs-delay-2" role="article" aria-label="Matcha Collection">
+          <div class="cat-card-inner">
+            <img src="images/category_matcha.jpg" alt="Iced matcha bubble tea" class="cat-img" loading="lazy">
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <h3 class="cat-name">Matcha Collection</h3>
+              <p class="cat-desc">Japanese ceremonial matcha whisked to silky green tea perfection.</p>
+              <a href="flavours.html" class="cat-link">Explore Flavours <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 5 -->
+        <div class="cat-card hs-reveal hs-delay-4" role="article" aria-label="Taro Milk Tea">
+          <div class="cat-card-inner">
+            <img src="images/category_taro.jpg" alt="Creamy taro bubble tea with tapioca pearls" class="cat-img"
+              loading="lazy">
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <h3 class="cat-name">Taro Milk Tea</h3>
+              <p class="cat-desc">Whipped taro, creamy milk tea and chewy pearls in every sip.</p>
+              <a href="flavours.html" class="cat-link">Explore Flavours <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 6 -->
+        <div class="cat-card hs-reveal hs-delay-5" role="article" aria-label="Signature Specials">
+          <div class="cat-card-inner">
+            <img src="images/category_signature.jpg" alt="A tray of signature bubble tea drinks" class="cat-img"
+              loading="lazy">
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <h3 class="cat-name">Signature Specials</h3>
+              <p class="cat-desc">Exclusive artisanal recipes you can only taste at Bubble &amp; Brew.</p>
+              <a href="flavours.html" class="cat-link">Explore Flavours <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat 7 -->
+        <div class="cat-card hs-reveal hs-delay-1" role="article" aria-label="Boba and Pearls">
+          <div class="cat-card-inner">
+            <img src="images/category_pearls.jpg" alt="Glossy tapioca pearls ready for bubble tea" class="cat-img"
+              loading="lazy">
+            <div class="cat-overlay"></div>
+            <div class="cat-content">
+              <h3 class="cat-name">Boba &amp; Pearls</h3>
+              <p class="cat-desc">Freshly cooked, satisfyingly chewy pearls made for your favourite tea.</p>
+              <a href="flavours.html" class="cat-link">Explore Flavours <svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.cat-grid -->
+      <p class="cat-photo-credits">
+        Photos: <a href="https://commons.wikimedia.org/wiki/File:Bubble_tea_by_Johnny.jpg" target="_blank"
+          rel="noopener noreferrer">Bubble tea</a> by Baoothersks,
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA
+          4.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:Brown_sugar_boba_tea_at_Boba_Heaven,_downtown_Evanston,_IL.jpg"
+          target="_blank" rel="noopener noreferrer">Brown sugar boba</a> by ~delta,
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA
+          4.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:Matcha_bubble_tea_(7660765558).jpg" target="_blank"
+          rel="noopener noreferrer">Matcha bubble tea</a> by cyclonebill,
+        <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA
+          2.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:Partea_(53937735158).jpg" target="_blank"
+          rel="noopener noreferrer">Taro bubble tea</a> by Eden, Janine and Jim,
+        <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:Drink_tray_boba.jpg" target="_blank"
+          rel="noopener noreferrer">Boba drink tray</a> by EmDashUser002,
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA
+          4.0</a>;
+        <a href="https://commons.wikimedia.org/wiki/File:Boba_by_Joy_1.jpg" target="_blank"
+          rel="noopener noreferrer">Boba pearls</a> by Joy,
+        <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>.
+      </p>
+    </div><!-- /.hs-container -->
+  </section>
+
+
+  <!-- ═══ SECTION 3: WHY WE'RE LOVED ══════════════════════════════════════════ -->
+  <section class="hs-section hs-section-cream" id="featuresSection" aria-labelledby="featuresHeading">
+    <!-- Floating Decorative Elements: Outlined Balls (Header Style) -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:5%;right:3%;animation-delay:-2.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="bottom:12%;left:3%;animation-delay:-1.2s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="top:25%;left:2%;animation-delay:-3.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="bottom:24%;right:4%;animation-delay:-2s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-xs" style="top:62%;right:2%;animation-delay:-4s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cups (Header Style) -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg" style="top:7%;left:4%;animation-delay:-1.5s;" aria-hidden="true">
+      <svg viewBox="0 0 110 110" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 28C20 18 28 12 40 12C52 12 60 18 60 28C60 34 56 39 48 42L45 52L40 44C30 43 20 37 20 28Z"
+          stroke-width="2" />
+        <line x1="82" y1="20" x2="90" y2="14" stroke-width="2" />
+        <line x1="90" y1="26" x2="98" y2="24" stroke-width="2" />
+        <line x1="88" y1="36" x2="96" y2="38" stroke-width="2" />
+        <path d="M42 56L48 94C48.3 96.5 50.5 98 53 98H71C73.5 98 75.7 96.5 76 94L82 56" stroke-width="2.2" />
+        <path d="M38 56H86" stroke-width="2.2" />
+        <path d="M44 56C44 47 50 42 62 42C74 42 80 47 80 56" stroke-width="2.2" />
+        <line x1="62" y1="42" x2="62" y2="28" stroke-width="2.5" />
+        <circle cx="53" cy="85" r="3" fill="currentColor" />
+        <circle cx="61" cy="88" r="3" fill="currentColor" />
+        <circle cx="68" cy="84" r="3" fill="currentColor" />
+        <path d="M88 72Q94 76 88 80Q94 84 88 88" stroke-width="1.8" />
+        <path d="M36 78Q30 82 36 86" stroke-width="1.8" />
+      </svg>
+    </div>
+    <div class="hs-doodle-cup hs-doodle-cup-md" style="bottom:7%;right:4%;animation-delay:-3s;" aria-hidden="true">
+      <svg viewBox="0 0 80 100" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 36C22 20 30 14 40 14C50 14 58 20 58 36" stroke-width="2.2" />
+        <path d="M16 36H64" stroke-width="2.5" />
+        <path d="M22 36L27 86C27.5 89 30 91 33 91H47C50 91 52.5 89 53 86L58 36" stroke-width="2.2" />
+        <line x1="40" y1="14" x2="48" y2="2" stroke-width="2.8" />
+        <circle cx="33" cy="78" r="3.5" fill="currentColor" />
+        <circle cx="41" cy="83" r="3.5" fill="currentColor" />
+        <circle cx="48" cy="77" r="3.5" fill="currentColor" />
+        <circle cx="38" cy="70" r="3" fill="currentColor" />
+        <line x1="66" y1="48" x2="73" y2="44" stroke-width="1.8" />
+        <line x1="68" y1="56" x2="75" y2="56" stroke-width="1.8" />
+        <line x1="65" y1="64" x2="72" y2="67" stroke-width="1.8" />
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Straws -->
+    <div class="hs-doodle-straw hs-doodle-straw-md" style="top:30%;right:4%;animation-delay:-1.8s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+        <circle cx="10" cy="94" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm" style="bottom:22%;left:3%;animation-delay:-2.7s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 72L36 30L56 18" stroke-width="3" />
+        <path d="M24 75L41 35L59 23" stroke-width="3" />
+        <line x1="34" y1="36" x2="39" y2="39" stroke-width="1.8" />
+        <line x1="37" y1="32" x2="42" y2="35" stroke-width="1.8" />
+        <circle cx="56" cy="38" r="2.5" fill="currentColor" />
+        <circle cx="62" cy="46" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+
+    <!-- Tapioca Pearls & Clusters -->
+    <div class="hs-pearl-cluster" style="bottom:18%;right:12%;animation-delay:-3.2s;" aria-hidden="true">
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-peach"></div>
+    </div>
+    <div class="hs-decor hs-pearl" style="top:15%;right:8%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-decor hs-dot" style="bottom:22%;right:5%;animation-delay:-1.2s;" aria-hidden="true"></div>
+
+    <!-- Sparks & Leaves -->
+    <div class="hs-decor hs-sparkle" style="top:10%;left:18%;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:12%;left:12%;animation-delay:-3.5s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+        <path d="M12 22V2" />
+      </svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width:600px;margin:0 auto;">
+        <span class="hs-eyebrow">The Bubble &amp; Brew Difference</span>
+        <h2 class="hs-heading" id="featuresHeading">Good Tea. Great Pearls. <span class="outline-word">Happy
+            Souls.</span></h2>
+      </div>
+
+      <div class="features-layout">
+        <!-- Visual -->
+        <div class="features-visual hs-reveal-left">
+          <div class="features-big-circle">
+            <img src="images/home-sec.png" alt="Bubble tea drink" class="feat-main-icon" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Feature Blocks -->
+        <div class="features-blocks">
+          <div class="feat-block hs-reveal hs-delay-1">
+            <span class="feat-block-number">01</span>
+            <div class="feat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="1" x2="6" y2="4" />
+                <line x1="10" y1="1" x2="10" y2="4" />
+                <line x1="14" y1="1" x2="14" y2="4" />
+              </svg>
+            </div>
+            <h3 class="feat-title">Freshly Brewed</h3>
+            <p class="feat-text">Every drink starts with carefully sourced single-origin tea leaves, brewed fresh for
+              each order. No shortcuts, no compromise.</p>
+          </div>
+
+          <div class="feat-block hs-reveal hs-delay-2">
+            <span class="feat-block-number">02</span>
+            <div class="feat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="12" cy="12" r="1" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="feat-title">Perfectly Chewy Pearls</h3>
+            <p class="feat-text">Grade-A cassava tapioca pearls slow-simmered daily to deliver that signature springy,
+              satisfying chew in every single sip.</p>
+          </div>
+
+          <div class="feat-block hs-reveal hs-delay-3">
+            <span class="feat-block-number">03</span>
+            <div class="feat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="feat-title">Quality Ingredients</h3>
+            <p class="feat-text">Organic fresh whole milk, real fruit purées, natural raw cane sugar, and ceremonial
+              matcha imported directly from Uji, Japan.</p>
+          </div>
+
+          <div class="feat-block hs-reveal hs-delay-4">
+            <span class="feat-block-number">04</span>
+            <div class="feat-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </div>
+            <h3 class="feat-title">Made With Love</h3>
+            <p class="feat-text">Every cup is prepared with meticulous attention to detail and care by our passionate
+              tea baristas, because you deserve true craftsmanship.</p>
+          </div>
+        </div><!-- /.features-blocks -->
+      </div><!-- /.features-layout -->
+    </div><!-- /.hs-container -->
+  </section>
+
+
+  <!-- ═══ SECTION 4: CUSTOMIZE YOUR DRINK ══════════════════════════════════════ -->
+  <section class="hs-section hs-section-dark" id="customizeSection" aria-labelledby="customizeHeading">
+    <!-- Floating Decorative Elements: Outlined Balls (Header Style) -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;left:2%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-white" style="bottom:8%;right:3%;animation-delay:-1.8s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="top:32%;right:2%;animation-delay:-2.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-white" style="bottom:22%;left:4%;animation-delay:-4s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-xs" style="top:60%;left:2%;animation-delay:-1.4s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cups (Header Style) -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg" style="top:7%;left:3%;animation-delay:-1.8s;" aria-hidden="true">
+      <svg viewBox="0 0 110 110" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 28C20 18 28 12 40 12C52 12 60 18 60 28C60 34 56 39 48 42L45 52L40 44C30 43 20 37 20 28Z"
+          stroke-width="2" />
+        <line x1="82" y1="20" x2="90" y2="14" stroke-width="2" />
+        <line x1="90" y1="26" x2="98" y2="24" stroke-width="2" />
+        <line x1="88" y1="36" x2="96" y2="38" stroke-width="2" />
+        <path d="M42 56L48 94C48.3 96.5 50.5 98 53 98H71C73.5 98 75.7 96.5 76 94L82 56" stroke-width="2.2" />
+        <path d="M38 56H86" stroke-width="2.2" />
+        <path d="M44 56C44 47 50 42 62 42C74 42 80 47 80 56" stroke-width="2.2" />
+        <line x1="62" y1="42" x2="62" y2="28" stroke-width="2.5" />
+        <circle cx="53" cy="85" r="3" fill="#FFFFFF" />
+        <circle cx="61" cy="88" r="3" fill="#FFFFFF" />
+        <circle cx="68" cy="84" r="3" fill="#FFFFFF" />
+        <path d="M88 72Q94 76 88 80Q94 84 88 88" stroke-width="1.8" />
+        <path d="M36 78Q30 82 36 86" stroke-width="1.8" />
+      </svg>
+    </div>
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="bottom:8%;right:4%;animation-delay:-2.6s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M38 42L44 86C44.3 88.5 46.5 90 49 90H63C65.5 90 67.7 88.5 68 86L74 42" stroke-width="2.2" />
+        <path d="M34 42H78" stroke-width="2.2" />
+        <path d="M40 42C40 33 46 26 56 26C66 26 72 33 72 42" stroke-width="2.2" />
+        <line x1="56" y1="26" x2="56" y2="12" stroke-width="2.5" />
+        <circle cx="50" cy="78" r="3" fill="currentColor" />
+        <circle cx="58" cy="81" r="3" fill="currentColor" />
+        <circle cx="64" cy="76" r="3" fill="currentColor" />
+        <path d="M22 28C22 22 27 18 34 18C41 18 46 22 46 28C46 32 43 35 38 37L35 44L32 37C26 36 22 32 22 28Z"
+          stroke-dasharray="2 3" />
+        <path d="M80 30L83 26L86 30L90 33L86 36L83 40L80 36L76 33Z" />
+        <path d="M28 62C26 60 22 62 22 66C22 70 28 74 28 74C28 74 34 70 34 66C34 62 30 60 28 62Z" stroke-width="1.5" />
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Straws -->
+    <div class="hs-doodle-straw hs-doodle-straw-md" style="top:18%;right:5%;animation-delay:-1.4s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+        <circle cx="10" cy="94" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:30%;left:2%;animation-delay:-3.6s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 72L36 30L56 18" stroke-width="3" />
+        <path d="M24 75L41 35L59 23" stroke-width="3" />
+        <line x1="34" y1="36" x2="39" y2="39" stroke-width="1.8" />
+        <line x1="37" y1="32" x2="42" y2="35" stroke-width="1.8" />
+        <circle cx="56" cy="38" r="2.5" fill="currentColor" />
+        <circle cx="62" cy="46" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+
+    <!-- Tapioca Pearls & Clusters -->
+    <div class="hs-pearl-cluster" style="top:55%;left:3%;animation-delay:-2.8s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-sm"></div>
+    </div>
+    <div class="hs-decor hs-pearl hs-pearl-lg" style="top:12%;left:7%;animation-delay:-1.2s;" aria-hidden="true"></div>
+    <div class="hs-decor hs-pearl hs-pearl-sm" style="bottom:10%;left:16%;animation-delay:-3s;" aria-hidden="true">
+    </div>
+
+    <!-- Sparks & Leaves -->
+    <div class="hs-decor hs-sparkle" style="top:22%;right:7%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:16%;right:10%;animation-delay:-4s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+        <path d="M12 22V2" />
+      </svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="customize-layout">
+        <!-- Content -->
+        <div class="hs-reveal-left">
+          <span class="hs-eyebrow">Your Cup, Your Rules</span>
+          <h2 class="hs-heading" id="customizeHeading" style="color:#FFFFFF;">Mix It. Shake It. <span
+              class="outline-word" style="-webkit-text-stroke-color:#FFFFFF;">Make It Yours!</span></h2>
+          <p class="hs-body" style="color:rgba(255,255,255,.82);">Your favourite drink should be made your way. Choose
+            your tea, pick your sweetness, add your favourite toppings and create a drink that is totally you.</p>
+
+          <div class="customize-steps">
+            <div class="cust-step">
+              <span class="cust-step-num">1</span>
+              <div class="cust-step-info">
+                <div class="cust-step-label">Choose Your Base</div>
+                <div class="cust-step-sub">High Mountain Black, Roasted Oolong, Jasmine Green, or Rooibos</div>
+              </div>
+            </div>
+            <div class="cust-step">
+              <span class="cust-step-num">2</span>
+              <div class="cust-step-info">
+                <div class="cust-step-label">Pick Your Sweetness</div>
+                <div class="cust-step-sub">0% Unsweetened, 30% Light, 50% Half, 70% Regular, or 100% Full</div>
+              </div>
+            </div>
+            <div class="cust-step">
+              <span class="cust-step-num">3</span>
+              <div class="cust-step-info">
+                <div class="cust-step-label">Adjust Your Ice</div>
+                <div class="cust-step-sub">Warm, No Ice, Less Ice, Regular Ice, or Extra Cold</div>
+              </div>
+            </div>
+            <div class="cust-step">
+              <span class="cust-step-num">4</span>
+              <div class="cust-step-info">
+                <div class="cust-step-label">Add Your Favourite Toppings</div>
+                <div class="cust-step-sub">Brown Sugar Tapioca, Popping Boba, Silky Egg Pudding, or Grass Jelly</div>
+              </div>
+            </div>
+          </div>
+
+          <a href="customize.html" class="hs-btn-peach">
+            Customize Your Drink <span class="hs-arrow">&#8594;</span>
+          </a>
+        </div>
+
+        <!-- Visual with real photography & ingredient badges -->
+        <div class="customize-visual hs-reveal-right">
+          <div class="cust-blob" aria-hidden="true"></div>
+          <div class="cust-drink-wrap">
+            <img src="images/custom_drink_boba.jpg" alt="Iced milk tea topped with brown sugar and tapioca pearls"
+              class="cust-drink-img" loading="lazy">
+          </div>
+          <!-- Floating ingredient badges -->
+          <div class="cust-tag cust-tag-1" aria-hidden="true">
+            <img src="images/topping_pearls.jpg" alt="Chewy Tapioca Pearls" class="cust-tag-thumb"> Tapioca Pearls
+          </div>
+          <div class="cust-tag cust-tag-2" aria-hidden="true">
+            <span class="cust-tag-dot" style="background:#98c88a;"></span> Uji Matcha Cream
+          </div>
+          <div class="cust-tag cust-tag-3" aria-hidden="true">
+            <span class="cust-tag-dot" style="background:#B98258;"></span> Slow Muscovado
+          </div>
+        </div>
+
+      </div><!-- /.customize-layout -->
+    </div><!-- /.hs-container -->
+  </section>
+
+
+  <!-- ═══ SECTION 5: STORY / BEHIND THE CUP ═══════════════════════════════════ -->
+  <section class="hs-section hs-section-cream" id="storySection" aria-labelledby="storyHeading">
+    <!-- Floating Decorative Elements: Outlined Balls (Header Style) -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;right:4%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="bottom:6%;left:3%;animation-delay:-4s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="top:32%;left:3%;animation-delay:-1.6s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="bottom:22%;right:5%;animation-delay:-3.2s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-xs" style="top:62%;right:2%;animation-delay:-2.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cups (Header Style) -->
+    <div class="hs-doodle-cup hs-doodle-cup-md" style="top:10%;right:5%;animation-delay:-1.5s;" aria-hidden="true">
+      <svg viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M22 36C22 20 30 14 40 14C50 14 58 20 58 36" stroke-width="2.2" />
+        <path d="M16 36H64" stroke-width="2.5" />
+        <path d="M22 36L27 86C27.5 89 30 91 33 91H47C50 91 52.5 89 53 86L58 36" stroke-width="2.2" />
+        <line x1="40" y1="14" x2="48" y2="2" stroke-width="2.8" />
+        <circle cx="33" cy="78" r="3.5" fill="currentColor" />
+        <circle cx="41" cy="83" r="3.5" fill="currentColor" />
+        <circle cx="48" cy="77" r="3.5" fill="currentColor" />
+        <circle cx="38" cy="70" r="3" fill="currentColor" />
+        <line x1="66" y1="48" x2="73" y2="44" stroke-width="1.8" />
+        <line x1="68" y1="56" x2="75" y2="56" stroke-width="1.8" />
+        <line x1="65" y1="64" x2="72" y2="67" stroke-width="1.8" />
+      </svg>
+    </div>
+    <div class="hs-doodle-cup hs-doodle-cup-lg" style="bottom:6%;left:4%;animation-delay:-3s;" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M38 42L44 86C44.3 88.5 46.5 90 49 90H63C65.5 90 67.7 88.5 68 86L74 42" stroke-width="2.2" />
+        <path d="M34 42H78" stroke-width="2.2" />
+        <path d="M40 42C40 33 46 26 56 26C66 26 72 33 72 42" stroke-width="2.2" />
+        <line x1="56" y1="26" x2="56" y2="12" stroke-width="2.5" />
+        <circle cx="50" cy="78" r="3" fill="currentColor" />
+        <circle cx="58" cy="81" r="3" fill="currentColor" />
+        <circle cx="64" cy="76" r="3" fill="currentColor" />
+        <path d="M22 28C22 22 27 18 34 18C41 18 46 22 46 28C46 32 43 35 38 37L35 44L32 37C26 36 22 32 22 28Z"
+          stroke-dasharray="2 3" />
+        <path d="M80 30L83 26L86 30L90 33L86 36L83 40L80 36L76 33Z" />
+        <path d="M28 62C26 60 22 62 22 66C22 70 28 74 28 74C28 74 34 70 34 66C34 62 30 60 28 62Z" stroke-width="1.5" />
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Straws -->
+    <div class="hs-doodle-straw hs-doodle-straw-md" style="top:26%;left:3%;animation-delay:-2.2s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+        <circle cx="10" cy="94" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm" style="bottom:18%;right:4%;animation-delay:-3.8s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 80" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 72L36 30L56 18" stroke-width="3" />
+        <path d="M24 75L41 35L59 23" stroke-width="3" />
+        <line x1="34" y1="36" x2="39" y2="39" stroke-width="1.8" />
+        <line x1="37" y1="32" x2="42" y2="35" stroke-width="1.8" />
+        <circle cx="56" cy="38" r="2.5" fill="currentColor" />
+        <circle cx="62" cy="46" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+
+    <!-- Tapioca Pearls & Clusters -->
+    <div class="hs-pearl-cluster" style="bottom:14%;left:16%;animation-delay:-1.8s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-pearl" style="bottom:10%;right:5%;animation-delay:-3.5s;" aria-hidden="true"></div>
+
+    <!-- Sparks & Leaves -->
+    <div class="hs-decor hs-leaf" style="top:10%;left:7%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+        <path d="M12 22V2" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:15%;right:10%;animation-delay:-1s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="story-layout">
+
+        <!-- Two realistic editorial photographs -->
+        <div class="story-images hs-reveal-left">
+          <div class="story-blob" aria-hidden="true"></div>
+          <div class="story-img-main">
+            <img src="images/story_tea_brewing.jpg" alt="Artisan Loose Tea Leaves Brewing with Care" class="story-img"
+              loading="lazy">
+          </div>
+          <div class="story-img-secondary">
+            <img src="images/story_pearls_prep.jpg" alt="Fresh Tapioca Boba Pearls Slow Cooking in Syrup"
+              class="story-img" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Story Content -->
+        <div class="hs-reveal-right">
+          <span class="hs-eyebrow">Brewed With Passion</span>
+          <h2 class="hs-heading" id="storyHeading">From Tea Leaves to <span class="outline-word">Happy Moments</span>
+          </h2>
+          <p class="hs-body" style="margin-bottom:0.85rem;">We believe the best drinks are made with patience, quality
+            ingredients and a little creativity.</p>
+          <p class="hs-body">Every cup brings together carefully brewed tea, delicious flavours and our signature pearls
+            &mdash; crafted with love to make your day just a little brighter.</p>
+
+          <div class="story-highlights">
+            <div class="story-highlight">
+              <div class="story-highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                </svg>
+              </div>
+              <span class="story-highlight-text">Carefully Brewed Tea</span>
+            </div>
+            <div class="story-highlight">
+              <div class="story-highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+              </div>
+              <span class="story-highlight-text">Freshly Prepared Pearls</span>
+            </div>
+            <div class="story-highlight">
+              <div class="story-highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </div>
+              <span class="story-highlight-text">Flavours Worth Sharing</span>
+            </div>
+          </div>
+
+          <a href="about.html" class="hs-btn-primary">
+            Our Story <span class="hs-arrow">&#8594;</span>
+          </a>
+        </div>
+
+      </div><!-- /.story-layout -->
+    </div><!-- /.hs-container -->
+  </section>
+
+
+  <!-- ═══ SECTION 6: TESTIMONIALS ══════════════════════════════════════════════ -->
+  <section class="hs-section hs-section-brown" id="testimonialsSection" aria-labelledby="testimonialsHeading">
+    <!-- Floating Decorative Elements: Outlined Balls (Header Style) -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:5%;left:3%;animation-delay:-1.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-white" style="bottom:8%;right:4%;animation-delay:-3.5s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="top:32%;right:3%;animation-delay:-2.2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-white" style="bottom:24%;left:5%;animation-delay:-4s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-xs" style="top:58%;left:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cups (Header Style) -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg" style="top:7%;left:4%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 110 110" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 28C20 18 28 12 40 12C52 12 60 18 60 28C60 34 56 39 48 42L45 52L40 44C30 43 20 37 20 28Z"
+          stroke-width="2" />
+        <line x1="82" y1="20" x2="90" y2="14" stroke-width="2" />
+        <line x1="90" y1="26" x2="98" y2="24" stroke-width="2" />
+        <line x1="88" y1="36" x2="96" y2="38" stroke-width="2" />
+        <path d="M42 56L48 94C48.3 96.5 50.5 98 53 98H71C73.5 98 75.7 96.5 76 94L82 56" stroke-width="2.2" />
+        <path d="M38 56H86" stroke-width="2.2" />
+        <path d="M44 56C44 47 50 42 62 42C74 42 80 47 80 56" stroke-width="2.2" />
+        <line x1="62" y1="42" x2="62" y2="28" stroke-width="2.5" />
+        <circle cx="53" cy="85" r="3" fill="#FFFFFF" />
+        <circle cx="61" cy="88" r="3" fill="#FFFFFF" />
+        <circle cx="68" cy="84" r="3" fill="#FFFFFF" />
+        <path d="M88 72Q94 76 88 80Q94 84 88 88" stroke-width="1.8" />
+        <path d="M36 78Q30 82 36 86" stroke-width="1.8" />
+      </svg>
+    </div>
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="bottom:6%;right:4%;animation-delay:-2.8s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M22 36C22 20 30 14 40 14C50 14 58 20 58 36" stroke-width="2.2" />
+        <path d="M16 36H64" stroke-width="2.5" />
+        <path d="M22 36L27 86C27.5 89 30 91 33 91H47C50 91 52.5 89 53 86L58 36" stroke-width="2.2" />
+        <line x1="40" y1="14" x2="48" y2="2" stroke-width="2.8" />
+        <circle cx="33" cy="78" r="3.5" fill="currentColor" />
+        <circle cx="41" cy="83" r="3.5" fill="currentColor" />
+        <circle cx="48" cy="77" r="3.5" fill="currentColor" />
+        <circle cx="38" cy="70" r="3" fill="currentColor" />
+        <line x1="66" y1="48" x2="73" y2="44" stroke-width="1.8" />
+        <line x1="68" y1="56" x2="75" y2="56" stroke-width="1.8" />
+        <line x1="65" y1="64" x2="72" y2="67" stroke-width="1.8" />
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Straws -->
+    <div class="hs-doodle-straw hs-doodle-straw-md" style="top:22%;right:5%;animation-delay:-1.4s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+        <circle cx="10" cy="94" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:22%;left:3%;animation-delay:-3.2s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 72L36 30L56 18" stroke-width="3" />
+        <path d="M24 75L41 35L59 23" stroke-width="3" />
+        <line x1="34" y1="36" x2="39" y2="39" stroke-width="1.8" />
+        <line x1="37" y1="32" x2="42" y2="35" stroke-width="1.8" />
+        <circle cx="56" cy="38" r="2.5" fill="currentColor" />
+        <circle cx="62" cy="46" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+
+    <!-- Tapioca Pearls & Clusters -->
+    <div class="hs-pearl-cluster" style="top:52%;right:3%;animation-delay:-2.6s;" aria-hidden="true">
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-peach"></div>
+    </div>
+    <div class="hs-decor hs-pearl hs-pearl-peach" style="bottom:8%;left:6%;animation-delay:-1.5s;" aria-hidden="true">
+    </div>
+    <div class="hs-decor hs-dot" style="bottom:12%;right:8%;animation-delay:-3s;" aria-hidden="true"></div>
+
+    <!-- Sparks -->
+    <div class="hs-decor hs-sparkle" style="top:8%;left:18%;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:12%;right:15%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width:600px;margin:0 auto;">
+        <span class="hs-eyebrow">Love in Every Sip</span>
+        <h2 class="hs-heading" id="testimonialsHeading">Don't Just Take <span class="outline-word">Our Word</span> for
+          It</h2>
+      </div>
+
+      <div class="testimonials-track">
+
+        <!-- Review 1 -->
+        <div class="testi-card hs-reveal hs-delay-1">
+          <span class="testi-quote-mark" aria-hidden="true">&ldquo;</span>
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+          </div>
+          <p class="testi-text">&ldquo;Absolutely loved the brown sugar milk tea! The pearls were perfectly chewy and
+            the flavour was amazing. I can't stop coming back for more!&rdquo;</p>
+          <div class="testi-author">
+            <img src="images/customer_1.jpg" alt="Sarah M." class="testi-avatar" loading="lazy">
+            <div>
+              <div class="testi-name">Sarah M.</div>
+              <div class="testi-role">Regular Customer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testi-card hs-reveal hs-delay-2">
+          <span class="testi-quote-mark" aria-hidden="true">&ldquo;</span>
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+          </div>
+          <p class="testi-text">&ldquo;The strawberry milk tea is my new favourite. Such a refreshing drink and a
+            beautiful presentation! It actually made my whole afternoon delightful.&rdquo;</p>
+          <div class="testi-author">
+            <img src="images/customer_2.jpg" alt="James K." class="testi-avatar" loading="lazy">
+            <div>
+              <div class="testi-name">James K.</div>
+              <div class="testi-role">Bubble Tea Enthusiast</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testi-card hs-reveal hs-delay-3">
+          <span class="testi-quote-mark" aria-hidden="true">&ldquo;</span>
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+            <svg class="testi-star" viewBox="0 0 24 24">
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+            </svg>
+          </div>
+          <p class="testi-text">&ldquo;Love the variety and the ability to customize my drink. Every visit is a happy
+            experience. The staff is wonderful and the tea aroma is unmatched!&rdquo;</p>
+          <div class="testi-author">
+            <img src="images/customer_3.jpg" alt="Aisha R." class="testi-avatar" loading="lazy">
+            <div>
+              <div class="testi-name">Aisha R.</div>
+              <div class="testi-role">Loyal Member</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.testimonials-track -->
+    </div><!-- /.hs-container -->
+  </section>
+
+
+  <!-- ═══ SECTION 7: FINAL CTA ═════════════════════════════════════════════════ -->
+  <section class="cta-section" id="ctaSection" aria-labelledby="ctaHeading">
+    <!-- Floating orbs & doodles -->
+    <div class="cta-orb cta-orb-1" aria-hidden="true"></div>
+    <div class="cta-orb cta-orb-2" aria-hidden="true"></div>
+    <div class="cta-orb cta-orb-3" aria-hidden="true"></div>
+    <div class="cta-orb cta-orb-4" aria-hidden="true"></div>
+
+    <!-- Floating Decorative Elements: Outlined Balls (Header Style) -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:6%;right:4%;animation-delay:-1.2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-white" style="bottom:8%;left:3%;animation-delay:-3.6s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="top:35%;left:2%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-white" style="bottom:22%;right:6%;animation-delay:-4s;"
+      aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-xs" style="top:56%;right:3%;animation-delay:-1.6s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cups (Header Style) -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg" style="top:8%;left:3%;animation-delay:-2.2s;" aria-hidden="true">
+      <svg viewBox="0 0 110 110" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 28C20 18 28 12 40 12C52 12 60 18 60 28C60 34 56 39 48 42L45 52L40 44C30 43 20 37 20 28Z"
+          stroke-width="2" />
+        <line x1="82" y1="20" x2="90" y2="14" stroke-width="2" />
+        <line x1="90" y1="26" x2="98" y2="24" stroke-width="2" />
+        <line x1="88" y1="36" x2="96" y2="38" stroke-width="2" />
+        <path d="M42 56L48 94C48.3 96.5 50.5 98 53 98H71C73.5 98 75.7 96.5 76 94L82 56" stroke-width="2.2" />
+        <path d="M38 56H86" stroke-width="2.2" />
+        <path d="M44 56C44 47 50 42 62 42C74 42 80 47 80 56" stroke-width="2.2" />
+        <line x1="62" y1="42" x2="62" y2="28" stroke-width="2.5" />
+        <circle cx="53" cy="85" r="3" fill="#FFFFFF" />
+        <circle cx="61" cy="88" r="3" fill="#FFFFFF" />
+        <circle cx="68" cy="84" r="3" fill="#FFFFFF" />
+        <path d="M88 72Q94 76 88 80Q94 84 88 88" stroke-width="1.8" />
+        <path d="M36 78Q30 82 36 86" stroke-width="1.8" />
+      </svg>
+    </div>
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="bottom:6%;right:3%;animation-delay:-1.8s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M38 42L44 86C44.3 88.5 46.5 90 49 90H63C65.5 90 67.7 88.5 68 86L74 42" stroke-width="2.2" />
+        <path d="M34 42H78" stroke-width="2.2" />
+        <path d="M40 42C40 33 46 26 56 26C66 26 72 33 72 42" stroke-width="2.2" />
+        <line x1="56" y1="26" x2="56" y2="12" stroke-width="2.5" />
+        <circle cx="50" cy="78" r="3" fill="currentColor" />
+        <circle cx="58" cy="81" r="3" fill="currentColor" />
+        <circle cx="64" cy="76" r="3" fill="currentColor" />
+        <path d="M22 28C22 22 27 18 34 18C41 18 46 22 46 28C46 32 43 35 38 37L35 44L32 37C26 36 22 32 22 28Z"
+          stroke-dasharray="2 3" />
+        <path d="M80 30L83 26L86 30L90 33L86 36L83 40L80 36L76 33Z" />
+        <path d="M28 62C26 60 22 62 22 66C22 70 28 74 28 74C28 74 34 70 34 66C34 62 30 60 28 62Z" stroke-width="1.5" />
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Straws -->
+    <div class="hs-doodle-straw hs-doodle-straw-md" style="top:20%;right:6%;animation-delay:-2.6s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+        <line x1="39" y1="48" x2="47" y2="52" stroke-width="2" />
+        <circle cx="16" cy="84" r="5" fill="currentColor" />
+        <circle cx="10" cy="94" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:20%;left:4%;animation-delay:-1.5s;"
+      aria-hidden="true">
+      <svg viewBox="0 0 70 80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 72L36 30L56 18" stroke-width="3" />
+        <path d="M24 75L41 35L59 23" stroke-width="3" />
+        <line x1="34" y1="36" x2="39" y2="39" stroke-width="1.8" />
+        <line x1="37" y1="32" x2="42" y2="35" stroke-width="1.8" />
+        <circle cx="56" cy="38" r="2.5" fill="currentColor" />
+        <circle cx="62" cy="46" r="1.8" fill="currentColor" />
+      </svg>
+    </div>
+
+    <!-- Tapioca Pearls & Clusters -->
+    <div class="hs-pearl-cluster" style="bottom:12%;left:22%;animation-delay:-2.8s;" aria-hidden="true">
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-peach"></div>
+    </div>
+    <div class="hs-decor hs-pearl hs-pearl-lg" style="top:14%;left:6%;animation-delay:-1.5s;" aria-hidden="true"></div>
+
+    <!-- Sparks & Leaves -->
+    <div class="hs-decor hs-sparkle" style="top:22%;right:16%;animation-delay:-2.8s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9" />
+      </svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:16%;left:12%;animation-delay:-3.2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+        <path d="M12 22V2" />
+      </svg>
+    </div>
+
+    <div class="hs-container" style="position:relative;z-index:2;">
+      <div class="cta-layout">
+        <!-- Text -->
+        <div class="hs-reveal-left">
+          <span class="hs-eyebrow" style="color:var(--hs-peach);">Your Next Happy Moment Starts Here</span>
+          <h2 class="cta-heading" id="ctaHeading">Life Is Better With a <span class="outline-word">Little Boba!</span>
+          </h2>
+          <p class="cta-body">Your favourite flavours are waiting. Find your perfect blend, customize your cup and make
+            every sip a little celebration.</p>
+          <div class="cta-buttons">
+            <a href="flavours.html" class="hs-btn-outline">
+              Explore Our Menu <span class="hs-arrow">&#8594;</span>
+            </a>
+            <a href="customize.html" class="hs-btn-peach">
+              Order Your Happiness <span class="hs-arrow">&#8594;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual with realistic photography & organic frame -->
+        <div class="cta-visual hs-reveal-right">
+          <div class="cta-drink-blob" aria-hidden="true"></div>
+          <div class="cta-drink-frame">
+            <img src="images/custom_drink_boba.jpg" alt="Creamy milk tea topped with brown sugar and tapioca pearls"
+              class="cta-drink-img" loading="lazy">
+          </div>
+        </div>
+      </div><!-- /.cta-layout -->
+    </div><!-- /.hs-container -->
+  </section>
+
+  <!-- Reusable Footer Component -->
+  <div id="footer-container"></div>
+
+  <!-- =========================================================================
+       ORDER NOW CUSTOMIZATION MODAL (Pure Vanilla JS)
+       ========================================================================= -->
+  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="custom-modal-card">
+      <button class="modal-close-btn" id="orderModalClose" aria-label="Close dialog">&times;</button>
+
+      <div class="modal-header-section">
+        <img id="orderModalThumb" src="images/slide1_brown_sugar.png" alt="Selected Boba Drink"
+          class="modal-drink-thumb">
+        <div>
+          <h3 class="modal-title" id="orderModalTitle">Brown Sugar Boba Milk Tea</h3>
+          <p id="orderModalNotes" style="font-size: 0.8rem; color: var(--peach-light); margin-top: 0.2rem;">
+            Nantou High Mountain Black Tea with slow-cooked Taiwanese Muscovado syrup.
+          </p>
+          <div class="modal-price" id="orderModalPrice">&#8377;149</div>
+        </div>
+      </div>
+
+      <!-- Size Selection -->
+      <div class="option-group-title">Select Cup Size</div>
+      <div class="pill-options-grid option-group-pills" data-multi="false">
+        <button type="button" class="pill-option-btn modal-size-btn" data-size="Small">Small (-&#8377;20)</button>
+        <button type="button" class="pill-option-btn modal-size-btn selected" data-size="Medium">Medium
+          (Standard)</button>
+        <button type="button" class="pill-option-btn modal-size-btn" data-size="Large">Large (+&#8377;30)</button>
+      </div>
+
+      <!-- Sweetness Level -->
+      <div class="option-group-title">Sweetness Level</div>
+      <div class="pill-options-grid option-group-pills" data-multi="false">
+        <button type="button" class="pill-option-btn modal-sweet-btn" data-val="0%">0% – No Added Sweetness</button>
+        <button type="button" class="pill-option-btn modal-sweet-btn" data-val="25%">25% – Light Sweetness</button>
+        <button type="button" class="pill-option-btn modal-sweet-btn" data-val="50%">50% – Balanced Sweetness</button>
+        <button type="button" class="pill-option-btn modal-sweet-btn selected" data-val="75%">75% – Sweet</button>
+        <button type="button" class="pill-option-btn modal-sweet-btn" data-val="100%">100% – Extra Sweet</button>
+      </div>
+
+      <!-- Ice Level -->
+      <div class="option-group-title">Ice Level</div>
+      <div class="pill-options-grid option-group-pills" data-multi="false">
+        <button type="button" class="pill-option-btn modal-ice-btn" data-val="No Ice">No Ice</button>
+        <button type="button" class="pill-option-btn modal-ice-btn" data-val="Less Ice">Less Ice</button>
+        <button type="button" class="pill-option-btn modal-ice-btn selected" data-val="Regular">Regular Ice</button>
+        <button type="button" class="pill-option-btn modal-ice-btn" data-val="Extra Ice">Extra Cold</button>
+      </div>
+
+      <!-- Toppings Selection (Multi-select) -->
+      <div class="option-group-title">Custom Toppings (Multi-select)</div>
+      <div class="pill-options-grid option-group-pills" data-multi="true">
+        <button type="button" class="pill-option-btn selected" data-val="Brown Sugar Boba">Brown Sugar Pearls (+&#8377;30)</button>
+        <button type="button" class="pill-option-btn" data-val="Popping Boba">Strawberry Popping Boba (+&#8377;30)</button>
+        <button type="button" class="pill-option-btn" data-val="Mango Popping">Mango Popping Boba (+&#8377;30)</button>
+        <button type="button" class="pill-option-btn" data-val="Fruit Jelly">Fruit Jelly (+&#8377;25)</button>
+        <button type="button" class="pill-option-btn" data-val="Coconut Jelly">Coconut Jelly (+&#8377;25)</button>
+      </div>
+
+      <!-- Quantity Stepper & Add to Bag -->
+      <div class="quantity-control-row">
+        <div class="qty-stepper">
+          <button class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+          <span class="qty-display" id="modalQty">1</span>
+          <button class="qty-btn" id="qtyPlus" aria-label="Increase quantity">&plus;</button>
+        </div>
+        <button class="btn-add-to-bag" id="addToBagBtn">Add to Bag</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       READ MORE FLAVOUR STORY MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="readMoreModal" role="dialog" aria-modal="true" aria-labelledby="readMoreTitle">
+    <div class="custom-modal-card">
+      <button class="modal-close-btn" id="readMoreModalClose" aria-label="Close dialog">&times;</button>
+
+      <img id="readMoreImg" src="images/slide1_brown_sugar.png" alt="Drink Cover"
+        style="width: 100%; height: 220px; object-fit: cover; border-radius: 14px; margin-bottom: 1.25rem; border: 2px solid var(--peach-accent);">
+
+      <h3 class="modal-title" id="readMoreTitle" style="margin-bottom: 0.5rem;">Brown Sugar Boba Milk Tea</h3>
+
+      <div class="option-group-title">Brewing Origin &amp; Leaf Profile</div>
+      <p id="readMoreOrigin" style="font-size: 0.9rem; line-height: 1.6; color: var(--white-80); margin-bottom: 1rem;">
+        Slow-steeped Taiwanese high mountain black tea infused with velvety organic whole milk and honey-glazed brown
+        sugar pearls.
+      </p>
+
+      <div class="option-group-title">Tasting Notes</div>
+      <p id="readMoreNotes"
+        style="font-size: 0.9rem; line-height: 1.6; color: var(--peach-light); margin-bottom: 1rem;">
+        Rich roasted caramel aroma, buttery creaminess, and springy tapioca pearls with warm Muscovado undertones.
+      </p>
+
+      <div class="option-group-title">Nutritional Highlights</div>
+      <p id="readMoreNutrition" style="font-size: 0.85rem; line-height: 1.6; color: var(--white-60);">
+        340 kcal • Fresh Whole Milk • Slow-cooked brown sugar • Grade-A Cassava pearls
+      </p>
+
+      <div style="margin-top: 1.5rem; text-align: right;">
+        <button class="btn-read-more" style="padding: 0.65rem 1.75rem;"
+          onclick="document.getElementById('readMoreModal').classList.remove('open')">Close Story</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SHOPPING BAG OFFCANVAS DRAWER
+       ========================================================================= -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg style="width: 22px; height: 22px; stroke: var(--peach-accent);" viewBox="0 0 24 24" fill="none"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span>Your Boba Bag</span>
+      </div>
+      <button class="modal-close-btn" id="cartDrawerClose" style="position: static;"
+        aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated via main.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Subtotal</span>
+        <span class="cart-total-val" id="cartTotalVal">&#8377;0</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       TOAST FEEDBACK NOTIFICATION
+       ========================================================================= -->
+  <div class="toast-notice" id="toastNotice">
+    <svg style="width: 20px; height: 20px; fill: var(--peach-accent);" viewBox="0 0 24 24">
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+    </svg>
+    <span id="toastMsg">Action completed!</span>
+  </div>
+
+  <!-- Vanilla JavaScript -->
+  <!-- Component Scripts (load before main.js) -->
+  <script src="js/site-data.js" defer></script>
+  <script src="components/navbar.js" defer></script>
+  <script src="components/footer.js" defer></script>
+  <!-- Page Controller -->
+  <script src="js/main.js" defer></script>
+  <script src="js/home-sections.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to your Bubble &amp; Brew account. Access your saved drinks, track boba orders, and enjoy handcrafted happiness.">
+  <meta name="keywords" content="Bubble and Brew login, bubble tea login, boba account, sign in">
+  <meta name="theme-color" content="#98633A">
+
+  <title>Login | Bubble &amp; Brew Handcrafted Boba</title>
+
+  <!-- Google Fonts: Poppins (headings) & DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Core Theme & Auth Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body class="auth-page">
+
+  <main class="auth-page-container">
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         LEFT SECTION – VISUAL BRANDING
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <aside class="auth-visual-col" aria-label="Bubble and Brew Visual Story">
+
+      <!-- Floating Decorative Boba Balls & Pearls -->
+      <div class="auth-floating-ball auth-ball-xl" style="top:8%;left:5%;animation-delay:-1s;" aria-hidden="true"></div>
+      <div class="auth-floating-ball auth-ball-md" style="top:70%;left:8%;animation-delay:-2.5s;" aria-hidden="true"></div>
+      <div class="auth-floating-ball auth-ball-sm" style="top:25%;right:10%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+      <!-- Floating Pearl Clusters & Tea Leaves -->
+      <div class="auth-pearl-cluster" style="top:32%;right:12%;animation-delay:-2.7s;" aria-hidden="true">
+        <div class="auth-pearl"></div>
+        <div class="auth-pearl auth-pearl-peach"></div>
+        <div class="auth-pearl"></div>
+      </div>
+      <div class="auth-decor-leaf" style="bottom:22%;left:10%;animation-delay:-1.5s;" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/>
+          <path d="M12 22V2"/>
+        </svg>
+      </div>
+
+      <!-- Hand-Drawn Boba Cup Doodle -->
+      <div class="auth-doodle-cup" style="top:18%;left:6%;width:58px;height:66px;animation-delay:-2.2s;" aria-hidden="true">
+        <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+          <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+          <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+          <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+          <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+          <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+          <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+          <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <!-- Hand-Drawn Straw Doodle -->
+      <div class="auth-doodle-straw" style="bottom:12%;right:6%;width:54px;height:78px;animation-delay:-1.2s;" aria-hidden="true">
+        <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+          <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+          <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+          <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        </svg>
+      </div>
+
+      <!-- Top: Brand Header -->
+      <div class="auth-visual-top">
+        <a href="index.html" class="auth-brand" aria-label="Bubble and Brew Home">
+          <div class="auth-brand-icon-wrap">
+            <svg class="auth-brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M10 12L13.5 35C13.8 36.8 15.3 38 17.1 38H22.9C24.7 38 26.2 36.8 26.5 35L30 12" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M8 12C8 10.9 8.9 10 10 10H30C31.1 10 32 10.9 32 12V12H8V12Z" stroke="#FFFFFF" stroke-width="2.2"/>
+              <path d="M12 10C12 5.5 15.6 2 20 2C24.4 2 28 5.5 28 10" stroke="#F5C18F" stroke-width="2.2"/>
+              <line x1="23" y1="2" x2="27" y2="-4" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="16" cy="30" r="2.2" fill="#F5C18F"/>
+              <circle cx="21" cy="32" r="2.2" fill="#F5C18F"/>
+              <circle cx="24" cy="28" r="2.2" fill="#F5C18F"/>
+              <circle cx="18" cy="25" r="2.2" fill="#F5C18F"/>
+            </svg>
+          </div>
+          <div class="auth-brand-text">
+            <span class="auth-brand-name">Bubble &amp; Brew</span>
+            <span class="auth-brand-tagline">Artisanal Tea Room</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Center: Organic Asymmetrical Masked Photograph -->
+      <div class="auth-visual-center">
+        <div class="auth-visual-frame">
+          <svg class="auth-visual-svg-border" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path class="auth-visual-peach-path" d="M470,270 C470,395 385,485 270,485 C145,485 65,385 65,270 C65,145 155,55 270,55 C395,55 470,145 470,270 Z"/>
+          </svg>
+          <div class="auth-visual-img-box">
+            <img src="images/menu_drink_classic_pearl.jpg" alt="Signature classic bubble tea glass with tapioca pearls and ice" class="auth-visual-img" loading="eager">
+          </div>
+
+          <!-- Overlapping Mini Drink Accent -->
+          <div class="auth-visual-accent-cup" aria-hidden="true">
+            <img src="images/straberry.png" alt="Strawberry accent drink">
+          </div>
+
+          <!-- Floating Badge -->
+          <div class="auth-visual-badge" aria-hidden="true">
+            <svg class="auth-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <div class="auth-badge-texts">
+              <span class="auth-badge-eyebrow">HANDCRAFTED</span>
+              <strong>BREWED FRESH DAILY</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom: Brand Message -->
+      <div class="auth-visual-bottom">
+        <div class="auth-quote-tag">
+          <span style="font-size:1.1rem; line-height:1;">&#10022;</span>
+          <span>SINCE 2018</span>
+        </div>
+        <h2 class="auth-quote-title">A Little Happiness in Every Sip.</h2>
+        <p class="auth-quote-sub">Your favourite flavours, your little moments of joy.</p>
+      </div>
+
+    </aside>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         RIGHT SECTION – AUTHENTICATION FORM
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="auth-form-col" aria-label="Login Form">
+
+      <!-- Top Navigation: Back to Home + Controls -->
+      <div class="auth-form-top-bar">
+        <a href="index.html" class="auth-back-btn" id="authBackBtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+
+        <!-- Direction & Theme toggles -->
+        <div class="auth-top-controls">
+          <button type="button" class="auth-ctrl-btn" id="authDirToggle" title="Toggle text direction" aria-label="Toggle text direction">
+            <span id="authDirLabel">LTR</span>
+          </button>
+          <button type="button" class="auth-ctrl-btn" id="authThemeToggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Form Container -->
+      <div class="auth-card-wrapper">
+
+        <!-- Form Headings -->
+        <div class="auth-header">
+          <span class="auth-eyebrow">WELCOME BACK</span>
+          <h1 class="auth-title">Good to See You Again!</h1>
+          <p class="auth-subtitle">Your next favourite bubble tea moment is just a sip away.</p>
+        </div>
+
+        <!-- Inline Status & Feedback Alert -->
+        <div class="auth-alert-box auth-alert-info" id="authAlertBox" hidden role="alert"></div>
+
+        <!-- Login Form -->
+        <form class="auth-form" id="loginForm" novalidate>
+
+          <!-- 1. Email Address -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="loginEmail">
+              Email Address <span class="auth-label-required">*</span>
+            </label>
+            <div class="auth-input-wrap">
+              <svg class="auth-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <input type="email" id="loginEmail" name="email" class="auth-input" placeholder="Enter your email address" autocomplete="email" required>
+            </div>
+            <span class="auth-field-error" id="loginEmailError" role="alert"></span>
+          </div>
+
+          <!-- 2. Password with Show/Hide -->
+          <div class="auth-field-group">
+            <label class="auth-label" for="loginPassword">
+              Password <span class="auth-label-required">*</span>
+            </label>
+            <div class="auth-input-wrap">
+              <svg class="auth-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <input type="password" id="loginPassword" name="password" class="auth-input" placeholder="Enter your password" autocomplete="current-password" required>
+              <button type="button" class="auth-password-toggle" data-target="loginPassword" aria-label="Show password" aria-pressed="false">
+                <!-- SVG rendered by auth.js -->
+              </button>
+            </div>
+            <span class="auth-field-error" id="loginPasswordError" role="alert"></span>
+          </div>
+
+          <!-- 3. Remember Me & Forgot Password -->
+          <div class="auth-form-options">
+            <label class="auth-checkbox-label" for="loginRemember">
+              <input type="checkbox" id="loginRemember" name="remember" class="auth-checkbox">
+              <span>Remember Me</span>
+            </label>
+            <a href="#forgot" class="auth-forgot-link" id="authForgotLink">Forgot Password?</a>
+          </div>
+
+          <!-- 4. Submit CTA Button -->
+          <button type="submit" class="auth-submit-btn" id="loginSubmitBtn">
+            <span>Login to Your Account</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Social Login Area -->
+        <div class="auth-divider">
+          <span>OR CONTINUE WITH</span>
+        </div>
+
+        <div class="auth-social-row">
+          <!-- Google -->
+          <button type="button" class="auth-social-btn" data-provider="Google" aria-label="Continue with Google">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+            </svg>
+            <span>Google</span>
+          </button>
+
+          <!-- Facebook -->
+          <button type="button" class="auth-social-btn" data-provider="Facebook" aria-label="Continue with Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#1877F2" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span>Facebook</span>
+          </button>
+
+          <!-- Apple -->
+          <button type="button" class="auth-social-btn" data-provider="Apple" aria-label="Continue with Apple">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.83c.62-.75 1.04-1.8 1.01-2.83-.9.04-2 .6-2.65 1.35-.58.67-.99 1.74-.96 2.76 1.01.08 2-.53 2.6-1.28z"/>
+            </svg>
+            <span>Apple</span>
+          </button>
+        </div>
+
+        <!-- Switch to Signup -->
+        <div class="auth-switch-prompt">
+          <span>New to Bubble &amp; Brew?</span>
+          <a href="signup.html" class="auth-switch-link">Create an Account</a>
+        </div>
+
+      </div><!-- /.auth-card-wrapper -->
+
+      <!-- Footer Note -->
+      <footer class="auth-form-footer">
+        <span>&copy; 2026 Bubble &amp; Brew. Handcrafted with passion.</span>
+      </footer>
+
+    </section>
+
+  </main>
+
+
+  <!-- ═════════════════════════════════════════════════════════════════════════
+       FORGOT PASSWORD MODAL
+       ═════════════════════════════════════════════════════════════════════════ -->
+  <div class="auth-modal-backdrop" id="authModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="auth-modal-card">
+      <button type="button" class="auth-modal-close" id="authModalClose" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <h2 class="auth-modal-title" id="modalTitle">Reset Password</h2>
+      <p class="auth-modal-desc">
+        Enter the email address associated with your account and we'll send you a recovery link to reset your password.
+      </p>
+
+      <div class="auth-alert-box" id="authModalAlert" hidden role="alert"></div>
+
+      <form id="authModalForm" novalidate>
+        <div class="auth-field-group" style="margin-bottom: 1.25rem;">
+          <label class="auth-label" for="authModalEmail">Account Email</label>
+          <div class="auth-input-wrap">
+            <svg class="auth-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <input type="email" id="authModalEmail" class="auth-input" placeholder="hello@example.com" required>
+          </div>
+        </div>
+
+        <button type="submit" class="auth-submit-btn" style="margin-top:0;">
+          <span>Send Reset Link</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Centralized Site Data & Auth Scripts -->
+  <script src="js/site-data.js" defer></script>
+  <script src="js/auth.js" defer></script>
+
+</body>
+
+</html>

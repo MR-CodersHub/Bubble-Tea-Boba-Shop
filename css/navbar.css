@@ -1,0 +1,865 @@
+/* ==========================================================================
+   BUBBLE & BREW – NAVBAR COMPONENT STYLES  v2.0
+   Transparent, full-bleed into hero background — no background card/box.
+   Includes: Light/Dark theme tokens · RTL support · Profile dropdown
+   ========================================================================== */
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   DESIGN TOKENS  — Light mode (default)
+   ══════════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* Palette */
+  --nb-white:          #FFFFFF;
+  --nb-white-80:       rgba(255, 255, 255, 0.82);
+  --nb-white-60:       rgba(255, 255, 255, 0.60);
+  --nb-peach:          #F5C18F;
+  --nb-peach-deep:     #E8A86A;
+  --nb-dark-brown:     #603D29;
+  --nb-primary:        #98633A;
+  --nb-secondary:      #B98258;
+
+  /* Navbar specifics (light) */
+  --nb-link-color:     #FFFFFF;
+  --nb-link-hover:     #FDE8D4;
+  --nb-underline:      #F5C18F;
+  --nb-underline-act:  #FFFFFF;
+  --nb-icon-bg:        rgba(255, 255, 255, 0.13);
+  --nb-icon-border:    rgba(255, 255, 255, 0.28);
+  --nb-ctrl-bg:        rgba(255, 255, 255, 0.12);
+  --nb-ctrl-border:    rgba(255, 255, 255, 0.25);
+  --nb-ctrl-color:     #FFFFFF;
+
+  /* Profile dropdown (light) */
+  --nb-drop-bg:        #FFF8F2;
+  --nb-drop-shadow:    0 12px 40px rgba(96, 61, 41, 0.22), 0 2px 8px rgba(0,0,0,.08);
+  --nb-drop-border:    rgba(185, 130, 88, 0.25);
+  --nb-drop-item-color:#603D29;
+  --nb-drop-item-hover:#98633A;
+  --nb-drop-item-hover-bg: rgba(245, 193, 143, 0.18);
+  --nb-drop-divider:   rgba(185, 130, 88, 0.15);
+  --nb-drop-arrow-bg:  #FFF8F2;
+
+  /* Mobile menu (light) */
+  --nb-mobile-bg:      #603D29;
+  --nb-mobile-link:    #FFFFFF;
+  --nb-mobile-link-active: #F5C18F;
+  --nb-mobile-divider: rgba(255,255,255,.12);
+  --nb-mobile-ctrl-bg: rgba(255,255,255,.10);
+  --nb-mobile-ctrl-border: rgba(255,255,255,.20);
+
+  --nb-transition: 0.25s ease;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   DARK MODE TOKENS  — applied when <html data-theme="dark">
+   ══════════════════════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  /* Profile dropdown (dark) */
+  --nb-drop-bg:              #2C1A0E;
+  --nb-drop-shadow:          0 12px 40px rgba(0,0,0,.55), 0 2px 8px rgba(0,0,0,.35);
+  --nb-drop-border:          rgba(185,130,88,.30);
+  --nb-drop-item-color:      #F5C18F;
+  --nb-drop-item-hover:      #FFFFFF;
+  --nb-drop-item-hover-bg:   rgba(245,193,143,.12);
+  --nb-drop-divider:         rgba(245,193,143,.12);
+  --nb-drop-arrow-bg:        #2C1A0E;
+
+  /* Mobile menu (dark) */
+  --nb-mobile-bg:            #1E0F08;
+  --nb-mobile-link:          #F5C18F;
+  --nb-mobile-link-active:   #FFFFFF;
+  --nb-mobile-ctrl-bg:       rgba(245,193,143,.10);
+  --nb-mobile-ctrl-border:   rgba(245,193,143,.20);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   GLOBAL DARK-MODE PAGE OVERRIDES
+   Applied when data-theme="dark" so every page gets readable colours.
+   ══════════════════════════════════════════════════════════════════════════════ */
+[data-theme="dark"] body {
+  background-color: #1A0D05;
+  color: #F5C18F;
+}
+
+/* Hero wrapper keeps its own background */
+[data-theme="dark"] .hero-wrapper {
+  background: #2a1508;
+}
+
+/* Coming-soon placeholder pages */
+[data-theme="dark"] .coming-soon-wrap {
+  background: #2a1508 !important;
+}
+
+/* Footer dark overrides */
+[data-theme="dark"] .bb-footer {
+  background: #120804 !important;
+}
+[data-theme="dark"] .bb-footer-bottom {
+  background: #0d0502 !important;
+}
+
+/* General card / surface dark */
+[data-theme="dark"] .custom-modal-card,
+[data-theme="dark"] .cart-drawer {
+  background: #2C1A0E;
+  color: #F5C18F;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   RTL LAYOUT HELPERS
+   ══════════════════════════════════════════════════════════════════════════════ */
+[dir="rtl"] .bb-nav-inner {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .bb-nav-links {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .bb-nav-actions {
+  flex-direction: row-reverse;
+}
+[dir="rtl"] .bb-mobile-menu {
+  right: auto;
+  left: -100%;
+}
+[dir="rtl"] .bb-mobile-menu.open {
+  left: 0;
+  right: auto;
+}
+[dir="rtl"] .bb-mobile-link:hover,
+[dir="rtl"] .bb-mobile-link.active {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+[dir="rtl"] .bb-dropdown-arrow {
+  left: auto;
+  right: 10px;
+}
+[dir="rtl"] .bb-profile-dropdown {
+  left: auto;
+  right: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   NAVBAR CONTAINER  — Fixed at top across ALL pages
+   ══════════════════════════════════════════════════════════════════════════════ */
+#navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  pointer-events: none; /* let clicks pass through transparent gaps */
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   NAVBAR SHELL  — always transparent; pointer-events restored on the bar itself
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-navbar {
+  width: 100%;
+  padding: 1.6rem 3.5rem 1rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  z-index: 999;
+  pointer-events: auto; /* restore clicks on the actual navbar bar */
+  transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+}
+
+/* Scroll-triggered solid state — applied when user scrolls past hero */
+.bb-navbar--solid {
+  background: rgba(74, 43, 26, 0.97) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.30) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding-top: 0.9rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+[data-theme="dark"] .bb-navbar--solid {
+  background: rgba(26, 13, 5, 0.97) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.55) !important;
+}
+
+.bb-nav-inner {
+  max-width: 1540px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BRAND / LOGO
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  z-index: 31;
+}
+
+.bb-brand-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.18));
+  transition: transform var(--nb-transition);
+}
+
+.bb-brand:hover .bb-brand-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.bb-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.bb-brand-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--nb-white);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.bb-brand-tagline {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--nb-peach);
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   CENTRE NAV LINKS  (desktop)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bb-nav-links li { position: relative; }
+
+.bb-nav-link {
+  position: relative;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--nb-link-color);
+  text-decoration: none;
+  padding: 0.5rem 0.2rem;
+  letter-spacing: 0.3px;
+  opacity: 0.88;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity var(--nb-transition), color var(--nb-transition);
+  white-space: nowrap;
+}
+
+/* Animated underline */
+.bb-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--nb-underline);
+  border-radius: 2px;
+  transition: width var(--nb-transition), left var(--nb-transition);
+}
+
+.bb-nav-link:hover {
+  opacity: 1;
+  color: var(--nb-link-hover);
+}
+.bb-nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Active link */
+.bb-nav-link.active {
+  font-weight: 600;
+  opacity: 1;
+}
+.bb-nav-link.active::after {
+  width: 100%;
+  left: 0;
+  background: var(--nb-underline-act);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   RIGHT-SIDE ACTION STRIP
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  z-index: 31;
+}
+
+/* ── Shared base for icon buttons (cart, profile) ── */
+.bb-icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--nb-icon-bg);
+  border: 1px solid var(--nb-icon-border);
+  border-radius: 50%;
+  color: var(--nb-white);
+  cursor: pointer;
+  transition: background var(--nb-transition), border-color var(--nb-transition),
+              color var(--nb-transition), transform var(--nb-transition);
+  outline: none;
+  flex-shrink: 0;
+}
+
+.bb-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.bb-icon-btn:hover {
+  background: var(--nb-peach);
+  border-color: var(--nb-peach);
+  color: var(--nb-dark-brown);
+  transform: scale(1.07);
+}
+
+/* ── Shared pill-style control buttons (dir, theme) ── */
+.bb-ctrl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  height: 36px;
+  padding: 0 0.9rem;
+  background: var(--nb-ctrl-bg);
+  border: 1px solid var(--nb-ctrl-border);
+  border-radius: 999px;
+  color: var(--nb-ctrl-color);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  outline: none;
+  transition: background var(--nb-transition), border-color var(--nb-transition),
+              color var(--nb-transition), transform var(--nb-transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.bb-ctrl-btn:hover {
+  background: var(--nb-peach);
+  border-color: var(--nb-peach);
+  color: var(--nb-dark-brown);
+  transform: scale(1.04);
+}
+
+/* RTL active state */
+.bb-dir-toggle.rtl-active {
+  background: rgba(245, 193, 143, 0.25);
+  border-color: var(--nb-peach);
+  color: var(--nb-peach);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LIGHT / DARK THEME TOGGLE
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-theme-toggle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Sun + Moon icons inside toggle */
+.bb-theme-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(.34,1.56,.64,1);
+  pointer-events: none;
+}
+
+.bb-sun  { transform: translate(-50%, -50%) rotate(0deg);    opacity: 1; }
+.bb-moon { transform: translate(-50%, -50%) rotate(-90deg);  opacity: 0; }
+
+/* Dark mode — show moon, hide sun */
+[data-theme="dark"] .bb-sun  {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+[data-theme="dark"] .bb-moon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   CART BADGE
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--nb-peach);
+  color: var(--nb-dark-brown);
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #98633A;
+  box-shadow: 0 2px 6px rgba(0,0,0,.22);
+  transition: transform 0.2s cubic-bezier(.175,.885,.32,1.275);
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   PROFILE DROPDOWN
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-profile-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.bb-profile-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  min-width: 170px;
+  background: var(--nb-drop-bg);
+  border: 1px solid var(--nb-drop-border);
+  border-radius: 14px;
+  box-shadow: var(--nb-drop-shadow);
+  overflow: hidden;
+  z-index: 200;
+
+  /* Hidden state */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px) scale(0.97);
+  transform-origin: top right;
+  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.16,1,.3,1);
+}
+
+.bb-profile-dropdown.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* Arrow caret pointing upward */
+.bb-dropdown-arrow {
+  position: absolute;
+  top: -7px;
+  right: 12px;
+  width: 13px;
+  height: 13px;
+  background: var(--nb-drop-arrow-bg);
+  border-top: 1px solid var(--nb-drop-border);
+  border-left: 1px solid var(--nb-drop-border);
+  transform: rotate(45deg);
+  border-radius: 2px 0 0 0;
+}
+
+.bb-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--nb-drop-item-color);
+  text-decoration: none;
+  transition: background var(--nb-transition), color var(--nb-transition),
+              padding-left var(--nb-transition);
+  border-bottom: 1px solid var(--nb-drop-divider);
+}
+
+.bb-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.bb-dropdown-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  opacity: 0.75;
+  transition: opacity var(--nb-transition);
+}
+
+.bb-dropdown-item:hover {
+  background: var(--nb-drop-item-hover-bg);
+  color: var(--nb-drop-item-hover);
+  padding-left: 1.4rem;
+}
+
+.bb-dropdown-item:hover svg {
+  opacity: 1;
+}
+
+[dir="rtl"] .bb-dropdown-item:hover {
+  padding-left: 1.1rem;
+  padding-right: 1.4rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   HAMBURGER TOGGLE  (mobile only)
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 19px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  z-index: 102;
+}
+
+.bb-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background: var(--nb-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.bb-hamburger.open span:nth-child(1) { transform: translateY(8.25px) rotate(45deg); }
+.bb-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.bb-hamburger.open span:nth-child(3) { transform: translateY(-8.25px) rotate(-45deg); }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MOBILE SLIDE-IN MENU
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(300px, 85vw);
+  height: 100vh;
+  height: 100dvh;
+  background: var(--nb-mobile-bg);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 1.75rem 2rem;
+  gap: 0;
+  margin: 0;
+  box-shadow: -10px 0 50px rgba(0,0,0,.45);
+  z-index: 1001;
+  transition: right 0.38s cubic-bezier(.16,1,.3,1);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bb-mobile-menu.open {
+  right: 0;
+}
+
+/* Mobile header row */
+.bb-mobile-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--nb-mobile-link);
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  transition: opacity var(--nb-transition);
+  flex-shrink: 0;
+}
+
+.bb-mobile-close svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.bb-mobile-close:hover { opacity: 1; }
+
+/* Mobile brand */
+.bb-mobile-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--nb-mobile-divider);
+  width: 100%;
+}
+
+.bb-mobile-brand-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.bb-mobile-brand > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-mobile-brand-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--nb-white);
+  text-transform: uppercase;
+}
+
+.bb-mobile-brand-tag {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--nb-peach);
+  text-transform: uppercase;
+  margin-top: 0.1rem;
+}
+
+/* Mobile nav links list */
+.bb-mobile-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.bb-mobile-links-list li {
+  opacity: 0;
+  transform: translateX(18px);
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+
+[dir="rtl"] .bb-mobile-links-list li {
+  transform: translateX(-18px);
+}
+
+.bb-mobile-menu.open .bb-mobile-links-list li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered delays */
+.bb-mobile-links-list li:nth-child(1)  { transition-delay: 0.04s; }
+.bb-mobile-links-list li:nth-child(2)  { transition-delay: 0.08s; }
+.bb-mobile-links-list li:nth-child(3)  { transition-delay: 0.12s; }
+.bb-mobile-links-list li:nth-child(4)  { transition-delay: 0.16s; }
+.bb-mobile-links-list li:nth-child(5)  { transition-delay: 0.20s; }
+.bb-mobile-links-list li:nth-child(6)  { transition-delay: 0.24s; }
+.bb-mobile-links-list li:nth-child(7)  { transition-delay: 0.28s; }
+.bb-mobile-links-list li:nth-child(8)  { transition-delay: 0.32s; }
+
+.bb-mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nb-mobile-link);
+  text-decoration: none;
+  padding: 0.75rem 0.25rem;
+  border-bottom: 1px solid var(--nb-mobile-divider);
+  width: 100%;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--nb-transition), padding-left var(--nb-transition);
+}
+
+.bb-mobile-link:hover,
+.bb-mobile-link.active {
+  color: var(--nb-mobile-link-active);
+  padding-left: 0.5rem;
+}
+
+.bb-mobile-link svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Account section */
+.bb-mobile-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--nb-mobile-divider);
+  margin: 1rem 0 0.75rem;
+}
+
+.bb-mobile-account .bb-mobile-account-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.bb-mobile-account .bb-mobile-account-link:hover {
+  opacity: 1;
+  color: var(--nb-peach);
+}
+
+/* Mobile bottom controls strip */
+.bb-mobile-controls {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: flex;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.bb-mobile-ctrl-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.6rem 0.5rem;
+  background: var(--nb-mobile-ctrl-bg);
+  border: 1px solid var(--nb-mobile-ctrl-border);
+  border-radius: 10px;
+  color: var(--nb-white);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--nb-transition), border-color var(--nb-transition);
+}
+
+.bb-mobile-ctrl-btn span:first-child {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.bb-mobile-ctrl-btn small {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.bb-mobile-ctrl-btn:hover,
+.bb-mobile-ctrl-btn.rtl-active,
+.bb-mobile-ctrl-btn.dark-active {
+  background: rgba(245,193,143,.20);
+  border-color: var(--nb-peach);
+  color: var(--nb-peach);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MOBILE BACKDROP
+   ══════════════════════════════════════════════════════════════════════════════ */
+.bb-mobile-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 15, 8, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.38s ease;
+}
+
+.bb-mobile-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.bb-menu-open {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 1280px) {
+  .bb-navbar      { padding: 1.5rem 2.5rem 1rem; }
+  .bb-nav-links   { gap: 1.9rem; }
+}
+
+@media (max-width: 1100px) {
+  .bb-navbar      { padding: 1.25rem 1.75rem 0.9rem; }
+  .bb-nav-links   { gap: 1.4rem; }
+  .bb-nav-link    { font-size: 0.88rem; }
+  .bb-brand-name  { font-size: 1.15rem; }
+}
+
+@media (max-width: 991px) {
+  /* Hide desktop links, show hamburger + mobile menu */
+  .bb-navbar        { padding: 1.1rem 1.5rem 0.75rem; }
+  .bb-nav-links     { display: none; }
+  .bb-hamburger     { display: flex; }
+  .bb-mobile-menu   { display: flex; }
+  .bb-mobile-backdrop { display: block; }
+
+  /* Keep dir + theme visible in action strip on tablet */
+  .bb-dir-toggle,
+  .bb-theme-toggle  { display: flex; }
+}
+
+@media (max-width: 640px) {
+  .bb-navbar        { padding: 0.9rem 1.1rem 0.6rem; }
+  .bb-brand-name    { font-size: 1.05rem; }
+  .bb-brand-icon    { width: 30px; height: 30px; }
+  .bb-brand-tagline { display: none; }
+
+  /* On small phones, hide dir/theme from action strip — they live in mobile menu */
+  .bb-dir-toggle,
+  .bb-theme-toggle  { display: none; }
+}
+
+@media (max-width: 360px) {
+  .bb-nav-inner    { gap: 0.5rem; }
+  .bb-brand        { gap: 0.45rem; }
+  .bb-brand-name   { font-size: 0.82rem; letter-spacing: 1.2px; }
+  .bb-brand-icon   { width: 26px; height: 26px; }
+  .bb-nav-actions  { gap: 0.35rem; }
+  #bbCartBtn       { display: none; }
+  .bb-profile-wrap,
+  .bb-profile-wrap .bb-icon-btn {
+    width: 36px;
+  }
+  .bb-hamburger    { width: 34px; }
+  .bb-profile-dropdown {
+    right: -42px;
+  }
+}

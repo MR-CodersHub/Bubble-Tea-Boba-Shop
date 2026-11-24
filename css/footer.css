@@ -1,0 +1,426 @@
+/* ==========================================================================
+   BUBBLE & BREW – FOOTER COMPONENT STYLES  v2.1
+   Premium café-style warm caramel & deep brown footer.
+   Color Palette: Deep Brown #603D29 · Peach #F5C18F · Cream #F4EBDD · White #FFFFFF
+   ========================================================================== */
+
+:root {
+  --ft-bg:          #603D29;
+  --ft-bg-dark:     #4A2B1A;
+  --ft-bg-bottom:   #442615;
+  --ft-white:       #FFFFFF;
+  --ft-white-85:    rgba(255, 255, 255, 0.88);
+  --ft-white-70:    rgba(255, 255, 255, 0.72);
+  --ft-white-45:    rgba(255, 255, 255, 0.45);
+  --ft-peach:       #F5C18F;
+  --ft-peach-light: #FDE8D4;
+  --ft-cream:       #F4EBDD;
+  --ft-accent:      #B98258;
+  --ft-transition:  0.25s cubic-bezier(.16,1,.3,1);
+}
+
+/* ── Dark Mode Overrides ─────────────────────────────────────────────────── */
+[data-theme="dark"] .bb-footer {
+  --ft-bg:        #231208;
+  --ft-bg-dark:   #1A0C05;
+  --ft-bg-bottom: #140904;
+}
+
+/* ── Footer shell ─────────────────────────────────────────────────────────── */
+#footer-container {
+  width: 100%;
+  position: relative;
+  z-index: 20;
+  overflow-x: hidden;
+}
+
+.bb-footer {
+  width: 100%;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(245, 193, 143, 0.10), transparent 22rem),
+    var(--ft-bg);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ft-white);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+/* Decorative top accent border line */
+.bb-footer-top-line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--ft-peach), var(--ft-accent), var(--ft-peach), transparent);
+}
+
+/* ── Main columns grid ────────────────────────────────────────────────────── */
+.bb-footer-main {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 2.5rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr 0.95fr 1.25fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* ── Column 1 – Brand Identity ────────────────────────────────────────────── */
+.bb-ft-brand-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.bb-ft-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: var(--ft-white);
+}
+
+.bb-ft-logo-svg {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  transition: transform var(--ft-transition);
+}
+
+.bb-ft-logo-row:hover .bb-ft-logo-svg {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.bb-ft-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.bb-ft-brand-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ft-white);
+}
+
+.bb-ft-brand-tagline {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--ft-peach);
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+.bb-ft-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--ft-cream);
+  max-width: 320px;
+  margin: 0;
+}
+
+/* Social icons */
+.bb-ft-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.bb-ft-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--ft-white);
+  text-decoration: none;
+  transition: all var(--ft-transition);
+}
+
+.bb-ft-social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform var(--ft-transition);
+}
+
+.bb-ft-social-link:hover {
+  background: var(--ft-peach);
+  color: #603D29;
+  border-color: var(--ft-peach);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bb-ft-social-link:hover svg {
+  transform: scale(1.1);
+}
+
+.bb-ft-logo-row:focus-visible,
+.bb-ft-social-link:focus-visible,
+.bb-ft-links li a:focus-visible,
+.bb-ft-contact-val:focus-visible,
+.bb-ft-bottom-links a:focus-visible {
+  outline: 3px solid var(--ft-peach);
+  outline-offset: 4px;
+}
+
+/* ── Columns 2 & 3 – Headings & Links ─────────────────────────────────────── */
+.bb-ft-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bb-ft-col-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--ft-peach);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.65rem;
+  line-height: 1.2;
+}
+
+.bb-ft-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--ft-peach);
+  border-radius: 2px;
+}
+
+[dir="rtl"] .bb-ft-col-title::after {
+  left: auto;
+  right: 0;
+}
+
+.bb-ft-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.bb-ft-links li a {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--ft-white-85);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--ft-transition), transform var(--ft-transition);
+}
+
+.bb-ft-links li a::before {
+  content: '›';
+  color: var(--ft-peach);
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform var(--ft-transition);
+}
+
+[dir="rtl"] .bb-ft-links li a::before {
+  content: '‹';
+}
+
+.bb-ft-links li a:hover {
+  color: var(--ft-peach);
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .bb-ft-links li a:hover {
+  transform: translateX(-4px);
+}
+
+/* ── Column 4 – Contact Information ───────────────────────────────────────── */
+.bb-ft-contact-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-ft-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.bb-ft-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.bb-ft-contact-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  color: var(--ft-peach);
+  transition: all var(--ft-transition);
+}
+
+.bb-ft-contact-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.bb-ft-contact-list li:hover .bb-ft-contact-icon {
+  background: var(--ft-peach);
+  color: #603D29;
+  border-color: var(--ft-peach);
+  transform: scale(1.05);
+}
+
+.bb-ft-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.bb-ft-contact-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ft-peach);
+}
+
+.bb-ft-contact-val {
+  font-size: 0.9rem;
+  color: var(--ft-white-85);
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color var(--ft-transition);
+}
+
+a.bb-ft-contact-val:hover {
+  color: var(--ft-peach);
+}
+
+/* ── Subtle separator line ────────────────────────────────────────────────── */
+.bb-footer-divider {
+  max-width: 1235px;
+  width: calc(100% - 5rem);
+  margin: 0 auto;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ── Footer bottom bar ────────────────────────────────────────────────────── */
+.bb-footer-bottom {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.6rem 2.5rem 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bb-ft-copy {
+  font-size: 0.85rem;
+  color: var(--ft-white-70);
+  margin: 0;
+}
+
+.bb-ft-copy strong {
+  color: var(--ft-peach);
+  font-weight: 600;
+}
+
+.bb-ft-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.bb-ft-bottom-links a {
+  font-size: 0.85rem;
+  color: var(--ft-white-70);
+  text-decoration: none;
+  transition: color var(--ft-transition);
+}
+
+.bb-ft-bottom-links a:hover {
+  color: var(--ft-peach);
+}
+
+.bb-ft-dot {
+  color: var(--ft-peach);
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive Adaptation ────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .bb-footer-main {
+    grid-template-columns: 1.2fr 0.9fr 0.9fr 1.2fr;
+    gap: 2.5rem;
+    padding: 4.5rem 2rem 3rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .bb-footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2.5rem;
+    padding: 4rem 2rem 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .bb-footer-main {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .bb-ft-desc {
+    max-width: 100%;
+  }
+
+  .bb-footer-divider {
+    width: calc(100% - 3rem);
+  }
+
+  .bb-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .bb-ft-bottom-links {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+}

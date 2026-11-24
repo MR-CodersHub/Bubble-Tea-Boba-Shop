@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | BUBBLE & BREW – Handcrafted Bubble Tea & Boba Shop</title>
+  <meta name="description" content="Discover the story, mission, and passionate team behind Bubble & Brew. Freshly brewed single-origin tea, perfectly chewy pearls, and genuine happiness in every cup.">
+
+  <!-- Google Fonts: Poppins (Weights 300, 400, 500, 600, 700, 800) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Core & Shared Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home-sections.css">
+
+  <!-- Dedicated About Us Page Stylesheet -->
+  <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body class="about-page-body">
+
+  <!-- REUSABLE NAVBAR COMPONENT (Fixed at top — shared component via components/navbar.js) -->
+  <div id="navbar-container"></div>
+
+  <!-- =========================================================================
+       HERO SECTION — OUR STORY BEGINS WITH A SIP
+       ========================================================================= -->
+  <header class="about-hero-wrapper" id="aboutHero">
+    <!-- Floating Outlined Bubbles & Doodles (Exact Home 1 Header Style) -->
+    <div class="floating-circle circle-1" aria-hidden="true"></div>
+    <div class="floating-circle circle-2" aria-hidden="true"></div>
+    <div class="floating-circle circle-3" aria-hidden="true"></div>
+    <div class="floating-circle circle-4" aria-hidden="true"></div>
+    <div class="floating-circle circle-5" aria-hidden="true"></div>
+
+    <div class="hs-floating-ball hs-ball-xl" style="top:12%;left:3%;animation-delay:-1.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:18%;left:22%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="top:22%;right:8%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg" style="top:75%;right:3%;animation-delay:-2.7s;" aria-hidden="true"></div>
+
+    <div class="hs-decor hs-pearl hs-pearl-lg" style="top:20%;right:4%;" aria-hidden="true"></div>
+    <div class="hs-decor hs-pearl hs-pearl-sm" style="bottom:15%;left:8%;animation-delay:-2.5s;" aria-hidden="true"></div>
+    <div class="hs-pearl-cluster" style="bottom:24%;right:42%;animation-delay:-3.2s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach hs-pearl-sm"></div>
+      <div class="hs-pearl hs-pearl-sm"></div>
+    </div>
+    <div class="hs-pearl-cluster" style="top:32%;left:48%;animation-delay:-2.1s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="top:16%;left:44%;animation-delay:-1.8s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Cup Doodle (Left) -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:26%;left:2%;animation-delay:-2.4s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Sparkle & Leaf Doodles -->
+    <div class="hs-decor hs-sparkle" style="top:18%;right:42%;animation-delay:-1s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:14%;left:36%;animation-delay:-2.6s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <!-- =======================================================================
+         NAVBAR (now fixed at top of body — see above)
+         ======================================================================= -->
+
+    <div class="about-hero-container">
+      <!-- Left Content (Using fade-in-left for immediate 100% visibility) -->
+      <div class="about-hero-content fade-in-left">
+        <div class="about-hero-eyebrow">
+          <span class="about-hero-eyebrow-dot"></span> OUR STORY • OUR PASSION
+        </div>
+
+        <h1 class="about-hero-headline">
+          More Than a Drink,<br>
+          It's a <span class="outline-word">Little Moment</span> of Happiness.
+        </h1>
+
+        <h2 class="about-hero-subtitle">
+          Crafting Smiles One Cup at a Time
+        </h2>
+
+        <p class="about-hero-description">
+          At Bubble &amp; Brew, we believe every cup should bring a little joy. From carefully brewed tea to perfectly chewy pearls, we turn simple ingredients into delightful moments worth sharing.
+        </p>
+
+        <div class="about-hero-buttons">
+          <a href="#storySection" class="btn-discover-story" id="discoverStoryBtn">
+            Discover Our Story <span class="hs-arrow">&#8595;</span>
+          </a>
+          <a href="flavours.html" class="btn-explore-flavours" id="exploreFlavoursBtn">
+            Explore Our Flavours <span class="hs-arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual (Organic Masked Bubble Tea Photography) -->
+      <div class="about-hero-visual fade-in-right">
+        <svg class="about-hero-svg-mask" viewBox="0 0 700 540" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="aboutHeroClip">
+              <path d="M 120,20 C 350,-20 620,30 680,180 C 740,330 630,480 470,510 C 310,540 100,520 40,380 C -20,240 10,40 120,20 Z" />
+            </clipPath>
+          </defs>
+
+          <!-- High Quality Real Bubble Tea Photo -->
+          <g clip-path="url(#aboutHeroClip)">
+            <image href="images/about_hero.jpg" x="0" y="0" width="700" height="540" preserveAspectRatio="xMidYMid slice" />
+          </g>
+
+          <!-- Decorative Peach Organic Ribbon Border -->
+          <path class="about-peach-ribbon" d="M 120,20 C 350,-20 620,30 680,180 C 740,330 630,480 470,510 C 310,540 100,520 40,380 C -20,240 10,40 120,20 Z" />
+        </svg>
+
+        <!-- Floating Boba Cup Doodle -->
+        <div class="hs-doodle-cup hs-doodle-cup-lg" style="bottom:10%;left:4%;" aria-hidden="true">
+          <svg viewBox="0 0 110 110" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 28C20 18 28 12 40 12C52 12 60 18 60 28C60 34 56 39 48 42L45 52L40 44C30 43 20 37 20 28Z" stroke-width="2"/>
+            <line x1="82" y1="20" x2="90" y2="14" stroke-width="2"/>
+            <line x1="90" y1="26" x2="98" y2="24" stroke-width="2"/>
+            <path d="M42 56L48 94C48.3 96.5 50.5 98 53 98H71C73.5 98 75.7 96.5 76 94L82 56" stroke-width="2.2"/>
+            <path d="M38 56H86" stroke-width="2.2"/>
+            <path d="M44 56C44 47 50 42 62 42C74 42 80 47 80 56" stroke-width="2.2"/>
+            <line x1="62" y1="42" x2="62" y2="28" stroke-width="2.5"/>
+            <circle cx="53" cy="85" r="3" fill="#FFFFFF"/>
+            <circle cx="61" cy="88" r="3" fill="#FFFFFF"/>
+            <circle cx="68" cy="84" r="3" fill="#FFFFFF"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================================
+       3. COMPANY STORY — THE BEGINNING OF BUBBLE & BREW
+       ========================================================================= -->
+  <section class="about-story-section" id="storySection" aria-labelledby="storyHeading">
+    <!-- Floating Decorative Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:5%;right:3%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="bottom:10%;left:4%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg" style="top:55%;right:2%;animation-delay:-1.7s;" aria-hidden="true"></div>
+    <div class="hs-decor hs-pearl hs-pearl-peach" style="top:22%;left:3%;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:8%;left:2%;animation-delay:-2.2s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:12%;right:3%;animation-delay:-1.9s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster & Sparkles -->
+    <div class="hs-pearl-cluster" style="top:62%;right:5%;animation-delay:-3s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:12%;right:8%;animation-delay:-1.4s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:8%;left:8%;animation-delay:-2.8s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="about-story-grid">
+        <!-- Asymmetrical Image Collage -->
+        <div class="story-collage-wrap hs-reveal-left">
+          <!-- Main Café Photography -->
+          <div class="story-main-img-box">
+            <img src="images/about_story_cafe.jpg" alt="Bubble & Brew Artisan Café Setting" class="story-main-img" loading="lazy">
+          </div>
+
+          <!-- Overlapping Boba Drink Preparation -->
+          <div class="story-overlay-img-box">
+            <img src="images/about_story_cup.jpg" alt="Handcrafted Bubble Tea with Chewy Tapioca Pearls" class="story-overlay-img" loading="lazy">
+          </div>
+
+          <!-- Floating Artisan Badge -->
+          <div class="story-floating-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            Handcrafted With Care
+          </div>
+        </div>
+
+        <!-- Editorial Story Content -->
+        <div class="about-story-text hs-reveal-right">
+          <span class="hs-eyebrow">OUR JOURNEY, ONE CUP AT A TIME</span>
+          <h2 class="hs-heading" id="storyHeading">
+            A Story Brewed With <span class="outline-word">Passion</span>
+          </h2>
+
+          <p class="story-lead-p">
+            Bubble &amp; Brew started with a simple idea: make every sip feel special. Inspired by the joy of discovering new flavours and sharing good moments, we set out to create drinks that combine quality ingredients, creativity, and happiness.
+          </p>
+
+          <p class="story-body-p">
+            What began as a love for tea and tapioca pearls grew into a place where classic favourites meet exciting new combinations. Every cup reflects our passion for fresh preparation, thoughtful ingredients, and unforgettable taste.
+          </p>
+
+          <!-- Key Craft Pills -->
+          <div class="story-pills-row">
+            <div class="story-pill-item">
+              <span class="story-pill-dot"></span> 100% Single-Origin Tea
+            </div>
+            <div class="story-pill-item">
+              <span class="story-pill-dot"></span> Grade-A Slow Cooked Boba
+            </div>
+            <div class="story-pill-item">
+              <span class="story-pill-dot"></span> Organic Whole &amp; Oat Milk
+            </div>
+            <div class="story-pill-item">
+              <span class="story-pill-dot"></span> Real Pure Fruit Infusions
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       4. MISSION & VISION — WHAT WE BELIEVE IN
+       ========================================================================= -->
+  <section class="about-mission-section" id="missionSection" aria-labelledby="missionHeading">
+    <!-- Floating Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="top:8%;left:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md" style="bottom:12%;right:3%;animation-delay:-2.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm" style="top:60%;left:3%;animation-delay:-3.2s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg hs-doodle-peach" style="top:10%;right:4%;animation-delay:-2.3s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-md hs-straw-white" style="bottom:15%;left:4%;animation-delay:-1.6s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:10%;right:18%;animation-delay:-2.9s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:14%;right:15%;animation-delay:-1.2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:18%;right:6%;animation-delay:-2.2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 650px; margin: 0 auto;">
+        <span class="hs-eyebrow">PURPOSE &amp; PRINCIPLES</span>
+        <h2 class="hs-heading" id="missionHeading">
+          What We <span class="outline-word">Believe</span> In
+        </h2>
+        <p class="hs-body mx-auto text-center">
+          Our guiding values shape every cup we steep, every topping we cook, and every smile we share across our café counters.
+        </p>
+      </div>
+
+      <!-- Two Heroic Cards (Mission & Vision) -->
+      <div class="mission-vision-grid">
+
+        <!-- Mission Card (Warm Cream / Caramel Theme) -->
+        <article class="mv-card mv-card-mission hs-reveal-left" aria-labelledby="cardMissionTitle">
+          <div class="mv-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/>
+              <path d="M12 22V2"/>
+            </svg>
+          </div>
+          <span class="mv-tag">OUR PURPOSE</span>
+          <h3 class="mv-title" id="cardMissionTitle">Our Mission</h3>
+          <p class="mv-quote">
+            &ldquo;To craft delightful bubble tea experiences using quality ingredients, fresh preparation, and imaginative flavours that bring people together.&rdquo;
+          </p>
+
+          <ul class="mv-pillars">
+            <li class="mv-pillar-item">
+              <span class="mv-pillar-icon">&#10003;</span>
+              Freshly brewed premium whole-leaf teas with zero shortcuts
+            </li>
+            <li class="mv-pillar-item">
+              <span class="mv-pillar-icon">&#10003;</span>
+              Naturally sweetened syrups and authentic farm-fresh ingredients
+            </li>
+            <li class="mv-pillar-item">
+              <span class="mv-pillar-icon">&#10003;</span>
+              Creating warm welcoming spaces where community thrives
+            </li>
+          </ul>
+        </article>
+
+        <!-- Vision Card (Deep Rich Caramel Brown Theme) -->
+        <article class="mv-card mv-card-vision hs-reveal-right" aria-labelledby="cardVisionTitle">
+          <div class="mv-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+            </svg>
+          </div>
+          <span class="mv-tag">OUR FUTURE</span>
+          <h3 class="mv-title" id="cardVisionTitle">Our Vision</h3>
+          <p class="mv-quote">
+            &ldquo;To become a favourite destination for bubble tea lovers by making every cup memorable, every flavour exciting, and every visit a happy experience.&rdquo;
+          </p>
+
+          <ul class="mv-pillars">
+            <li class="mv-pillar-item">
+              <span class="mv-pillar-icon">&#10003;</span>
+              Unrivalled beverage innovation and flavor craftsmanship
+            </li>
+            <li class="mv-pillar-item">
+              <span class="mv-pillar-icon">&#10003;</span>
+              Sustainable eco-friendly packaging and ethical sourcing
+            </li>
+            <li class="mv-pillar-item">
+              <span class="mv-pillar-icon">&#10003;</span>
+              A joyful everyday celebration for bubble tea fans everywhere
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. OUR JOURNEY — INTERACTIVE TIMELINE
+       ========================================================================= -->
+  <section class="about-timeline-section" id="journeySection" aria-labelledby="journeyHeading">
+    <!-- Floating Outlined Bubbles, Cups & Straws -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:6%;right:4%;animation-delay:-1.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-white" style="bottom:14%;left:5%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="top:50%;left:2%;animation-delay:-2.2s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup (White on Brown) -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:12%;left:3%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw (White on Brown) -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:16%;right:4%;animation-delay:-2.4s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkle & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:18%;right:12%;animation-delay:-2s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:15%;right:12%;animation-delay:-1.6s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:10%;left:28%;animation-delay:-3s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 660px; margin: 0 auto;">
+        <span class="hs-eyebrow">LITTLE MOMENTS, BIG MILESTONES</span>
+        <h2 class="hs-heading" id="journeyHeading">
+          Every Great Story Has Its <span class="outline-word">Milestones</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Follow our evolution from a humble passion for authentic Taiwanese tea to a vibrant boba destination loved by tea enthusiasts.
+        </p>
+      </div>
+
+      <!-- Timeline Track with Animated Line -->
+      <div class="timeline-track-wrap">
+        <div class="timeline-line">
+          <div class="timeline-line-progress" id="timelineProgress"></div>
+        </div>
+
+        <div class="timeline-grid">
+
+          <!-- Milestone 1 -->
+          <div class="timeline-step-item hs-reveal hs-delay-1">
+            <div class="timeline-node" aria-label="Step 1">01</div>
+            <span class="timeline-phase">PHASE 1 • THE SPARK</span>
+            <h3 class="timeline-title">The First Idea</h3>
+            <p class="timeline-desc">
+              The initial spark of inspiration to create an elevated bubble tea experience built around genuine happiness, playful creativity, and welcoming café culture.
+            </p>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-step-item hs-reveal hs-delay-2">
+            <div class="timeline-node" aria-label="Step 2">02</div>
+            <span class="timeline-phase">PHASE 2 • EXPERIMENTATION</span>
+            <h3 class="timeline-title">Our First Creations</h3>
+            <p class="timeline-desc">
+              Countless days in the kitchen experimenting with single-origin loose leaf blends, organic milk ratios, and slow-cooking tapioca pearls to achieve the signature springy chew.
+            </p>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-step-item hs-reveal hs-delay-3">
+            <div class="timeline-node" aria-label="Step 3">03</div>
+            <span class="timeline-phase">PHASE 3 • INNOVATION</span>
+            <h3 class="timeline-title">A World of Flavours</h3>
+            <p class="timeline-desc">
+              Introducing exciting recipe innovations including slow-caramelized Muscovado syrup, ceremonial Uji matcha blends, and vibrant seasonal fresh fruit refreshers.
+            </p>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-step-item hs-reveal hs-delay-4">
+            <div class="timeline-node" aria-label="Step 4">04</div>
+            <span class="timeline-phase">PHASE 4 • COMMUNITY</span>
+            <h3 class="timeline-title">Growing Together</h3>
+            <p class="timeline-desc">
+              Building a loyal community of bubble tea enthusiasts, expanding customizable options, and crafting memorable happiness in every single cup served daily.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       6. WHAT MAKES US SPECIAL — OUR LITTLE SECRETS
+       ========================================================================= -->
+  <section class="about-secrets-section" id="secretsSection" aria-labelledby="secretsHeading">
+    <!-- Floating Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;left:2%;animation-delay:-2.2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:8%;right:4%;animation-delay:-3.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm" style="top:55%;right:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:10%;left:4%;animation-delay:-2.5s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm" style="bottom:12%;left:3%;animation-delay:-1.7s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster & Sparkles -->
+    <div class="hs-pearl-cluster" style="bottom:14%;left:12%;animation-delay:-3.1s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:14%;right:12%;animation-delay:-1.5s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:16%;right:8%;animation-delay:-2.7s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 650px; margin: 0 auto;">
+        <span class="hs-eyebrow">OUR LITTLE SECRETS</span>
+        <h2 class="hs-heading" id="secretsHeading">
+          What Makes Us <span class="outline-word">Special</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          From precise steeping temperatures to artisanal cooking techniques, explore the dedication behind every delicious cup.
+        </p>
+      </div>
+
+      <!-- 4 Feature Cards Grid -->
+      <div class="secrets-grid">
+
+        <!-- Card 1 -->
+        <article class="secret-card hs-reveal hs-delay-1" aria-labelledby="secTitle1">
+          <div class="secret-img-wrap">
+            <img src="images/story_tea_brewing.jpg" alt="Freshly steeped tea served in a glass teapot" class="secret-img" loading="lazy">
+          </div>
+          <div class="secret-card-body">
+            <span class="secret-num">SECRET 01</span>
+            <h3 class="secret-title" id="secTitle1">Freshly Brewed Tea</h3>
+            <p class="secret-desc">
+              Every cup begins with thoughtfully prepared loose-leaf tea steeped fresh in small batches at precise water temperatures.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="secret-card hs-reveal hs-delay-2" aria-labelledby="secTitle2">
+          <div class="secret-img-wrap">
+            <img src="images/category_pearls.jpg" alt="Glossy tapioca pearls prepared for bubble tea" class="secret-img" loading="lazy">
+          </div>
+          <div class="secret-card-body">
+            <span class="secret-num">SECRET 02</span>
+            <h3 class="secret-title" id="secTitle2">Perfectly Chewy Pearls</h3>
+            <p class="secret-desc">
+              Grade-A cassava tapioca pearls slow-simmered in honey syrup throughout the day to deliver that delightful, springy texture in every sip.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="secret-card hs-reveal hs-delay-3" aria-labelledby="secTitle3">
+          <div class="secret-img-wrap">
+            <img src="images/category_signature.jpg" alt="Two handcrafted bubble tea flavour combinations" class="secret-img" loading="lazy">
+          </div>
+          <div class="secret-card-body">
+            <span class="secret-num">SECRET 03</span>
+            <h3 class="secret-title" id="secTitle3">Creative Combinations</h3>
+            <p class="secret-desc">
+              A balanced harmony of timeless Taiwanese milk tea classics and exciting seasonal recipes featuring real fruit purées and Japanese matcha.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="secret-card hs-reveal hs-delay-4" aria-labelledby="secTitle4">
+          <div class="secret-img-wrap">
+            <img src="images/category_brown_sugar.jpg" alt="Brown sugar bubble tea held ready to serve" class="secret-img" loading="lazy">
+          </div>
+          <div class="secret-card-body">
+            <span class="secret-num">SECRET 04</span>
+            <h3 class="secret-title" id="secTitle4">Made With Care</h3>
+            <p class="secret-desc">
+              Personalized attention to every sweetness preference, ice level, and topping choice, prepared by baristas passionate about hospitality.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       7. MEET OUR TEAM — THE PEOPLE BEHIND EVERY CUP
+       ========================================================================= -->
+  <section class="about-team-section" id="teamSection" aria-labelledby="teamHeading">
+    <!-- Floating Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:6%;right:2%;animation-delay:-1.6s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:12%;left:3%;animation-delay:-2.8s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm" style="top:68%;right:3%;animation-delay:-2.1s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg hs-doodle-peach" style="top:8%;left:3%;animation-delay:-2.3s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-md hs-straw-white" style="bottom:10%;right:3%;animation-delay:-1.8s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="top:58%;left:2%;animation-delay:-2.7s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:12%;left:12%;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:14%;right:10%;animation-delay:-2.4s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 650px; margin: 0 auto;">
+        <span class="hs-eyebrow">THE PEOPLE BEHIND EVERY CUP</span>
+        <h2 class="hs-heading" id="teamHeading">
+          Meet the People Who Make It <span class="outline-word">Special</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Behind every delicious cup is a team that brings creativity, care, and a little extra happiness to everything we do.
+        </p>
+      </div>
+
+      <!-- 4 Team Profile Cards Grid -->
+      <div class="team-grid">
+
+        <!-- Team Member 1 -->
+        <article class="team-card hs-reveal hs-delay-1" aria-labelledby="teamMember1">
+          <div class="team-img-wrap">
+            <img src="images/team_aarav.jpg" alt="Aarav - Founder & Creative Director" class="team-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-name" id="teamMember1">Aarav</h3>
+            <span class="team-role">Founder &amp; Creative Director</span>
+            <p class="team-bio">
+              Bringing the vision and passion behind every Bubble &amp; Brew beverage and customer experience.
+            </p>
+          </div>
+        </article>
+
+        <!-- Team Member 2 -->
+        <article class="team-card hs-reveal hs-delay-2" aria-labelledby="teamMember2">
+          <div class="team-img-wrap">
+            <img src="images/team_maya.jpg" alt="Maya - Flavour Specialist" class="team-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-name" id="teamMember2">Maya</h3>
+            <span class="team-role">Flavour Specialist</span>
+            <p class="team-bio">
+              Exploring new botanical combinations, seasonal fruits, and creating exciting signature recipes.
+            </p>
+          </div>
+        </article>
+
+        <!-- Team Member 3 -->
+        <article class="team-card hs-reveal hs-delay-3" aria-labelledby="teamMember3">
+          <div class="team-img-wrap">
+            <img src="images/team_riya.jpg" alt="Riya - Tea Craft Expert" class="team-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-name" id="teamMember3">Riya</h3>
+            <span class="team-role">Tea Craft Expert</span>
+            <p class="team-bio">
+              Focused on the delicate balance of single-origin tea brewing, creamy milks, and aroma.
+            </p>
+          </div>
+        </article>
+
+        <!-- Team Member 4 -->
+        <article class="team-card hs-reveal hs-delay-4" aria-labelledby="teamMember4">
+          <div class="team-img-wrap">
+            <img src="images/team_daniel.jpg" alt="Daniel - Customer Experience Lead" class="team-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <h3 class="team-name" id="teamMember4">Daniel</h3>
+            <span class="team-role">Customer Experience Lead</span>
+            <p class="team-bio">
+              Making every café visit welcoming, friendly, and truly memorable for all boba lovers.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       8. CUSTOMER LOVE — HAPPINESS IN EVERY SIP
+       ========================================================================= -->
+  <section class="about-testimonials-section" id="testimonialsSection" aria-labelledby="testiHeading">
+    <!-- Floating Outlined Bubbles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:5%;left:3%;animation-delay:-1.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-white" style="bottom:8%;right:4%;animation-delay:-3.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="top:60%;right:3%;animation-delay:-2.2s;" aria-hidden="true"></div>
+    <div class="hs-decor hs-pearl hs-pearl-peach" style="bottom:12%;left:6%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup (White on Dark Brown) -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:10%;right:5%;animation-delay:-2.1s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw (White on Dark Brown) -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:14%;left:4%;animation-delay:-2.6s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="top:22%;left:4%;animation-delay:-1.9s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:16%;right:15%;animation-delay:-1.3s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:8%;left:22%;animation-delay:-3s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 650px; margin: 0 auto;">
+        <span class="hs-eyebrow">HAPPINESS IN EVERY SIP</span>
+        <h2 class="hs-heading" id="testiHeading">
+          Little Words That <span class="outline-word">Mean a Lot</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Every shared smile and every happy review inspires us to keep brewing something special day after day.
+        </p>
+      </div>
+
+      <!-- 3 Testimonial Cards -->
+      <div class="about-testi-grid">
+
+        <!-- Review 1 -->
+        <article class="about-testi-card hs-reveal hs-delay-1">
+          <div class="testi-stars-row" aria-label="5 out of 5 stars">
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p class="testi-quote-text">
+            &ldquo;Absolutely love the brown sugar milk tea! The pearls are perfectly chewy, and the flavour is amazing. My go-to treat every single weekend!&rdquo;
+          </p>
+          <div class="testi-author-box">
+            <img src="images/customer_1.jpg" alt="Sarah M." class="testi-avatar-img">
+            <div>
+              <div class="testi-author-name">Sarah M.</div>
+              <div class="testi-author-desc">Regular Customer</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 2 -->
+        <article class="about-testi-card hs-reveal hs-delay-2">
+          <div class="testi-stars-row" aria-label="5 out of 5 stars">
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p class="testi-quote-text">
+            &ldquo;Such a lovely experience. The drinks are refreshing, and there are so many interesting flavours to try. The staff is always smiling and helpful!&rdquo;
+          </p>
+          <div class="testi-author-box">
+            <img src="images/customer_2.jpg" alt="James K." class="testi-avatar-img">
+            <div>
+              <div class="testi-author-name">James K.</div>
+              <div class="testi-author-desc">Bubble Tea Enthusiast</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 3 -->
+        <article class="about-testi-card hs-reveal hs-delay-3">
+          <div class="testi-stars-row" aria-label="5 out of 5 stars">
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="testi-star-svg" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <p class="testi-quote-text">
+            &ldquo;My favourite place for bubble tea! Every visit gives me a new flavour to fall in love with. The strawberry popping boba is pure magic.&rdquo;
+          </p>
+          <div class="testi-author-box">
+            <img src="images/customer_3.jpg" alt="Aisha R." class="testi-avatar-img">
+            <div>
+              <div class="testi-author-name">Aisha R.</div>
+              <div class="testi-author-desc">Loyal Member</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       9. THE ART BEHIND EVERY CUP — 4-STEP VISUAL JOURNEY
+       ========================================================================= -->
+  <section class="about-process-section" id="artSection" aria-labelledby="artHeading">
+    <!-- Floating Outlined Bubbles, Cups & Straws -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;left:2%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:10%;right:3%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm" style="top:50%;right:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:12%;right:5%;animation-delay:-2.2s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:15%;left:4%;animation-delay:-1.9s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:12%;right:15%;animation-delay:-2.7s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:14%;left:12%;animation-delay:-1.1s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:14%;left:6%;animation-delay:-2.5s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal mb-5" style="max-width: 720px; margin: 0 auto;">
+        <span class="hs-eyebrow">OUR LITTLE BREWING RITUAL</span>
+        <h2 class="hs-heading" id="artHeading">
+          FROM LEAF TO <span class="outline-word">HAPPINESS</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Every beautiful cup begins with simple ingredients, thoughtful preparation and a little love. Discover the journey behind every sip.
+        </p>
+      </div>
+
+      <!-- Split Layout: Left 4-Step Vertical Journey + Right Looping Video -->
+      <div class="brewing-journey-split">
+
+        <!-- LEFT SIDE: 4-Step Vertical Brewing Journey -->
+        <div class="brewing-journey-left">
+          <div class="brewing-timeline" id="brewingTimeline">
+
+            <!-- Connecting Progress Track -->
+            <div class="brewing-progress-track" aria-hidden="true">
+              <div class="brewing-progress-bar" id="brewingProgressBar"></div>
+            </div>
+
+            <!-- STEP 01: SELECT THE LEAVES -->
+            <article class="brewing-step brewing-step--active" data-step="1">
+              <div class="brewing-marker-col">
+                <div class="brewing-marker">
+                  <span class="brewing-step-num">01</span>
+                  <div class="brewing-marker-pulse" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="brewing-card">
+                <div class="brewing-card-header">
+                  <div class="brewing-icon-box brewing-icon-leaf">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 3C8 3 4 10 4 18c0 5 4 10 12 10s12-5 12-10c0-8-4-15-12-15z"/>
+                      <path d="M16 28V3"/>
+                      <path d="M16 11c3 2 6 2 8 0"/>
+                      <path d="M16 19c-3 2-6 2-8 0"/>
+                    </svg>
+                  </div>
+                  <div class="brewing-title-group">
+                    <span class="brewing-tag">STEP 01</span>
+                    <h3 class="brewing-title">SELECT THE LEAVES</h3>
+                  </div>
+                </div>
+                <p class="brewing-desc">
+                  We begin with carefully selected tea leaves to bring out a fresh, rich and naturally delightful flavour.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 02: BREW TO PERFECTION -->
+            <article class="brewing-step" data-step="2">
+              <div class="brewing-marker-col">
+                <div class="brewing-marker">
+                  <span class="brewing-step-num">02</span>
+                  <div class="brewing-marker-pulse" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="brewing-card">
+                <div class="brewing-card-header">
+                  <div class="brewing-icon-box brewing-icon-kettle">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <!-- Steaming lines -->
+                      <path d="M12 4c0 2-2 3-2 5" class="steam-line steam-1"/>
+                      <path d="M16 2c0 2-2 3-2 5" class="steam-line steam-2"/>
+                      <path d="M20 4c0 2-2 3-2 5" class="steam-line steam-3"/>
+                      <!-- Teapot / Kettle -->
+                      <path d="M7 14h18a2 2 0 0 1 2 2v6a7 7 0 0 1-7 7h-6a7 7 0 0 1-7-7v-6a2 2 0 0 1 2-2z"/>
+                      <path d="M4 18l-2 1a2 2 0 0 0-1 2v1a4 4 0 0 0 4 4h2"/>
+                      <path d="M25 18l3-2a2 2 0 0 1 3 2v2a5 5 0 0 1-5 5h-1"/>
+                      <path d="M11 14a5 5 0 0 1 10 0"/>
+                    </svg>
+                  </div>
+                  <div class="brewing-title-group">
+                    <span class="brewing-tag">STEP 02</span>
+                    <h3 class="brewing-title">BREW TO PERFECTION</h3>
+                  </div>
+                </div>
+                <p class="brewing-desc">
+                  Our tea is freshly brewed with care, allowing its aroma and flavour to develop beautifully.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 03: BLEND WITH LOVE -->
+            <article class="brewing-step" data-step="3">
+              <div class="brewing-marker-col">
+                <div class="brewing-marker">
+                  <span class="brewing-step-num">03</span>
+                  <div class="brewing-marker-pulse" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="brewing-card">
+                <div class="brewing-card-header">
+                  <div class="brewing-icon-box brewing-icon-blend">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <!-- Pitcher pouring -->
+                      <path d="M8 8h12l-2 15a4 4 0 0 1-4 4h0a4 4 0 0 1-4-4L8 8z"/>
+                      <path d="M20 12h3a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-2"/>
+                      <!-- Droplets & liquid swirl -->
+                      <path d="M10 16c2 1 4-1 6 0s4-1 4 0" class="blend-wave"/>
+                      <circle cx="12" cy="22" r="1.5" fill="currentColor"/>
+                      <circle cx="16" cy="24" r="1.5" fill="currentColor"/>
+                      <path d="M6 7l-3 4"/>
+                    </svg>
+                  </div>
+                  <div class="brewing-title-group">
+                    <span class="brewing-tag">STEP 03</span>
+                    <h3 class="brewing-title">BLEND WITH LOVE</h3>
+                  </div>
+                </div>
+                <p class="brewing-desc">
+                  We bring together creamy milk, delicious flavours and perfectly chewy pearls to create a delightful combination.
+                </p>
+              </div>
+            </article>
+
+            <!-- STEP 04: SERVE YOUR HAPPINESS -->
+            <article class="brewing-step" data-step="4">
+              <div class="brewing-marker-col">
+                <div class="brewing-marker brewing-marker--final">
+                  <span class="brewing-step-num">04</span>
+                  <div class="brewing-marker-pulse" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="brewing-card brewing-card--final">
+                <div class="brewing-card-header">
+                  <div class="brewing-icon-box brewing-icon-cup">
+                    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <!-- Boba Cup with Straw -->
+                      <path d="M9 11l2 15a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3l2-15"/>
+                      <path d="M7 11h18"/>
+                      <path d="M10 11c0-4 3-6 6-6s6 2 6 6"/>
+                      <line x1="18" y1="5" x2="22" y2="1"/>
+                      <!-- Pearls inside -->
+                      <circle cx="13" cy="23" r="1.6" fill="currentColor"/>
+                      <circle cx="17" cy="24" r="1.6" fill="currentColor"/>
+                      <circle cx="15" cy="20" r="1.6" fill="currentColor"/>
+                      <circle cx="19" cy="21" r="1.6" fill="currentColor"/>
+                    </svg>
+                  </div>
+                  <div class="brewing-title-group">
+                    <span class="brewing-tag brewing-tag--final">STEP 04</span>
+                    <h3 class="brewing-title">SERVE YOUR HAPPINESS</h3>
+                  </div>
+                </div>
+                <p class="brewing-desc">
+                  Every cup is finished with care and served fresh, ready to make your everyday moment a little happier.
+                </p>
+              </div>
+            </article>
+
+          </div><!-- /.brewing-timeline -->
+        </div><!-- /.brewing-journey-left -->
+
+        <!-- RIGHT SIDE: Continuous Brewing Video in Asymmetrical Organic Frame -->
+        <div class="brewing-journey-right">
+          <div class="brewing-video-stage">
+            <!-- Organic decorative background halo & rotating ring -->
+            <div class="brewing-video-halo" aria-hidden="true"></div>
+            <div class="brewing-video-ring" aria-hidden="true"></div>
+
+            <!-- Video Frame Container -->
+            <div class="brewing-video-frame">
+              <video class="brewing-video" id="brewingVideo" autoplay muted loop playsinline preload="auto">
+                <source src="assets-images-vid.mp4" type="video/mp4">
+                <source src="images/vid.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="brewing-video-overlay" aria-hidden="true"></div>
+
+              <!-- Decorative Badge -->
+              <div class="brewing-video-badge">
+                <span class="brewing-badge-dot"></span>
+                <span class="brewing-badge-text">FRESHLY BREWED, ALWAYS</span>
+              </div>
+            </div>
+
+            <!-- Floating SVG Decorations around the frame -->
+            <div class="brewing-decor-leaf" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+            </div>
+            <div class="brewing-decor-sparkle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+            </div>
+            <div class="brewing-decor-pearl bdp-1" aria-hidden="true"></div>
+            <div class="brewing-decor-pearl bdp-2" aria-hidden="true"></div>
+          </div>
+        </div><!-- /.brewing-journey-right -->
+
+      </div><!-- /.brewing-journey-split -->
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       10. FINAL CTA — COME BE PART OF OUR STORY
+       ========================================================================= -->
+  <section class="about-cta-section" id="ctaSection" aria-labelledby="ctaHeading">
+    <!-- Floating Outlined Bubbles, Cups & Straws -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;right:4%;animation-delay:-1.2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-white" style="bottom:12%;left:3%;animation-delay:-3.6s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="top:55%;left:2%;animation-delay:-2.1s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup (White on Brown) -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg hs-doodle-peach" style="top:12%;left:4%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw (White on Brown) -->
+    <div class="hs-doodle-straw hs-doodle-straw-md hs-straw-white" style="bottom:16%;right:5%;animation-delay:-2.3s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:16%;left:24%;animation-delay:-2.8s;" aria-hidden="true">
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-peach"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:18%;right:15%;animation-delay:-1.3s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:10%;left:48%;animation-delay:-2.7s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="about-cta-grid">
+        <!-- CTA Text Content -->
+        <div class="hs-reveal-left">
+          <span class="hs-eyebrow" style="color:var(--peach-accent, #F5C18F);">JOIN OUR BOBA FAMILY</span>
+          <h2 class="about-cta-headline" id="ctaHeading">
+            Your Next Happy Moment <span class="outline-word">Starts Here.</span>
+          </h2>
+          <p class="about-cta-desc">
+            Discover your favourite flavour, create your perfect combination, and make every sip a little celebration. We can't wait to brew for you!
+          </p>
+
+          <div class="about-hero-buttons">
+            <a href="flavours.html" class="btn-discover-story">
+              Explore Our Menu <span class="hs-arrow">&#8594;</span>
+            </a>
+            <a href="customize.html" class="btn-explore-flavours">
+              Customize Your Drink <span class="hs-arrow">&#8594;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA Large Lifestyle Image -->
+        <div class="about-cta-img-wrap hs-reveal-right">
+          <img src="images/about_boba_family.jpg" alt="A freshly made brown sugar bubble tea with tapioca pearls" class="about-cta-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       11. REUSABLE FOOTER COMPONENT
+       ========================================================================= -->
+  <div id="footer-container"></div>
+
+
+  <!-- =========================================================================
+       SHOPPING BAG / CART DRAWER
+       ========================================================================= -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <svg style="width: 22px; height: 22px; stroke: var(--peach-accent, #F5C18F);" viewBox="0 0 24 24" fill="none"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span style="font-weight: 700;">Your Boba Bag</span>
+      </div>
+      <button class="modal-close-btn" id="cartDrawerClose" style="position: static;"
+        aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <div class="p-4 text-center text-muted" style="font-size: 0.95rem;">
+        Your bag is currently empty. Explore our signature flavours to begin!
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Subtotal</span>
+        <span class="cart-total-val" id="cartTotalVal">&#8377;0</span>
+      </div>
+      <a href="flavours.html" class="btn-checkout text-center text-decoration-none d-block">Explore Our Flavours</a>
+    </div>
+  </aside>
+
+
+  <!-- =========================================================================
+       SCRIPTS (Bootstrap 5, Reusable Navbar, Reusable Footer, About Controller)
+       ========================================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/site-data.js" defer></script>
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/about.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Flavours | BUBBLE &amp; BREW – Handcrafted Bubble Tea &amp; Boba Shop</title>
+  <meta name="description" content="Explore a world full of flavour at Bubble &amp; Brew. From classic milk tea to fruity refreshers, brown sugar specials, and ceremonial matcha, find the perfect boba to brighten your day.">
+
+  <!-- Google Fonts: Poppins (Weights 300, 400, 500, 600, 700, 800) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Core & Shared Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home-sections.css">
+
+  <!-- Dedicated Our Flavor Page Stylesheet -->
+  <link rel="stylesheet" href="css/flavours.css">
+</head>
+
+<body class="flavor-page-body">
+
+  <!-- REUSABLE NAVBAR COMPONENT (Fixed at top — shared component via components/navbar.js) -->
+  <div id="navbar-container"></div>
+
+  <!-- =========================================================================
+       1. HERO SECTION — A WORLD FULL OF FLAVOUR
+       ========================================================================= -->
+  <header class="flavor-hero-wrapper" id="flavorHero">
+    <!-- Floating Outlined Bubbles & Doodles (Exact Home 1 Header Style) -->
+    <div class="floating-circle circle-1" aria-hidden="true"></div>
+    <div class="floating-circle circle-2" aria-hidden="true"></div>
+    <div class="floating-circle circle-3" aria-hidden="true"></div>
+    <div class="floating-circle circle-4" aria-hidden="true"></div>
+    <div class="floating-circle circle-5" aria-hidden="true"></div>
+
+    <div class="hs-floating-ball hs-ball-xl" style="top:12%;left:3%;animation-delay:-1.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:18%;left:22%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="top:22%;right:8%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg" style="top:75%;right:3%;animation-delay:-2.7s;" aria-hidden="true"></div>
+
+    <div class="hs-decor hs-pearl hs-pearl-lg" style="top:20%;right:4%;" aria-hidden="true"></div>
+    <div class="hs-decor hs-pearl hs-pearl-sm" style="bottom:15%;left:8%;animation-delay:-2.5s;" aria-hidden="true"></div>
+    <div class="hs-pearl-cluster" style="bottom:24%;right:42%;animation-delay:-3.2s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach hs-pearl-sm"></div>
+      <div class="hs-pearl hs-pearl-sm"></div>
+    </div>
+    <div class="hs-pearl-cluster" style="top:32%;left:48%;animation-delay:-2.1s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="top:16%;left:44%;animation-delay:-1.8s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:24%;left:2%;animation-delay:-2.4s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Sparkle & Leaf Doodles -->
+    <div class="hs-decor hs-sparkle" style="top:18%;right:42%;animation-delay:-1s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:14%;left:36%;animation-delay:-2.6s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <!-- =======================================================================
+         REUSABLE NAVBAR COMPONENT (now fixed at top of body — see above)
+         ======================================================================= -->
+
+    <div class="flavor-hero-container">
+      <!-- Left Content (Immediate visibility via fade-in-left) -->
+      <div class="flavor-hero-content fade-in-left">
+        <div class="flavor-hero-eyebrow">
+          <span class="flavor-hero-eyebrow-dot"></span> DISCOVER YOUR NEXT FAVOURITE
+        </div>
+
+        <h1 class="flavor-hero-headline">
+          A World Full of<br>
+          <span class="outline-word">Flavour</span> in Every Sip.
+        </h1>
+
+        <p class="flavor-hero-description">
+          From rich and creamy classics to refreshing fruity blends, discover a delicious collection of bubble tea flavours made to brighten your day.
+        </p>
+
+        <div class="flavor-hero-buttons">
+          <a href="#flavourCollections" class="btn-explore-main" id="btnExploreFlavours">
+            Explore Our Flavours <span class="hs-arrow">&#8595;</span>
+          </a>
+          <a href="#moodSection" class="btn-mood-secondary" id="btnFindFavourite">
+            Find Your Favourite <span class="hs-arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual (Asymmetric Masked Realistic Boba Photography) -->
+      <div class="flavor-hero-visual fade-in-right">
+        <svg class="flavor-hero-svg-mask" viewBox="0 0 700 540" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="flavorHeroClip">
+              <path d="M 120,20 C 350,-20 620,30 680,180 C 740,330 630,480 470,510 C 310,540 100,520 40,380 C -20,240 10,40 120,20 Z" />
+            </clipPath>
+          </defs>
+
+          <!-- High-Quality Realistic Group Composition of Boba Drinks -->
+          <g clip-path="url(#flavorHeroClip)">
+            <image href="images/flavor_hero.jpg" x="0" y="0" width="700" height="540" preserveAspectRatio="xMidYMid slice" />
+          </g>
+
+          <!-- Decorative Peach Organic Ribbon Border -->
+          <path class="flavor-peach-ribbon" d="M 120,20 C 350,-20 620,30 680,180 C 740,330 630,480 470,510 C 310,540 100,520 40,380 C -20,240 10,40 120,20 Z" />
+        </svg>
+
+        <!-- Floating Badge -->
+        <div class="hero-flavour-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          Handcrafted Daily
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================================
+       2. FLAVOUR COLLECTIONS — 6 CATEGORY CARDS (Cream Background)
+       ========================================================================= -->
+  <section class="flavor-collections-section" id="flavourCollections" aria-labelledby="collectionsHeading">
+    <!-- Floating Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:5%;right:3%;animation-delay:-2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-peach" style="bottom:10%;left:4%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg" style="top:52%;left:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:8%;left:2%;animation-delay:-2.2s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm" style="bottom:12%;right:3%;animation-delay:-1.9s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="top:40%;right:4%;animation-delay:-2.7s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:12%;right:12%;animation-delay:-1.4s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:10%;left:10%;animation-delay:-2.8s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 680px; margin: 0 auto;">
+        <span class="hs-eyebrow">OUR FLAVOUR WORLD</span>
+        <h2 class="hs-heading" id="collectionsHeading">
+          Find the Flavour That <span class="outline-word">Feels Like You.</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Every mood deserves its own flavour. Explore our carefully curated collections, from comforting classics to refreshing fruity creations.
+        </p>
+      </div>
+
+      <!-- 6 Category Cards Grid -->
+      <div class="flavor-collections-grid">
+
+        <!-- Card 1: Classic Milk Tea -->
+        <article class="flavor-cat-card hs-reveal hs-delay-1" aria-labelledby="catTitle1">
+          <div class="flavor-cat-img-box">
+            <span class="flavor-cat-tag">COLLECTION 01</span>
+            <img src="https://images.pexels.com/photos/9271564/pexels-photo-9271564.jpeg?cs=srgb&dl=pexels-amar-9271564.jpg&fm=jpg" alt="Classic Taiwanese Milk Tea with Tapioca Pearls" class="flavor-cat-img" loading="lazy">
+          </div>
+          <div class="flavor-cat-body">
+            <h3 class="flavor-cat-title" id="catTitle1">Classic Milk Tea</h3>
+            <p class="flavor-cat-desc">
+              Smooth, creamy, and timeless. The perfect choice for anyone who loves traditional milk tea brewed from whole black tea leaves.
+            </p>
+            <a href="menu.html" class="flavor-cat-explore">Explore Selection <span class="hs-arrow">&#8594;</span></a>
+          </div>
+        </article>
+
+        <!-- Card 2: Brown Sugar Specials -->
+        <article class="flavor-cat-card hs-reveal hs-delay-2" aria-labelledby="catTitle2">
+          <div class="flavor-cat-img-box">
+            <span class="flavor-cat-tag">COLLECTION 02</span>
+            <img src="https://images.pexels.com/photos/6412828/pexels-photo-6412828.jpeg?cs=srgb&dl=pexels-rdne-6412828.jpg&fm=jpg" alt="Brown Sugar Tiger Stripes Boba Milk Tea" class="flavor-cat-img" loading="lazy">
+          </div>
+          <div class="flavor-cat-body">
+            <h3 class="flavor-cat-title" id="catTitle2">Brown Sugar Specials</h3>
+            <p class="flavor-cat-desc">
+              Rich caramel sweetness, creamy milk, and delightful brown sugar pearls slow-cooked to sticky, chewy perfection.
+            </p>
+            <a href="menu.html" class="flavor-cat-explore">Explore Selection <span class="hs-arrow">&#8594;</span></a>
+          </div>
+        </article>
+
+        <!-- Card 3: Fruity Refreshers -->
+        <article class="flavor-cat-card hs-reveal hs-delay-3" aria-labelledby="catTitle3">
+          <div class="flavor-cat-img-box">
+            <span class="flavor-cat-tag">COLLECTION 03</span>
+            <img src="https://images.pexels.com/photos/33212344/pexels-photo-33212344.jpeg?cs=srgb&dl=pexels-lol-bubble-tea-2154418419-33212344.jpg&fm=jpg" alt="Bright Fruit Tea Infusion with Fresh Tropical Slices" class="flavor-cat-img" loading="lazy">
+          </div>
+          <div class="flavor-cat-body">
+            <h3 class="flavor-cat-title" id="catTitle3">Fruity Refreshers</h3>
+            <p class="flavor-cat-desc">
+              Bright, juicy, and refreshing combinations inspired by real fruit goodness, fragrant jasmine green tea, and popping boba.
+            </p>
+            <a href="menu.html" class="flavor-cat-explore">Explore Selection <span class="hs-arrow">&#8594;</span></a>
+          </div>
+        </article>
+
+        <!-- Card 4: Matcha Moments -->
+        <article class="flavor-cat-card hs-reveal hs-delay-1" aria-labelledby="catTitle4">
+          <div class="flavor-cat-img-box">
+            <span class="flavor-cat-tag">COLLECTION 04</span>
+            <img src="https://images.pexels.com/photos/31599066/pexels-photo-31599066.jpeg?cs=srgb&dl=pexels-31599066.jpg&fm=jpg" alt="Ceremonial Uji Matcha Green Tea Boba" class="flavor-cat-img" loading="lazy">
+          </div>
+          <div class="flavor-cat-body">
+            <h3 class="flavor-cat-title" id="catTitle4">Matcha Moments</h3>
+            <p class="flavor-cat-desc">
+              Earthy matcha flavours blended into smooth and creamy bubble tea creations made with shade-grown Japanese green tea.
+            </p>
+            <a href="menu.html" class="flavor-cat-explore">Explore Selection <span class="hs-arrow">&#8594;</span></a>
+          </div>
+        </article>
+
+        <!-- Card 5: Taro & Creamy Blends -->
+        <article class="flavor-cat-card hs-reveal hs-delay-2" aria-labelledby="catTitle5">
+          <div class="flavor-cat-img-box">
+            <span class="flavor-cat-tag">COLLECTION 05</span>
+            <img src="https://images.pexels.com/photos/35727299/pexels-photo-35727299.jpeg?cs=srgb&dl=pexels-alberto-lara-25433440-35727299.jpg&fm=jpg" alt="Silky Purple Taro Root Milk Tea with Chewy Boba" class="flavor-cat-img" loading="lazy">
+          </div>
+          <div class="flavor-cat-body">
+            <h3 class="flavor-cat-title" id="catTitle5">Taro &amp; Creamy Blends</h3>
+            <p class="flavor-cat-desc">
+              Delightfully smooth drinks with comforting textures and distinctive sweet vanilla-nutty taro notes loved by café fans.
+            </p>
+            <a href="menu.html" class="flavor-cat-explore">Explore Selection <span class="hs-arrow">&#8594;</span></a>
+          </div>
+        </article>
+
+        <!-- Card 6: Signature Creations -->
+        <article class="flavor-cat-card hs-reveal hs-delay-3" aria-labelledby="catTitle6">
+          <div class="flavor-cat-img-box">
+            <span class="flavor-cat-tag">COLLECTION 06</span>
+            <img src="https://images.pexels.com/photos/33212329/pexels-photo-33212329.jpeg?cs=srgb&dl=pexels-lol-bubble-tea-2154418419-33212329.jpg&fm=jpg" alt="Decadent Bubble & Brew House Signature Beverage" class="flavor-cat-img" loading="lazy">
+          </div>
+          <div class="flavor-cat-body">
+            <h3 class="flavor-cat-title" id="catTitle6">Signature Creations</h3>
+            <p class="flavor-cat-desc">
+              Unique Bubble &amp; Brew combinations crafted for adventurous flavour lovers with house cheese foam and specialty toppings.
+            </p>
+            <a href="menu.html" class="flavor-cat-explore">Explore Selection <span class="hs-arrow">&#8594;</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. OUR SIGNATURE FLAVOURS — 4 PRODUCT CARDS (White Background)
+       ========================================================================= -->
+  <section class="flavor-signature-section" id="signatureFlavours" aria-labelledby="sigHeading">
+    <!-- Floating Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;left:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:12%;right:3%;animation-delay:-2.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm" style="top:60%;left:3%;animation-delay:-3.2s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg hs-doodle-peach" style="top:10%;right:4%;animation-delay:-2.3s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-md hs-straw-white" style="bottom:15%;left:4%;animation-delay:-1.6s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:10%;right:18%;animation-delay:-2.9s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:14%;right:15%;animation-delay:-1.2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:18%;right:6%;animation-delay:-2.2s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <!-- Soft Pastel Oval Background (Inspired by Reference Design) -->
+    <div class="flavor-sig-oval-bg" aria-hidden="true"></div>
+
+    <div class="hs-container flavor-sig-container">
+      <div class="text-center hs-reveal" style="max-width: 680px; margin: 0 auto;">
+        <span class="hs-eyebrow">A LITTLE SIP OF HAPPINESS</span>
+        <h2 class="hs-heading" id="sigHeading">
+          The Flavours Everyone <span class="outline-word">Falls For.</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Every cup has its own personality. Hover over or tap any drink to explore flavours, customize ingredients, and enjoy your perfect sip.
+        </p>
+      </div>
+
+      <!-- Interactive 4-Product Showcase (Inspired by Starbucks Reference UI) -->
+      <div class="flavor-sig-track-wrap" id="flavorSigWrap">
+
+        <!-- Mobile / Tablet Navigation Chevrons -->
+        <button type="button" class="flavor-sig-nav-arrow flavor-sig-nav-prev" id="flavorSigPrev" aria-label="Previous Drink">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+        </button>
+
+        <!-- Product Cards Row (4 Drinks matching reference layout) -->
+        <div class="flavor-sig-cards-row" id="flavorSigCardsRow" role="region" aria-label="Signature Flavours Showcase">
+
+          <!-- ── CARD 1: Brown Sugar Bliss ── -->
+          <article class="flavor-sig-card" data-index="0" data-id="brown-sugar-bliss" data-base-price="169" tabindex="0" role="button" aria-label="Brown Sugar Bliss" aria-expanded="false">
+            <div class="flavor-sig-img-container">
+              <span class="flavor-sig-card-badge">&#9733; Bestseller</span>
+              <div class="flavor-sig-img-box">
+                <img src="images/brown.png" alt="Brown Sugar Bliss" class="flavor-sig-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="flavor-sig-normal-view">
+              <h3 class="flavor-sig-title-normal">Brown Sugar Bliss</h3>
+              <span class="flavor-sig-price-normal">&#8377;169</span>
+              <p class="flavor-sig-desc-normal">Caramelized brown sugar, fresh milk and warm chewy boba.</p>
+              <span class="flavor-sig-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View (matches reference design) -->
+            <div class="flavor-sig-active-view">
+              <div class="flavor-sig-card-nav-bar">
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                </button>
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                </button>
+              </div>
+
+              <h3 class="flavor-sig-title-active">Brown Sugar Bliss</h3>
+              <p class="flavor-sig-desc-active">Rich Taiwanese brown sugar syrup slow-simmered with organic milk & chewy warm boba.</p>
+
+              <div class="flavor-sig-price-active-wrap">
+                <span class="flavor-sig-price-active" data-role="display-price">&#8377;169</span>
+                <span class="flavor-sig-cal-active">• 340 kcal</span>
+              </div>
+
+              <!-- Customization Options matching reference -->
+              <div class="flavor-sig-options-box">
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Size</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Milk</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                      <option value="Soy Milk">Soy Milk (+&#8377;25)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Drink</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-temp" aria-label="Select drink style">
+                      <option value="Iced Boba" selected>Iced Boba</option>
+                      <option value="Less Ice">Less Ice (70%)</option>
+                      <option value="Warm / Hot">Warm / Hot</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="flavor-sig-btn-add" aria-label="Add Brown Sugar Bliss to Basket">
+                <span>ADD TO BASKET</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ── CARD 2: Strawberry Cloud ── -->
+          <article class="flavor-sig-card" data-index="1" data-id="strawberry-cloud" data-base-price="159" tabindex="0" role="button" aria-label="Strawberry Cloud" aria-expanded="false">
+            <div class="flavor-sig-img-container">
+              <span class="flavor-sig-card-badge" style="background:#F5C18F;color:#603D29;">New Crave</span>
+              <div class="flavor-sig-img-box">
+                <img src="images/straberry.png" alt="Strawberry Cloud" class="flavor-sig-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="flavor-sig-normal-view">
+              <h3 class="flavor-sig-title-normal">Strawberry Cloud</h3>
+              <span class="flavor-sig-price-normal">&#8377;159</span>
+              <p class="flavor-sig-desc-normal">Sweet strawberry, floral jasmine tea and popping pearls.</p>
+              <span class="flavor-sig-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View -->
+            <div class="flavor-sig-active-view">
+              <div class="flavor-sig-card-nav-bar">
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                </button>
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                </button>
+              </div>
+
+              <h3 class="flavor-sig-title-active">Strawberry Cloud</h3>
+              <p class="flavor-sig-desc-active">Sweet hand-crushed strawberries blended with velvety cream milk and popping boba pearls.</p>
+
+              <div class="flavor-sig-price-active-wrap">
+                <span class="flavor-sig-price-active" data-role="display-price">&#8377;159</span>
+                <span class="flavor-sig-cal-active">• 280 kcal</span>
+              </div>
+
+              <!-- Customization Options -->
+              <div class="flavor-sig-options-box">
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Size</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Milk</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                      <option value="Soy Milk">Soy Milk (+&#8377;25)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Drink</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-temp" aria-label="Select drink style">
+                      <option value="Iced Boba" selected>Iced Boba</option>
+                      <option value="Less Ice">Less Ice (70%)</option>
+                      <option value="Warm / Hot">Warm / Hot</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="flavor-sig-btn-add" aria-label="Add Strawberry Cloud to Basket">
+                <span>ADD TO BASKET</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ── CARD 3: Matcha Velvet (ACTIVE BY DEFAULT — matches green center card in reference) ── -->
+          <article class="flavor-sig-card active" data-index="2" data-id="matcha-velvet" data-base-price="169" tabindex="0" role="button" aria-label="Matcha Velvet" aria-expanded="true">
+            <div class="flavor-sig-img-container">
+              <span class="flavor-sig-card-badge" style="background:#4B6F44;color:#FFFFFF;">Ceremonial</span>
+              <div class="flavor-sig-img-box">
+                <img src="images/matcha.png" alt="Matcha Velvet" class="flavor-sig-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="flavor-sig-normal-view">
+              <h3 class="flavor-sig-title-normal">Matcha Velvet</h3>
+              <span class="flavor-sig-price-normal">&#8377;169</span>
+              <p class="flavor-sig-desc-normal">Ceremonial matcha blended with silky milk and tapioca.</p>
+              <span class="flavor-sig-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View -->
+            <div class="flavor-sig-active-view">
+              <div class="flavor-sig-card-nav-bar">
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                </button>
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                </button>
+              </div>
+
+              <h3 class="flavor-sig-title-active">Matcha Velvet</h3>
+              <p class="flavor-sig-desc-active">First-harvest Uji matcha whisked with fresh whole milk and layered over chewy brown sugar tapioca.</p>
+
+              <div class="flavor-sig-price-active-wrap">
+                <span class="flavor-sig-price-active" data-role="display-price">&#8377;169</span>
+                <span class="flavor-sig-cal-active">• 290 kcal</span>
+              </div>
+
+              <!-- Customization Options -->
+              <div class="flavor-sig-options-box">
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Size</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Milk</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                      <option value="Soy Milk">Soy Milk (+&#8377;25)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Drink</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-temp" aria-label="Select drink style">
+                      <option value="Iced Boba" selected>Iced Boba</option>
+                      <option value="Less Ice">Less Ice (70%)</option>
+                      <option value="Warm / Hot">Warm / Hot</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="flavor-sig-btn-add" aria-label="Add Matcha Velvet to Basket">
+                <span>ADD TO BASKET</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ── CARD 4: Taro Dream ── -->
+          <article class="flavor-sig-card" data-index="3" data-id="taro-dream" data-base-price="159" tabindex="0" role="button" aria-label="Taro Dream" aria-expanded="false">
+            <div class="flavor-sig-img-container">
+              <span class="flavor-sig-card-badge" style="background:#7A4C78;color:#FFFFFF;">Chef's Choice</span>
+              <div class="flavor-sig-img-box">
+                <img src="images/taro.png" alt="Taro Dream" class="flavor-sig-drink-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Normal Inactive View -->
+            <div class="flavor-sig-normal-view">
+              <h3 class="flavor-sig-title-normal">Taro Dream</h3>
+              <span class="flavor-sig-price-normal">&#8377;159</span>
+              <p class="flavor-sig-desc-normal">Creamy taro, sweet milk and soft purple boba pearls.</p>
+              <span class="flavor-sig-explore-normal">Discover flavour</span>
+            </div>
+
+            <!-- Active Highlighted View -->
+            <div class="flavor-sig-active-view">
+              <div class="flavor-sig-card-nav-bar">
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-prev" aria-label="Previous Drink">
+                  <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                </button>
+                <button type="button" class="flavor-sig-arrow-btn flavor-sig-card-next" aria-label="Next Drink">
+                  <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                </button>
+              </div>
+
+              <h3 class="flavor-sig-title-active">Taro Dream</h3>
+              <p class="flavor-sig-desc-active">Real slow-cooked taro root puree with silky fresh milk and chewy sweet honey pearls.</p>
+
+              <div class="flavor-sig-price-active-wrap">
+                <span class="flavor-sig-price-active" data-role="display-price">&#8377;159</span>
+                <span class="flavor-sig-cal-active">• 320 kcal</span>
+              </div>
+
+              <!-- Customization Options -->
+              <div class="flavor-sig-options-box">
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Size</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-size" aria-label="Select drink size">
+                      <option value="Small" data-delta="-20">Small (350ml -&#8377;20)</option>
+                      <option value="Medium" data-delta="0" selected>Medium (500ml)</option>
+                      <option value="Large" data-delta="30">Large (700ml +&#8377;30)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Milk</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-milk" aria-label="Select milk type">
+                      <option value="Regular Milk" selected>Regular Milk</option>
+                      <option value="Oat Milk">Oat Milk (+&#8377;30)</option>
+                      <option value="Almond Milk">Almond Milk (+&#8377;30)</option>
+                      <option value="Soy Milk">Soy Milk (+&#8377;25)</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+
+                <div class="flavor-sig-option-row">
+                  <span class="flavor-sig-option-label">Drink</span>
+                  <div class="flavor-sig-select-wrapper">
+                    <select class="flavor-sig-custom-select flavor-opt-temp" aria-label="Select drink style">
+                      <option value="Iced Boba" selected>Iced Boba</option>
+                      <option value="Less Ice">Less Ice (70%)</option>
+                      <option value="Warm / Hot">Warm / Hot</option>
+                    </select>
+                    <span class="flavor-sig-select-chevron" aria-hidden="true">&#9662;</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="flavor-sig-btn-add" aria-label="Add Taro Dream to Basket">
+                <span>ADD TO BASKET</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              </button>
+            </div>
+          </article>
+
+        </div><!-- /.flavor-sig-cards-row -->
+
+        <!-- Right Side Nav Arrow (Tablet / Mobile Carousel) -->
+        <button type="button" class="flavor-sig-nav-arrow flavor-sig-nav-next" id="flavorSigNext" aria-label="Next Drink">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </button>
+
+      </div><!-- /.flavor-sig-track-wrap -->
+
+      <!-- Interactive Toast Alert -->
+      <div class="flavor-cart-toast" id="flavorCartToast" role="alert" aria-live="polite">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        <span id="flavorToastMsg">Added to your basket!</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       4. CHOOSE YOUR FLAVOUR MOOD — INTERACTIVE (Brown Background)
+       ========================================================================= -->
+  <section class="flavor-mood-section" id="moodSection" aria-labelledby="moodHeading">
+    <!-- Floating Outlined Bubbles, Cups & Straws -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:6%;right:4%;animation-delay:-1.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm hs-ball-white" style="bottom:14%;left:5%;animation-delay:-3s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="top:50%;left:2%;animation-delay:-2.2s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup (White on Brown) -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:12%;left:3%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw (White on Brown) -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm hs-straw-white" style="bottom:16%;right:4%;animation-delay:-2.4s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:18%;right:12%;animation-delay:-2s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:15%;right:12%;animation-delay:-1.6s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:10%;left:28%;animation-delay:-3s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 680px; margin: 0 auto;">
+        <span class="hs-eyebrow">PERSONALIZED TASTE EXPERIENCE</span>
+        <h2 class="hs-heading" id="moodHeading">
+          What's Your <span class="outline-word">Mood Today?</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Sometimes you need something refreshing. Sometimes you want something rich and creamy. There's always a flavour for your moment. Tap a mood below to explore!
+        </p>
+      </div>
+
+      <!-- 4 Interactive Mood Cards (Work by Tap or Click) -->
+      <div class="flavor-mood-grid" role="tablist" aria-label="Flavour Mood Selector">
+
+        <!-- Mood 1: The Comfort Mood (Active by default) -->
+        <article class="mood-card active hs-reveal hs-delay-1" data-mood="comfort" role="tab" tabindex="0" aria-selected="true" aria-labelledby="moodTitle1">
+          <div class="mood-img-box">
+            <img src="images/flavor_mood_comfort.jpg" alt="Comforting rich and creamy bubble tea" class="mood-img" loading="lazy">
+          </div>
+          <div class="mood-card-body">
+            <span class="mood-tag">MOOD #01</span>
+            <h3 class="mood-title" id="moodTitle1">The Comfort Mood</h3>
+            <p class="mood-desc">Creamy, rich, and comforting drinks that feel like a warm hug.</p>
+            <div class="mood-recommend">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Classic Brown Sugar Boba</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mood 2: The Fresh Mood -->
+        <article class="mood-card hs-reveal hs-delay-2" data-mood="fresh" role="tab" tabindex="0" aria-selected="false" aria-labelledby="moodTitle2">
+          <div class="mood-img-box">
+            <img src="images/flavor_mood_fresh.jpg" alt="Light fruity refreshing bubble tea" class="mood-img" loading="lazy">
+          </div>
+          <div class="mood-card-body">
+            <span class="mood-tag">MOOD #02</span>
+            <h3 class="mood-title" id="moodTitle2">The Fresh Mood</h3>
+            <p class="mood-desc">Light, fruity, and refreshing drinks bursting with vibrant energy.</p>
+            <div class="mood-recommend">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Mango Passion Fruit Green Tea</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mood 3: The Sweet Mood -->
+        <article class="mood-card hs-reveal hs-delay-3" data-mood="sweet" role="tab" tabindex="0" aria-selected="false" aria-labelledby="moodTitle3">
+          <div class="mood-img-box">
+            <img src="images/flavor_mood_sweet.jpg" alt="Caramel sweet indulgent bubble tea" class="mood-img" loading="lazy">
+          </div>
+          <div class="mood-card-body">
+            <span class="mood-tag">MOOD #03</span>
+            <h3 class="mood-title" id="moodTitle3">The Sweet Mood</h3>
+            <p class="mood-desc">Caramel-inspired and indulgently sweet creations to treat yourself.</p>
+            <div class="mood-recommend">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Crème Brûlée Caramel Boba</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mood 4: The Explorer Mood -->
+        <article class="mood-card hs-reveal hs-delay-4" data-mood="explorer" role="tab" tabindex="0" aria-selected="false" aria-labelledby="moodTitle4">
+          <div class="mood-img-box">
+            <img src="images/flavor_mood_explorer.jpg" alt="Adventurous multi-layered bubble tea" class="mood-img" loading="lazy">
+          </div>
+          <div class="mood-card-body">
+            <span class="mood-tag">MOOD #04</span>
+            <h3 class="mood-title" id="moodTitle4">The Explorer Mood</h3>
+            <p class="mood-desc">Unique combinations for adventurous flavour lovers seeking novelty.</p>
+            <div class="mood-recommend">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Uji Matcha Strawberry Cloud</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Live Interactive Recommendation Banner -->
+      <div class="mood-live-box hs-reveal" id="moodLiveBox" aria-live="polite">
+        <div class="mood-live-info">
+          <span class="mood-live-badge" id="moodLiveBadge">RECOMMENDED PAIRING FOR COMFORT</span>
+          <h3 class="mood-live-headline" id="moodLiveHeadline">Classic Brown Sugar Milk Tea with Warm Tapioca Pearls</h3>
+          <p class="mood-live-sub" id="moodLiveSub">
+            Rich caramel sweetness and creamy whole milk perfectly balance authentic slow-cooked boba for a deep, comforting embrace in every sip.
+          </p>
+        </div>
+        <a href="menu.html" class="btn-explore-main flex-shrink-0" id="btnMoodOrder">
+          Order This Drink <span class="hs-arrow">&#8594;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. THE INGREDIENTS BEHIND THE FLAVOUR (Cream Background)
+       ========================================================================= -->
+  <section class="flavor-ingredients-section" id="ingredientsSection" aria-labelledby="ingHeading">
+    <!-- Floating Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;left:2%;animation-delay:-2.2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:8%;right:4%;animation-delay:-3.5s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm" style="top:55%;right:2%;animation-delay:-1.8s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-md hs-doodle-peach" style="top:10%;left:4%;animation-delay:-2.5s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-sm" style="bottom:12%;left:3%;animation-delay:-1.7s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:14%;left:12%;animation-delay:-3.1s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:14%;right:12%;animation-delay:-1.5s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:16%;right:8%;animation-delay:-2.7s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="text-center hs-reveal" style="max-width: 680px; margin: 0 auto;">
+        <span class="hs-eyebrow">PURE CRAFT &amp; INTEGRITY</span>
+        <h2 class="hs-heading" id="ingHeading">
+          Good Ingredients. <span class="outline-word">Beautiful Flavours.</span>
+        </h2>
+        <p class="hs-body-sub mx-auto text-center">
+          Great bubble tea starts with thoughtful ingredients. Every element contributes to the taste, texture, and experience of every cup.
+        </p>
+      </div>
+
+      <!-- Editorial Asymmetric Layout -->
+      <div class="ingredients-grid-wrap">
+
+        <!-- Left: Large Hero Ingredient Visual with Floating Quote -->
+        <div class="ing-main-visual hs-reveal-left">
+          <img src="images/flavor_ing_main.jpg" alt="Artisanal bubble tea ingredients and craft preparation" class="ing-main-img" loading="lazy">
+          <div class="ing-floating-quote">
+            <p>&ldquo;<strong>Zero artificial powders.</strong> We source single-estate teas, simmer fresh cassava boba every 4 hours, and craft syrups from raw natural sugar.&rdquo;</p>
+          </div>
+        </div>
+
+        <!-- Right: 4 Ingredient Highlight Mini Cards -->
+        <div class="ingredients-cards-column hs-reveal-right">
+
+          <!-- Ingredient 1: Freshly Brewed Tea -->
+          <article class="ing-mini-card" aria-labelledby="ingTitle1">
+            <div class="ing-mini-img-box">
+              <img src="images/flavor_ing_tea.jpg" alt="Whole loose tea leaves freshly harvested" class="ing-mini-img" loading="lazy">
+            </div>
+            <div class="ing-mini-body">
+              <h3 class="ing-mini-title" id="ingTitle1">Freshly Brewed Tea</h3>
+              <p class="ing-mini-desc">
+                Carefully prepared tea creates the foundation of every delicious blend. Steeping at exact temperatures unlocks nuanced floral and malt notes.
+              </p>
+            </div>
+          </article>
+
+          <!-- Ingredient 2: Creamy Milk Blends -->
+          <article class="ing-mini-card" aria-labelledby="ingTitle2">
+            <div class="ing-mini-img-box">
+              <img src="images/flavor_ing_milk.jpg" alt="Creamy organic whole milk and oat milk" class="ing-mini-img" loading="lazy">
+            </div>
+            <div class="ing-mini-body">
+              <h3 class="ing-mini-title" id="ingTitle2">Creamy Milk Blends</h3>
+              <p class="ing-mini-desc">
+                Smooth milk combinations bring richness and balance to every sip, offering dairy-fresh whole milk, organic oat, and silky coconut bases.
+              </p>
+            </div>
+          </article>
+
+          <!-- Ingredient 3: Chewy Tapioca Pearls -->
+          <article class="ing-mini-card" aria-labelledby="ingTitle3">
+            <div class="ing-mini-img-box">
+              <img src="https://i.pinimg.com/736x/52/e7/f8/52e7f80719494a1bc17b0512760e4b25.jpg" alt="Glossy warm tapioca pearls simmered in honey" class="ing-mini-img" loading="lazy">
+            </div>
+            <div class="ing-mini-body">
+              <h3 class="ing-mini-title" id="ingTitle3">Chewy Tapioca Pearls</h3>
+              <p class="ing-mini-desc">
+                The signature springy texture that makes bubble tea so fun to enjoy. Slow-cooked with honey and dark muscovado syrup throughout the day.
+              </p>
+            </div>
+          </article>
+
+          <!-- Ingredient 4: Fruity Flavour Notes -->
+          <article class="ing-mini-card" aria-labelledby="ingTitle4">
+            <div class="ing-mini-img-box">
+              <img src="images/flavor_ing_fruits.jpg" alt="Fresh strawberries, passionfruit, and mangoes" class="ing-mini-img" loading="lazy">
+            </div>
+            <div class="ing-mini-body">
+              <h3 class="ing-mini-title" id="ingTitle4">Fruity Flavour Notes</h3>
+              <p class="ing-mini-desc">
+                Bright and delicious fruit-inspired combinations add a refreshing twist, made with 100% natural fruit purees and real citrus zest.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       6. CREATE YOUR OWN FLAVOUR EXPERIENCE (White Background)
+       ========================================================================= -->
+  <section class="flavor-custom-section" id="customSection" aria-labelledby="customHeading">
+    <!-- Floating Doodles, Cups, Straws & Balls -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:6%;right:2%;animation-delay:-1.6s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="bottom:12%;left:3%;animation-delay:-2.8s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-sm" style="top:68%;right:3%;animation-delay:-2.1s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup Doodle -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg hs-doodle-peach" style="top:8%;left:3%;animation-delay:-2.3s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw Doodle -->
+    <div class="hs-doodle-straw hs-doodle-straw-md hs-straw-white" style="bottom:10%;right:3%;animation-delay:-1.8s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="top:58%;left:2%;animation-delay:-2.7s;" aria-hidden="true">
+      <div class="hs-pearl hs-pearl-peach"></div>
+      <div class="hs-pearl"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:12%;left:12%;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:14%;right:10%;animation-delay:-2.4s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="flavor-custom-grid">
+
+        <!-- Left: Text & Customization Breakdown Pills -->
+        <div class="hs-reveal-left">
+          <span class="hs-eyebrow">CUSTOM CRAFTED JUST FOR YOU</span>
+          <h2 class="hs-heading" id="customHeading">
+            Your Drink. Your Kind of <span class="outline-word">Happiness.</span>
+          </h2>
+          <p class="hs-body-sub">
+            Make your bubble tea feel more like you. Choose your favourite base, discover delicious combinations, and add the little extras you love.
+          </p>
+
+          <div class="custom-step-pills">
+            <div class="custom-step-pill">
+              <span class="custom-step-num">01</span>
+              <div class="custom-step-content">
+                <span class="custom-step-title">Choose Your Tea Base</span>
+                <span class="custom-step-desc">Black Ceylon, Jasmine Green, Roasted Oolong, or Botanical Herbal</span>
+              </div>
+            </div>
+
+            <div class="custom-step-pill">
+              <span class="custom-step-num">02</span>
+              <div class="custom-step-content">
+                <span class="custom-step-title">Select Your Milk &amp; Richness</span>
+                <span class="custom-step-desc">Whole Milk, Organic Oat Milk, Silky Coconut Milk, or Fresh Cream</span>
+              </div>
+            </div>
+
+            <div class="custom-step-pill">
+              <span class="custom-step-num">03</span>
+              <div class="custom-step-content">
+                <span class="custom-step-title">Sweetness &amp; Ice Calibration</span>
+                <span class="custom-step-desc">0%, 25%, 50%, 75%, 100% Sweetness &bull; Warm, Light Ice, or Regular Ice</span>
+              </div>
+            </div>
+
+            <div class="custom-step-pill">
+              <span class="custom-step-num">04</span>
+              <div class="custom-step-content">
+                <span class="custom-step-title">Add Delicious Toppings</span>
+                <span class="custom-step-desc">Slow-Cooked Boba, Mango Popping Pearls, Herbal Grass Jelly, Cheese Foam</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="customize.html" class="btn-explore-main" id="btnGoCustomize">
+            Customize Your Drink <span class="hs-arrow">&#8594;</span>
+          </a>
+        </div>
+
+        <!-- Right: Styled Custom Boba Visual -->
+        <div class="custom-drink-visual-wrap hs-reveal-right">
+          <img src="images/flavor_custom_drink.jpg" alt="Artisanal custom crafted bubble tea with multiple toppings and straw" class="custom-drink-img" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       7. FINAL CTA SECTION — YOUR NEXT FAVOURITE IS WAITING (Brown Canvas)
+       ========================================================================= -->
+  <section class="flavor-cta-section" id="ctaSection" aria-labelledby="ctaHeading">
+    <!-- Floating Outlined Bubbles, Cups & Straws -->
+    <div class="hs-floating-ball hs-ball-xl" style="top:8%;right:4%;animation-delay:-1.2s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-md hs-ball-white" style="bottom:12%;left:3%;animation-delay:-3.6s;" aria-hidden="true"></div>
+    <div class="hs-floating-ball hs-ball-lg hs-ball-peach" style="top:55%;left:2%;animation-delay:-2.1s;" aria-hidden="true"></div>
+
+    <!-- Hand-Drawn Boba Cup (White on Brown) -->
+    <div class="hs-doodle-cup hs-doodle-cup-lg hs-doodle-peach" style="top:12%;left:4%;animation-delay:-2s;" aria-hidden="true">
+      <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2"/>
+        <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2"/>
+        <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2"/>
+        <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6"/>
+        <circle cx="24" cy="52" r="2.8" fill="currentColor"/>
+        <circle cx="31" cy="55" r="2.8" fill="currentColor"/>
+        <circle cx="36" cy="49" r="2.8" fill="currentColor"/>
+        <circle cx="27" cy="44" r="2.8" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Hand-Drawn Straw (White on Brown) -->
+    <div class="hs-doodle-straw hs-doodle-straw-md hs-straw-white" style="bottom:16%;right:5%;animation-delay:-2.3s;" aria-hidden="true">
+      <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="20" y1="90" x2="52" y2="12" stroke-width="3"/>
+        <line x1="28" y1="94" x2="60" y2="16" stroke-width="3"/>
+        <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2"/>
+        <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2"/>
+        <line x1="33" y1="62" x2="41" y2="66" stroke-width="2"/>
+        <circle cx="16" cy="84" r="5" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <!-- Pearl Cluster, Sparkles & Leaf -->
+    <div class="hs-pearl-cluster" style="bottom:16%;left:24%;animation-delay:-2.8s;" aria-hidden="true">
+      <div class="hs-pearl"></div>
+      <div class="hs-pearl hs-pearl-peach"></div>
+    </div>
+    <div class="hs-decor hs-sparkle" style="top:18%;right:15%;animation-delay:-1.3s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><polygon points="12,0 15,9 24,12 15,15 12,24 9,15 0,12 9,9"/></svg>
+    </div>
+    <div class="hs-decor hs-leaf" style="bottom:10%;left:48%;animation-delay:-2.7s;" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+    </div>
+
+    <div class="hs-container">
+      <div class="flavor-cta-grid">
+        <!-- CTA Text Content -->
+        <div class="hs-reveal-left">
+          <span class="hs-eyebrow" style="color:var(--peach-accent, #F5C18F);">READY FOR A SIP?</span>
+          <h2 class="flavor-cta-headline" id="ctaHeading">
+            One More Sip, <span class="outline-word">One More Happy Moment.</span>
+          </h2>
+          <p class="flavor-cta-desc">
+            Your next favourite flavour is waiting to be discovered. Find your perfect cup and make today a little sweeter.
+          </p>
+
+          <div class="flavor-hero-buttons">
+            <a href="menu.html" class="btn-explore-main">
+              Explore Our Menu <span class="hs-arrow">&#8594;</span>
+            </a>
+            <a href="customize.html" class="btn-mood-secondary">
+              Customize Your Drink <span class="hs-arrow">&#8594;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA Large Lifestyle Image -->
+        <div class="flavor-cta-img-wrap hs-reveal-right">
+          <img src="https://i.pinimg.com/736x/0c/9d/d4/0c9dd45fee8ef1685e43b7410eefe3b1.jpg" alt="Bubble tea drinks for the Bubble & Brew flavours CTA" class="flavor-cta-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       REUSABLE FOOTER COMPONENT
+       ========================================================================= -->
+  <div id="footer-container"></div>
+
+
+  <!-- =========================================================================
+       SHOPPING BAG / CART DRAWER
+       ========================================================================= -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <svg style="width: 22px; height: 22px; stroke: var(--peach-accent, #F5C18F);" viewBox="0 0 24 24" fill="none"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span style="font-weight: 700;">Your Boba Bag</span>
+      </div>
+      <button class="modal-close-btn" id="cartDrawerClose" style="position: static;"
+        aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <div class="p-4 text-center text-muted" style="font-size: 0.95rem;">
+        Your bag is currently empty. Explore our signature flavours to begin!
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Subtotal</span>
+        <span class="cart-total-val" id="cartTotalVal">&#8377;0</span>
+      </div>
+      <a href="menu.html" class="btn-checkout text-center text-decoration-none d-block">View Full Menu</a>
+    </div>
+  </aside>
+
+
+  <!-- =========================================================================
+       SCRIPTS (Bootstrap 5, Reusable Navbar, Reusable Footer, Flavour Controller)
+       ========================================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/site-data.js" defer></script>
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/flavours.js"></script>
+
+</body>
+
+</html>

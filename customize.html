@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boba Builder Studio | BUBBLE &amp; BREW</title>
+
+  <!-- Google Fonts: Poppins (Headings) & DM Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Shared Global Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/home-sections.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- Boba Builder Dedicated Stylesheet -->
+  <link rel="stylesheet" href="css/customize.css">
+</head>
+
+<body class="builder-page-body">
+
+  <!-- =========================================================================
+       REUSABLE SHARED NAVBAR COMPONENT (Fixed at top of body)
+       ========================================================================= -->
+  <div id="navbar-container"></div>
+
+  <!-- Main Builder Page Wrapper -->
+  <main class="builder-main-wrapper" id="builderApp">
+
+    <!-- =========================================================================
+         1. HERO HEADER: LARGE EDITORIAL HERO (Caramel Brown Background)
+            Matches the visual weight, color and presence of Menu & Flavours pages
+         ========================================================================= -->
+    <header class="builder-hero-wrapper" id="builderHero" aria-labelledby="builderHeroHeading">
+
+      <!-- Floating Organic Bubbles, Pearls & Hand-Drawn Boba Doodles -->
+      <div class="hs-floating-ball hs-ball-xl" style="top:14%;left:3%;animation-delay:-1s;" aria-hidden="true"></div>
+      <div class="hs-floating-ball hs-ball-md hs-ball-peach" style="top:74%;left:5%;animation-delay:-2.5s;" aria-hidden="true"></div>
+      <div class="hs-floating-ball hs-ball-lg hs-ball-white" style="top:20%;right:6%;animation-delay:-1.8s;" aria-hidden="true"></div>
+      <div class="hs-floating-ball hs-ball-sm" style="bottom:12%;right:8%;animation-delay:-3.2s;" aria-hidden="true"></div>
+
+      <!-- Hand-Drawn Boba Cup Doodle Left -->
+      <div class="hs-doodle-cup hs-doodle-cup-lg hs-doodle-peach" style="top:26%;left:5%;animation-delay:-2s;" aria-hidden="true">
+        <svg viewBox="0 0 60 70" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 20L18 62C18.5 64.5 20.5 66 23 66H37C39.5 66 41.5 64.5 42 62L46 20" stroke-width="2.2" />
+          <path d="M11 20C11 18.5 12.5 17 14 17H46C47.5 17 49 18.5 49 20V20H11V20Z" stroke-width="2.2" />
+          <path d="M17 17C17 10 22 5 30 5C38 5 43 10 43 17" stroke-width="2.2" />
+          <line x1="33" y1="5" x2="38" y2="-2" stroke-width="2.6" />
+          <circle cx="24" cy="52" r="2.8" fill="currentColor" />
+          <circle cx="31" cy="55" r="2.8" fill="currentColor" />
+          <circle cx="36" cy="49" r="2.8" fill="currentColor" />
+          <circle cx="27" cy="44" r="2.8" fill="currentColor" />
+        </svg>
+      </div>
+
+      <!-- Hand-Drawn Straw Doodle Right -->
+      <div class="hs-doodle-straw hs-doodle-straw-lg hs-straw-white" style="bottom:14%;right:4%;animation-delay:-1.4s;" aria-hidden="true">
+        <svg viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="20" y1="90" x2="52" y2="12" stroke-width="3" />
+          <line x1="28" y1="94" x2="60" y2="16" stroke-width="3" />
+          <ellipse cx="56" cy="14" rx="4.5" ry="2.2" transform="rotate(-30 56 14)" stroke-width="2.2" />
+          <ellipse cx="24" cy="92" rx="4.5" ry="2.2" transform="rotate(-30 24 92)" stroke-width="2.2" />
+          <line x1="33" y1="62" x2="41" y2="66" stroke-width="2" />
+          <circle cx="16" cy="84" r="5" fill="currentColor" />
+        </svg>
+      </div>
+
+      <!-- Floating Pearl Clusters & Tea Leaves -->
+      <div class="hs-pearl-cluster" style="top:32%;right:12%;animation-delay:-2.7s;" aria-hidden="true">
+        <div class="hs-pearl"></div>
+        <div class="hs-pearl hs-pearl-peach"></div>
+      </div>
+      <div class="hs-decor hs-leaf" style="bottom:15%;left:8%;animation-delay:-1.9s;" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z" />
+          <path d="M12 22V2" />
+        </svg>
+      </div>
+
+      <div class="builder-container builder-hero-container">
+
+        <!-- Left Hero Column: Typography & Action Buttons -->
+        <div class="builder-hero-content">
+          <div class="builder-hero-eyebrow-pill">
+            <span class="builder-hero-eyebrow-dot"></span>
+            <span>YOUR CUP, YOUR CREATION</span>
+          </div>
+
+          <h1 class="builder-hero-heading" id="builderHeroHeading">
+            Create Your <br>
+            <span class="outline-word">Perfect Boba.</span>
+          </h1>
+
+          <p class="builder-hero-sub">
+            Choose your favourite ingredients, mix delicious flavours and create a bubble tea that feels uniquely yours. Freshly brewed, beautifully blended, and crafted to your exact taste.
+          </p>
+
+          <div class="builder-hero-supporting-line">
+            <span class="builder-hero-sparkle">&#10022;</span>
+            <span>100% Custom Formula • Handcrafted Fresh • Over 50+ Combinations</span>
+          </div>
+
+          <div class="builder-hero-buttons">
+            <a href="#builderWorkspace" class="btn-hero-peach">
+              <span>Start Customizing</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M19 12l-7 7-7-7" />
+              </svg>
+            </a>
+
+            <!-- Surprise Me Button -->
+            <button type="button" class="btn-hero-outline" id="btnSurpriseMe" title="Randomly create a tasty combo">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+              </svg>
+              <span>Surprise Me</span>
+            </button>
+
+            <!-- Reset Button -->
+            <button type="button" class="btn-hero-outline" id="btnResetBuilder" title="Reset all custom choices">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+              </svg>
+              <span>Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: Editorial Visual Composition -->
+        <div class="builder-hero-visual">
+          <div class="builder-hero-visual-frame">
+            <!-- Asymmetric Organic Image Mask with Peach Glowing Outlines -->
+            <div class="builder-hero-mask-wrapper">
+              <svg class="builder-hero-svg-bg" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path class="builder-hero-peach-path" d="M470,270 C470,395 385,485 270,485 C145,485 65,385 65,270 C65,145 155,55 270,55 C395,55 470,145 470,270 Z" />
+              </svg>
+              <div class="builder-hero-main-img-box">
+                <img src="https://images.pexels.com/photos/12666754/pexels-photo-12666754.jpeg?cs=srgb&dl=pexels-telly-mina-262052395-12666754.jpg&fm=jpg" alt="Handcrafted custom bubble tea drinks" class="builder-hero-main-img" loading="eager">
+              </div>
+            </div>
+
+            <!-- Overlapping Mini Drink Visual -->
+            <div class="builder-hero-overlap-cup" aria-hidden="true">
+              <img src="https://images.pexels.com/photos/9271564/pexels-photo-9271564.jpeg?cs=srgb&dl=pexels-amar-9271564.jpg&fm=jpg" alt="Classic milk tea boba drink" class="builder-overlap-img">
+            </div>
+
+            <!-- Floating Badge: YOUR CUP, YOUR RULES -->
+            <div class="builder-hero-float-badge" aria-hidden="true">
+              <span class="builder-badge-star">&#9733;</span>
+              <div class="builder-badge-texts">
+                <span class="builder-badge-eyebrow">YOUR CUP, YOUR RULES</span>
+                <strong>100% CUSTOM CREATION</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- =========================================================================
+         2. MAIN CUSTOMIZATION WORKSPACE – SPLIT SCREEN (65% / 35%)
+         ========================================================================= -->
+    <section class="builder-workspace-section" id="builderWorkspace">
+      <div class="builder-container">
+        <div class="builder-split-layout">
+
+          <!-- ═══════════════════════════════════════════════════════════════════
+               LEFT SIDE (65%): HORIZONTAL CATEGORY NAV & DYNAMIC OPTIONS
+               ═══════════════════════════════════════════════════════════════════ -->
+          <div class="builder-left-workspace">
+
+            <!-- Compact Horizontal Category Navigation Bar -->
+            <nav class="builder-category-nav-wrap" aria-label="Customization categories">
+              <div class="builder-category-nav" id="categoryNav">
+
+                <!-- 1. BASE Tab -->
+                <button type="button" class="category-nav-tab active" data-category="base" role="tab" aria-selected="true" aria-controls="view-base">
+                  <div class="tab-icon-box">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6 2 2 8 2 14c0 4 3 8 10 8s10-4 10-8c0-6-4-12-10-12z"/><path d="M12 22V2"/></svg>
+                  </div>
+                  <span class="tab-name">BASE</span>
+                  <span class="tab-status-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                </button>
+
+                <!-- 2. FLAVOUR Tab -->
+                <button type="button" class="category-nav-tab" data-category="flavour" role="tab" aria-selected="false" aria-controls="view-flavour">
+                  <div class="tab-icon-box">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                  </div>
+                  <span class="tab-name">FLAVOUR</span>
+                  <span class="tab-status-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                </button>
+
+                <!-- 3. TOPPINGS Tab -->
+                <button type="button" class="category-nav-tab" data-category="toppings" role="tab" aria-selected="false" aria-controls="view-toppings">
+                  <div class="tab-icon-box">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/></svg>
+                  </div>
+                  <span class="tab-name">TOPPINGS</span>
+                  <span class="tab-status-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                </button>
+
+                <!-- 4. MILK Tab -->
+                <button type="button" class="category-nav-tab" data-category="milk" role="tab" aria-selected="false" aria-controls="view-milk">
+                  <div class="tab-icon-box">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v3H8z"/><path d="M6 7h12l-1 14H7L6 7z"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+                  </div>
+                  <span class="tab-name">MILK</span>
+                  <span class="tab-status-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                </button>
+
+                <!-- 5. SIZE Tab -->
+                <button type="button" class="category-nav-tab" data-category="size" role="tab" aria-selected="false" aria-controls="view-size">
+                  <div class="tab-icon-box">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 6h10l-1 15H8L7 6z"/><path d="M5 6h14"/><line x1="13" y1="2" x2="15" y2="6"/></svg>
+                  </div>
+                  <span class="tab-name">SIZE</span>
+                  <span class="tab-status-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                </button>
+
+                <!-- 6. SWEETNESS Tab -->
+                <button type="button" class="category-nav-tab" data-category="sweetness" role="tab" aria-selected="false" aria-controls="view-sweetness">
+                  <div class="tab-icon-box">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12c1 2 3 3 4 3s3-1 4-3"/></svg>
+                  </div>
+                  <span class="tab-name">SWEETNESS</span>
+                  <span class="tab-status-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                </button>
+
+              </div>
+            </nav>
+
+            <!-- Dynamic Category Content Panels Container (Injected & Controlled via JS Centralized Data) -->
+            <div class="builder-dynamic-view-area" id="dynamicViewArea">
+              <!-- Dynamically populated from centralized product catalog -->
+            </div>
+
+          </div><!-- /.builder-left-workspace -->
+
+
+          <!-- ═══════════════════════════════════════════════════════════════════
+               RIGHT SIDE (35%): SHORT & CLEAN SELECTED ITEMS PANEL
+               ═══════════════════════════════════════════════════════════════════ -->
+          <div class="builder-right-summary-col">
+            <aside class="builder-selected-panel" id="builderSelectedPanel" aria-label="Selected Items Summary">
+
+              <!-- Mobile Close Button -->
+              <button type="button" class="mobile-summary-close-btn" id="btnCloseMobileSummary" aria-label="Close summary modal">&times;</button>
+
+              <!-- Panel Header -->
+              <div class="selected-panel-header">
+                <div class="selected-header-titles">
+                  <span class="selected-badge-sub">RECIPE SNAPSHOT</span>
+                  <h3 class="selected-panel-title">YOUR SELECTIONS</h3>
+                </div>
+                <button type="button" class="btn-clear-selections" id="btnClearSelections" title="Reset all current choices">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                  <span>Reset</span>
+                </button>
+              </div>
+
+              <!-- Selected Items List: Compact rows with consistent thumbnails & remove icons -->
+              <div class="selected-items-container" id="selectedItemsContainer">
+                <!-- Dynamically populated via JS: thumbnail, name, tag, remove button -->
+              </div>
+
+              <!-- Compact Estimated Total Price & Jump Action -->
+              <div class="selected-panel-footer">
+                <div class="selected-price-row">
+                  <div class="price-label-box">
+                    <span class="selected-price-eyebrow">ESTIMATED TOTAL</span>
+                    <span class="selected-price-note">All taxes included</span>
+                  </div>
+                  <strong class="selected-price-amount" id="selectedPriceAmount">&#8377;0</strong>
+                </div>
+
+                <div class="selected-panel-actions">
+                  <a href="#customCreationSection" class="btn-view-custom-creation">
+                    <span>View Complete Cup</span>
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
+                  </a>
+                </div>
+              </div>
+
+            </aside>
+          </div><!-- /.builder-right-summary-col -->
+
+        </div><!-- /.builder-split-layout -->
+      </div><!-- /.builder-container -->
+    </section>
+
+    <!-- =========================================================================
+         3. PRODUCT SELECTION AREA – BELOW MAIN WORKSPACE (YOUR CUSTOM CREATION)
+         ========================================================================= -->
+    <section class="builder-creation-section" id="customCreationSection">
+      <div class="builder-container">
+
+        <!-- Section Header -->
+        <div class="creation-section-header">
+          <span class="builder-eyebrow">
+            <span class="builder-eyebrow-dot"></span>
+            MASTERPIECE IN A CUP
+          </span>
+          <h2 class="creation-heading">YOUR CUSTOM CREATION</h2>
+          <p class="creation-subtitle">
+            See your selected ingredients come together and discover the perfect cup for your taste.
+          </p>
+        </div>
+
+        <!-- Final Customized Product Card Container -->
+        <div class="creation-card-wrapper" id="creationCardWrapper">
+          <!-- Dynamically populated via JS: Large product image, drink title, ingredient pills, price, breakdown, Add to Cart -->
+        </div>
+
+      </div><!-- /.builder-container -->
+    </section>
+
+    <!-- =========================================================================
+         MOBILE STICKY BOTTOM ACTION BAR (Touch-friendly & non-blocking)
+         ========================================================================= -->
+    <div class="builder-mobile-bar" id="builderMobileBar">
+      <div class="mobile-bar-price">
+        <span class="mobile-bar-label">Total</span>
+        <strong class="mobile-bar-amount" id="mobileBarTotal">&#8377;0</strong>
+      </div>
+      <div class="mobile-bar-btns">
+        <button type="button" class="mobile-btn-summary" id="btnOpenMobileSummary" aria-label="View custom recipe summary">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Selections (<span id="mobileSelectionsCount">0</span>)</span>
+        </button>
+        <button type="button" class="mobile-btn-cart" id="btnMobileAddToCart">
+          <span>Add to Cart</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         CONFIRMATION & CART PREVIEW MODAL
+         ========================================================================= -->
+    <div class="builder-modal-backdrop" id="cartModalBackdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalDrinkName">
+      <div class="builder-modal-sheet">
+        <button type="button" class="builder-modal-close" id="btnCloseCartModal" aria-label="Close dialog">&times;</button>
+        <div class="modal-badge-tag">HANDCRAFTED FORMULA READY</div>
+        <h3 class="modal-drink-title" id="modalDrinkName">Custom Bubble Tea</h3>
+        <p class="modal-drink-desc">Your handcrafted bubble tea formula has been configured. Review your customized recipe below:</p>
+
+        <div class="modal-recipe-summary-box" id="modalRecipeContent">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <div class="modal-total-row">
+          <span>Final Price:</span>
+          <strong id="modalGrandTotal">&#8377;0</strong>
+        </div>
+
+        <div class="modal-actions-row">
+          <a href="menu.html" class="modal-btn-menu">
+            <span>Explore Full Menu</span>
+          </a>
+          <button type="button" class="modal-btn-keep-customizing" id="btnKeepCustomizing">
+            <span>Keep Customizing</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Surprise Me / Info Toast Notification (SVG, no emoji) -->
+    <div class="builder-toast" id="surpriseToast" role="status" aria-live="polite">
+      <span class="toast-svg-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </span>
+      <span class="toast-text" id="toastMessage">A little surprise for your taste buds!</span>
+    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       REUSABLE SHARED FOOTER COMPONENT
+       ========================================================================= -->
+  <div id="footer-container"></div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Shared Data & Components JS -->
+  <script src="js/site-data.js" defer></script>
+  <script src="components/navbar.js" defer></script>
+  <script src="components/footer.js" defer></script>
+
+  <!-- Boba Builder Controller JS -->
+  <script src="js/customize.js" defer></script>
+
+</body>
+</html>
